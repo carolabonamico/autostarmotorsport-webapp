@@ -62,7 +62,7 @@ const Home = () => {
   const storiaRef = useRef(null);
 
   return (
-    <div>
+    <>
       <HeroSection 
         title="Autostar"
         highlight="Motorsport"
@@ -173,7 +173,7 @@ const Home = () => {
         </Container>
       </section>
 
-    </div>
+    </>
   );
 };
 

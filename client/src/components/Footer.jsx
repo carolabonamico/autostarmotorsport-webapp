@@ -86,7 +86,7 @@ const Footer = () => {
         </Row>
         
         <div className="footer-bottom">
-          <Row className="align-items-center">
+          <Row>
             <Col md={6}>
               <p className="copyright mb-1">
                 &copy; 2025 AutoStar Racing. Tutti i diritti riservati.
