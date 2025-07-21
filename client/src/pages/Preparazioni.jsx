@@ -198,10 +198,34 @@ const Preparazioni = () => {
                           ))}
                         </div>
                       </div>
-                      {service.text && (
-                        <div className="mt-4 text-justify">
-                          <p>{service.text}</p>
+                      {service.id === 'tagliandi-auto' ? (
+                        <div className="d-flex flex-column align-items-center" style={{marginTop: '2.5rem', marginBottom: '2.5rem'}}>
+                          <img 
+                            src="/images/tagliando.jpg" 
+                            alt="Tagliando Auto" 
+                            className="rounded shadow-lg" 
+                            style={{
+                              maxWidth: '600px',
+                              width: '100%',
+                              height: 'auto',
+                              objectFit: 'cover',
+                              border: '4px solid var(--primary-red)',
+                              background: '#fff',
+                              padding: '8px',
+                              marginBottom: '32px',
+                              marginTop: '8px'
+                            }} 
+                          />
+                          <div className="text-justify w-100">
+                            <p>{service.text}</p>
+                          </div>
                         </div>
+                      ) : (
+                        service.text && (
+                          <div className="mt-4 text-justify">
+                            <p>{service.text}</p>
+                          </div>
+                        )
                       )}
                       { service.id === 'auto-elettriche' && (
                         <div className="mt-3">
