@@ -208,7 +208,7 @@ const Preparazioni = () => {
                             <Button 
                                 as={Link} 
                                 to="/team#certificazioni-qualifiche"
-                                variant="dark"
+                                variant="custom-primary"
                                 size="sm"
                             >
                                 <i className="bi bi-award me-1"></i>

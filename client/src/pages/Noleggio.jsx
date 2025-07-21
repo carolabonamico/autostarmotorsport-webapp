@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
+import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
 import HeroSection from '../components/HeroSection';
 import AOS from 'aos';
 
@@ -387,11 +387,11 @@ const Noleggio = () => {
             {servizi.map((servizio, index) => (
               <Col lg={3} md={6} className="mb-4" key={index}>
                 <Card 
-                  className="service-card h-100 text-center"
+                  className="team-card h-100 text-center"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <Card.Body>
+                  <Card.Body className="team-card-body">
                     <i className={`bi bi-${servizio.icon} text-primary`} style={{fontSize: '3rem'}}></i>
                     <h5 className="mt-3 mb-3">{servizio.title}</h5>
                     <p className="text-muted">{servizio.description}</p>

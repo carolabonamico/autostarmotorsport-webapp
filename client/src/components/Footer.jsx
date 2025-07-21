@@ -85,21 +85,21 @@ const Footer = () => {
           </Col>
         </Row>
         
-        <div className="footer-bottom">
+        <div className="footer-bottom w-100" style={{background: 'transparent', paddingTop: '18px'}}>
           <Row>
-            <Col md={6}>
-              <p className="copyright mb-1">
-                &copy; 2025 AutoStar Racing. Tutti i diritti riservati.
-              </p>
-              <div className="footer-legal-extra text-muted small">
-                P.IVA 02231680063 &nbsp; | &nbsp; C.F. BNMDVD69A12L570G
-              </div>
-            </Col>
-            <Col md={6} className="text-md-end">
-              <div className="footer-legal">
-                <Link to="/contatti">Privacy Policy</Link>
-                <Link to="/contatti">Cookie Policy</Link>
-                <Link to="/contatti">Termini e Condizioni</Link>
+            <Col xs={12}>
+              <div style={{width: '100%', textAlign: 'center'}}>
+                <p className="copyright mb-1" style={{fontSize: '1rem', color: '#aaa', marginBottom: '4px'}}>
+                  &copy; 2025 AutoStar Racing. Tutti i diritti riservati.
+                </p>
+                <div className="footer-legal-extra text-muted small" style={{fontSize: '0.98rem', color: '#888'}}>
+                  P.IVA 02231680063 &nbsp; | &nbsp; C.F. BNMDVD69A12L570G
+                </div>
+                <div className="footer-legal mt-2">
+                  <Link to="/contatti" className="footer-legal-link">Privacy Policy</Link>
+                  <Link to="/contatti" className="footer-legal-link">Cookie Policy</Link>
+                  <Link to="/contatti" className="footer-legal-link">Termini e Condizioni</Link>
+                </div>
               </div>
             </Col>
           </Row>

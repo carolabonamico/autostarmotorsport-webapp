@@ -1,3 +1,20 @@
+/* Footer legal links */
+.footer-legal {
+  display: inline-flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-legal-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.98rem;
+  transition: color 0.2s;
+}
+.footer-legal-link:hover {
+  color: #e30613;
+  text-decoration: underline;
+}
 /* Contact Card Style */
 .contact-card {
   border: 1.5px solid var(--primary-red);
@@ -553,9 +570,10 @@ html {
 }
 
 .footer-legal {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: flex-end;
+  display: inline-flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-legal a {
@@ -573,12 +591,10 @@ html {
   .footer-minimal {
     padding: 40px 0 0;
   }
-  
   .footer-legal {
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 1rem;
   }
-  
   .social-links {
     justify-content: flex-start;
   }

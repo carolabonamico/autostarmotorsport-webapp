@@ -206,7 +206,7 @@ const NewsMotori = () => {
               .map((article, index) => (
                 <Col lg={4} md={6} className="mb-4" key={article.id}>
                   <Card 
-                    className="news-card h-100"
+                    className="team-card h-100"
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                   >
@@ -222,7 +222,7 @@ const NewsMotori = () => {
                     >
                       <i className="bi bi-newspaper text-white" style={{fontSize: '3rem'}}></i>
                     </div>
-                    <Card.Body className="news-card-body">
+                    <Card.Body className="team-card-body">
                       <div className="d-flex align-items-center mb-3">
                         <Badge 
                           bg={getCategoryColor(article.category)}
