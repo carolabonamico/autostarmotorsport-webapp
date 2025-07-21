@@ -1,3 +1,44 @@
+/* Override Bootstrap blue with custom yellow */
+:root {
+  --bs-primary: #e6b800; /* giallo caldo, non troppo chiaro */
+  --bs-link-color: #e6b800;
+  --bs-btn-primary-bg: #e6b800;
+  --bs-btn-primary-border-color: #e6b800;
+  --bs-btn-primary-hover-bg: #c9a000;
+  --bs-btn-primary-hover-border-color: #c9a000;
+  --bs-btn-primary-active-bg: #b38f00;
+  --bs-btn-primary-active-border-color: #b38f00;
+}
+
+.text-primary {
+  color: #e6b800 !important;
+}
+
+.bg-primary {
+  background-color: #e6b800 !important;
+}
+
+.btn-primary {
+  background-color: #e6b800 !important;
+  border-color: #e6b800 !important;
+  color: #222 !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #c9a000 !important;
+  border-color: #c9a000 !important;
+  color: #222 !important;
+}
+
+.btn-outline-primary {
+  color: #e6b800 !important;
+  border-color: #e6b800 !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: #e6b800 !important;
+  color: #222 !important;
+}
 /* Footer legal links */
 .footer-legal {
   display: inline-flex;

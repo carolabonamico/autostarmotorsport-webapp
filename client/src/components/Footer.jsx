@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="footer-brand">
               <h4 className="brand-title mb-3">
                 <i className="bi bi-gear-fill me-2"></i>
-                AutoStar Racing
+                Autostar Motorsport
               </h4>
               <p className="brand-description mb-4">
                 Passione, precisione e performance.<br />
@@ -39,9 +39,6 @@ const Footer = () => {
               <ul className="footer-links">
                 <li><Link to="/preparazioni">Preparazioni</Link></li>
                 <li><Link to="/noleggio">Noleggio & Vendita</Link></li>
-                <li><Link to="/contatti">Assistenza Tecnica</Link></li>
-                <li><Link to="/news">News Motori</Link></li>
-                <li><Link to="/hurr">HURR Prototipo</Link></li>
               </ul>
             </div>
           </Col>
@@ -66,15 +63,15 @@ const Footer = () => {
               <div className="contact-info">
                 <div className="contact-item">
                   <i className="bi bi-geo-alt"></i>
-                  <span>Via Racing 123<br />Maranello (MO), Italia</span>
+                  <span>Strada per Valenza 38<br />15040 Pecetto di Valenza (AL)<br />Fr. Pellizzari, Italia</span>
                 </div>
                 <div className="contact-item">
                   <i className="bi bi-telephone"></i>
-                  <span>+39 0536 123456</span>
+                  <span>+39 0131 940175</span>
                 </div>
                 <div className="contact-item">
                   <i className="bi bi-envelope"></i>
-                  <span>info@autostarracing.it</span>
+                  <span>info@autostar-motorsport.it</span>
                 </div>
                 <div className="contact-item">
                   <i className="bi bi-clock"></i>
@@ -90,7 +87,7 @@ const Footer = () => {
             <Col xs={12}>
               <div style={{width: '100%', textAlign: 'center'}}>
                 <p className="copyright mb-1" style={{fontSize: '1rem', color: '#aaa', marginBottom: '4px'}}>
-                  &copy; 2025 AutoStar Racing. Tutti i diritti riservati.
+                  &copy; 2025 Autostar Motorsport. Tutti i diritti riservati.
                 </p>
                 <div className="footer-legal-extra text-muted small" style={{fontSize: '0.98rem', color: '#888'}}>
                   P.IVA 02231680063 &nbsp; | &nbsp; C.F. BNMDVD69A12L570G
