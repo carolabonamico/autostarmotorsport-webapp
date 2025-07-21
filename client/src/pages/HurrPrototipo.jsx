@@ -60,7 +60,7 @@ const HurrPrototipo = () => {
       <HeroSection 
         highlight="HURR"
         title="Prototipo"
-        subtitle="L'apice dell'innovazione AutoStar Racing - 20 anni di esperienza motorsport condensati in una macchina da corsa all'avanguardia."
+        subtitle="L'apice dell'innovazione Autostar Motorsport - 20 anni di esperienza motorsport condensati in una macchina da corsa all'avanguardia."
       />
 
       {/* Specs Section */}

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
+import ImageWithText from '../components/Preparazioni/ImageWithText';
 import AOS from 'aos';
 
 const Preparazioni = () => {
@@ -26,6 +27,7 @@ const Preparazioni = () => {
         'Analisi telemetria',
         'Supporto tecnico 24/7'
       ],
+
     },
     {
       id: 'tagliandi-auto',
@@ -52,7 +54,10 @@ const Preparazioni = () => {
         'Deposito stagionale',
         'Pneumatici racing'
       ],
-      text: 'Ogni anno, a ridosso di novembre, scatta l\'obbligo di avere le catene a bordo oppure le gomme invernali, per non incorrere in una sanzione. Autostar Motorsport si può occupare di questa semplice operazione, ma proprio perché tutti tendono a concentrarsi in un breve periodo dell\'anno, ti consigliamo di chiamarci e prendere un appuntamento in modo da evitare di attendere troppi giorni. Naturalmente, possiamo occuparci anche dello smontaggio delle tue gomme invernali per sostituirle con quelle estive. In questo caso, il riferimento temporale è solitamente il passaggio all\'ora legale, che avviene a ridosso della primavera.'
+      text: 'Ogni anno, a ridosso di novembre, scatta l\'obbligo di avere le catene a bordo oppure le gomme invernali, per non incorrere in una sanzione. Autostar Motorsport si può occupare di questa semplice operazione, ma proprio perché tutti tendono a concentrarsi in un breve periodo dell\'anno, ti consigliamo di chiamarci e prendere un appuntamento in modo da evitare di attendere troppi giorni. Naturalmente, possiamo occuparci anche dello smontaggio delle tue gomme invernali per sostituirle con quelle estive. In questo caso, il riferimento temporale è solitamente il passaggio all\'ora legale, che avviene a ridosso della primavera.',
+      image: '/images/gomme.jpg',
+      alt: 'Cambio Gomme',
+      imageWidth: '600px'
     },
     {
       id: 'elettrauto',
@@ -66,7 +71,10 @@ const Preparazioni = () => {
         'Riparazione e/o sostituzione regolatori di tensione',
         'Ispezione e misurazione impianti elettrici'
       ],
-      text: 'Autostar Motorsport è anche elettrauto, e può risolvere qualsiasi problema di natura elettronica della vostra auto. Se avete bisogno di un elettrauto, potete recarvi nella nostra officina per contare su un servizio altamente specializzato e professionale: usiamo computer e attrezzature di ultima generazione per monitorare i mezzi dei nostri clienti e risolvere i loro problemi in breve tempo. Individuazione guasti elettronici.'
+      text: 'Autostar Motorsport è anche elettrauto, e può risolvere qualsiasi problema di natura elettronica della vostra auto. Se avete bisogno di un elettrauto, potete recarvi nella nostra officina per contare su un servizio altamente specializzato e professionale: usiamo computer e attrezzature di ultima generazione per monitorare i mezzi dei nostri clienti e risolvere i loro problemi in breve tempo. Individuazione guasti elettronici.',
+      image: '/images/elettrauto.jpeg',
+      alt: 'Elettrauto',
+      imageWidth: '400px'
     },
     {
       id: 'meccatronica',
@@ -80,7 +88,10 @@ const Preparazioni = () => {
         'Controllo emissioni',
         'Ottimizzazione prestazioni'
       ],
-      text: 'Possiamo risolvere qualsiasi problema meccanico, elettronico ed elettrico del vostro mezzo a quattro ruote. La nostra esperienza pluricinquantennale garantisce un servizio di alta qualità per ogni tipo di automobile, dalle utilitarie ai suv, dalle berline ai fuoristrada. Per le riparazioni meccaniche delle vostre automobili utilizziamo attrezzature di ultima generazione che ci permettono di individuare e risolvere il problema in pochissimo tempo.'
+      text: 'Possiamo risolvere qualsiasi problema meccanico, elettronico ed elettrico del vostro mezzo a quattro ruote. La nostra esperienza pluricinquantennale garantisce un servizio di alta qualità per ogni tipo di automobile, dalle utilitarie ai suv, dalle berline ai fuoristrada. Per le riparazioni meccaniche delle vostre automobili utilizziamo attrezzature di ultima generazione che ci permettono di individuare e risolvere il problema in pochissimo tempo.',
+      image: '/images/motore.jpeg',
+      alt: 'Meccatronica',
+      imageWidth: '400px'
     },
     {
       id: 'auto-elettriche',
@@ -95,6 +106,9 @@ const Preparazioni = () => {
         'Aggiornamenti software'
       ],
       text: 'Mettiamo a vostra disposizione consulenza affidabile e completa in grado di offrire un intero ventaglio di servizi dedicati alle esigenze dei nuovi veicoli elettrici. Offriamo assistenza e riparazione ai veicoli elettrici con l\'esperienza che ci contraddistingue da sempre, in questo caso maturata anche in ambito motorsport. Garantiamo la massima professionalità e completezza degli interventi elettronici. Eseguiamo lavorazioni di manutenzione ordinaria, straordinaria, servizio pneumatici, vetri e ogni tipo di riparazione. Nulla al caso perché facciamo la diagnosi analitica e computerizzata su ogni veicolo, l\'unica capace di identificare con precisione la tipologia di guasto e che permette l\'intervento mirato. Siamo un\'azienda con attestato PEI e PES/PAV per interventi in sicurezza su auto ibride ed elettriche.',
+      image: '/images/elettriche2.jpg',
+      alt: 'Auto Elettrica',
+      imageWidth: '500px'
     },
     {
       id: 'pre-revisione',
@@ -130,23 +144,12 @@ const Preparazioni = () => {
           <div className="d-flex justify-content-center gap-3 flex-wrap">
             <Button 
               as={Link} 
-              to="/contatti" 
+              to="/contatti#info-contatti" 
               variant="outline-light"
               size="lg"
               className="px-4"
             >
-              <i className="bi bi-telephone me-2"></i>
               Prenota Appuntamento
-            </Button>
-            <Button 
-              as={Link} 
-              to="/preventivo" 
-              variant="outline-light"
-              size="lg"
-              className="px-4"
-            >
-              <i className="bi bi-calculator me-2"></i>
-              Richiedi Preventivo
             </Button>
           </div>
         </div>
@@ -198,28 +201,8 @@ const Preparazioni = () => {
                           ))}
                         </div>
                       </div>
-                      {service.id === 'tagliandi-auto' ? (
-                        <div className="d-flex flex-column align-items-center" style={{marginTop: '2.5rem', marginBottom: '2.5rem'}}>
-                          <img 
-                            src="/images/tagliando.jpg" 
-                            alt="Tagliando Auto" 
-                            className="rounded shadow-lg" 
-                            style={{
-                              maxWidth: '600px',
-                              width: '100%',
-                              height: 'auto',
-                              objectFit: 'cover',
-                              border: '4px solid var(--primary-red)',
-                              background: '#fff',
-                              padding: '8px',
-                              marginBottom: '32px',
-                              marginTop: '8px'
-                            }} 
-                          />
-                          <div className="text-justify w-100">
-                            <p>{service.text}</p>
-                          </div>
-                        </div>
+                      {service.image ? (
+                        <ImageWithText src={service.image} alt={service.alt} text={service.text} maxWidth={service.imageWidth} />
                       ) : (
                         service.text && (
                           <div className="mt-4 text-justify">
@@ -227,8 +210,9 @@ const Preparazioni = () => {
                           </div>
                         )
                       )}
+                      
                       { service.id === 'auto-elettriche' && (
-                        <div className="mt-3">
+                        <div className="d-flex justify-content-center">
                             <Button 
                                 as={Link} 
                                 to="/team#certificazioni-qualifiche"

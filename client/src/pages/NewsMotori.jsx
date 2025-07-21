@@ -24,7 +24,7 @@ const NewsMotori = () => {
   const newsArticles = [
     {
       id: 1,
-      title: 'AutoStar Racing vince il Campionato Italiano Velocità in Salita',
+      title: 'Autostar Motorsport vince il Campionato Italiano Velocità in Salita',
       excerpt: 'Grande successo per il nostro team: prima vittoria assoluta nella categoria CN con il prototipo HURR.',
       category: 'motorsport',
       date: '2025-07-15',

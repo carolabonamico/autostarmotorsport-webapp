@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 const newsArticles = [
   {
     id: 1,
-    title: 'AutoStar Racing vince il Campionato Italiano Velocità in Salita',
+    title: 'Autostar Motorsport vince il Campionato Italiano Velocità in Salita',
     excerpt: 'Grande successo per il nostro team: prima vittoria assoluta nella categoria CN con il prototipo HURR.',
     category: 'motorsport',
     date: '2025-07-15',
@@ -91,7 +91,7 @@ const Home = () => {
       />
 
       {/* Ultime Notizie */}
-      <section className="section bg-light pt-2">
+      <section className="section bg-light">
         <Container>
           <Row>
             <Col className="text-center mb-5">
@@ -178,13 +178,13 @@ const Home = () => {
             </Col>
           </Row>
           <Row className="justify-content-center align-items-center">
-            <Col lg={5} md={6} className="mb-4 d-flex justify-content-center">
-              <div className="story-img-wrapper" data-aos="fade-right">
-                <img src="/public/downloads/storia.jpg" alt="AutoStar Storia" className="rounded shadow-lg" style={{maxWidth: '100%', height: '260px', objectFit: 'cover', border: '4px solid var(--primary-red)'}} />
+            <Col lg={5} md={6} className="mb-4 d-flex align-items-stretch">
+              <div className="story-img-wrapper d-flex align-items-center h-100" data-aos="fade-right" style={{height: '100%'}}>
+                <img src="/public/images/a112.jpg" alt="a112" className="rounded shadow-lg w-100" style={{height: '100%', minHeight: '260px', objectFit: 'cover', border: '4px solid var(--primary-red)'}} />
               </div>
             </Col>
-            <Col lg={7} md={12}>
-              <div data-aos="fade-left" className="story-content p-4 rounded shadow-lg bg-white">
+            <Col lg={7} md={12} className="d-flex align-items-stretch">
+              <div data-aos="fade-left" className="story-content p-4 rounded shadow-lg bg-white d-flex flex-column justify-content-center w-100" style={{height: '100%'}}>
                 <p className="lead mb-3 text-dark" style={{fontWeight: 500, fontSize: '1.25rem'}}>
                   Oltre 60 anni di <span className="text-accent">passione</span>, <span className="text-accent">innovazione</span> e <span className="text-accent">successi</span> nel mondo automotive.
                 </p>
@@ -198,8 +198,8 @@ const Home = () => {
                   as={Link}
                   to="/storia"
                   variant="custom-primary"
-                  className="fw-semibold px-4 py-2 mt-2"
-                  style={{fontSize: '1.08rem', letterSpacing: '0.01em'}}
+                  className="fw-semibold px-4 py-2 mt-2 mx-auto d-block"
+                  style={{fontSize: '1.08rem', letterSpacing: '0.01em', maxWidth: '260px'}}
                 >
                   Scopri la nostra storia
                 </Button>

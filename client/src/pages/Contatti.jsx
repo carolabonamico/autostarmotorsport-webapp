@@ -20,8 +20,8 @@ const Contatti = () => {
         subtitle="Siamo qui per te, sempre pronti ad aiutarti"
       />
 
-      {/* Contact Info Social Style */}
-      <section className="section bg-light">
+      {/* Contact info */}
+      <section className="section bg-light" id='info-contatti'>
         <Container>
           <Row>
             <Col className="mb-5">
