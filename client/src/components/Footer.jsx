@@ -8,11 +8,19 @@ const Footer = () => {
         <Row className="justify-content-between align-items-start">
           <Col lg={4} md={6} className="mb-4">
             <div className="footer-brand">
-              <h4 className="brand-title mb-3">
-                <i className="bi bi-gear-fill me-2"></i>
-                Autostar Motorsport
-              </h4>
-              <p className="brand-description mb-4">
+              <img 
+                src="/images/logo.png"
+                alt="Autostar Motorsport Logo"
+                className="navbar-logo"
+                style={{ width: '45px', height: '45px', marginRight: '10px' }}
+              />
+              <img 
+                src="/images/logo-text.png"
+                alt="Autostar Motorsport"
+                className="navbar-logo-text"
+                style={{ height: '40px' }}
+              />
+              <p className="brand-description mb-4 mt-4">
                 Passione, precisione e performance.<br />
                 La tua officina di fiducia dal 1985.
               </p>
@@ -33,7 +41,7 @@ const Footer = () => {
             </div>
           </Col>
           
-          <Col lg={2} md={3} sm={6} className="mb-4">
+          <Col lg={2} md={3} sm={6}>
             <div className="footer-section">
               <h6 className="section-title">Servizi</h6>
               <ul className="footer-links">
@@ -43,7 +51,7 @@ const Footer = () => {
             </div>
           </Col>
           
-          <Col lg={2} md={3} sm={6} className="mb-4">
+          <Col lg={2} md={3} sm={6}>
             <div className="footer-section">
               <h6 className="section-title">Azienda</h6>
               <ul className="footer-links">

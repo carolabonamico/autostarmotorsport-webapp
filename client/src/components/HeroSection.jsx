@@ -2,7 +2,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const HeroSection = ({ 
   title, 
-  subtitle, 
+  subtitle,
+  images = [],
   highlight,
   backgroundClass = 'hero-professional',
   children
@@ -21,9 +22,26 @@ const HeroSection = ({
         <Row className="justify-content-center align-items-center min-vh-100">
           <Col lg={8} className="text-center">
             <div className="hero-content">
-              <h1 className="hero-title">
-                {title} {highlight && <span className="text-accent">{highlight}</span>}
-              </h1>
+              
+              {images.length > 0 && (
+                <div className="mb-4 d-flex flex-column align-items-center gap-3">
+                  {images.map((image, index) => (
+                    <img 
+                      key={index}
+                      src={image}
+                      className="img-fluid"
+                      style={{ maxWidth: '100%', height: 'auto' }}
+                    />
+                  ))}
+                </div>
+              )}
+
+              {(title || highlight) && (
+                <h1 className="hero-title">
+                  {title} {highlight && <span className="text-accent">{highlight}</span>}
+                </h1>
+              )}
+
               {subtitle && <p className="hero-subtitle">{subtitle}</p>}
               
               {children && (

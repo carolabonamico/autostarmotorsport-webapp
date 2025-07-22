@@ -1,3 +1,6 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* Override Bootstrap blue with custom yellow */
 :root {
   --bs-primary: #e6b800; /* giallo caldo, non troppo chiaro */
@@ -165,8 +168,6 @@
     width: 45px;
   }
 }
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* Variabili CSS per la palette di colori professionale */
 :root {
@@ -598,7 +599,7 @@ html {
 }
 
 .footer-bottom {
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding: 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.3);
@@ -630,7 +631,7 @@ html {
 
 @media (max-width: 768px) {
   .footer-minimal {
-    padding: 40px 0 0;
+    padding: 2rem 0 0;
   }
   .footer-legal {
     justify-content: center;

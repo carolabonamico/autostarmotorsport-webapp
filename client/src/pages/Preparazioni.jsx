@@ -131,7 +131,6 @@ const Preparazioni = () => {
       <HeroSection 
         title="Le nostre"
         highlight="preparazioni"
-        subtitle="Servizi automotive di eccellenza per ogni esigenza"
       >
         <div className="mt-5">
           <h3 className="text-white mb-4">

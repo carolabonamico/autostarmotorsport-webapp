@@ -37,9 +37,18 @@ const CustomNavbar = () => {
       >
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-            <i className="bi bi-gear-fill me-2 text-accent"></i>
-            <span className="text-primary">Autostar</span>
-            <span className="text-white">Motorsport</span>
+            <img 
+              src="/images/logo.png"
+              alt="Autostar Motorsport Logo"
+              className="navbar-logo"
+              style={{ width: '45px', height: '45px', marginRight: '10px' }}
+            />
+            <img 
+              src="/images/logo-text.png"
+              alt="Autostar Motorsport"
+              className="navbar-logo-text"
+              style={{ height: '40px' }}
+            />
           </Navbar.Brand>
           
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

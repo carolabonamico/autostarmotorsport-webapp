@@ -84,9 +84,8 @@ const Home = () => {
 
   return (
     <>
-      <HeroSection 
-        title="Autostar"
-        highlight="Motorsport"
+      <HeroSection
+        images={['/images/logo.png', '/images/logo-text.png']}
         subtitle="Passione, Precisione e Performance - La tua officina di fiducia per servizi di meccanica d'eccellenza e assistenza tecnica professionale in pista."
       />
 
