@@ -23,6 +23,7 @@ const CustomNavbar = () => {
     { path: '/preparazioni', label: 'Preparazioni' },
     { path: '/noleggio', label: 'Noleggio & Vendita' },
     { path: '/hurr', label: 'HURR Prototipo' },
+    { path: '/motorsport', label: 'Motorsport' },
     { path: '/news', label: 'News Motori' },
     { path: '/contatti', label: 'Contatti' }
   ];

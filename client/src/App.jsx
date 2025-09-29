@@ -10,13 +10,14 @@ import Team from "./pages/Team";
 import Preparazioni from "./pages/Preparazioni";
 import Noleggio from "./pages/Noleggio";
 import HurrPrototipo from "./pages/HurrPrototipo";
+import Motorsport from "./pages/Motorsport";
 import NewsMotori from "./pages/NewsMotori";
 import Contatti from "./pages/Contatti";
 import useAutoScroll from "./hooks/useAutoScroll";
 import "./styles/main.css";
 
 function App() {
-  useAutoScroll(); // Hook per lo scroll automatico
+  useAutoScroll();
 
   return (
     <div className="App">
@@ -29,6 +30,7 @@ function App() {
           <Route path="/preparazioni" element={<Preparazioni />} />
           <Route path="/noleggio" element={<Noleggio />} />
           <Route path="/hurr" element={<HurrPrototipo />} />
+          <Route path="/motorsport" element={<Motorsport />} />
           <Route path="/news" element={<NewsMotori />} />
           <Route path="/contatti" element={<Contatti />} />
         </Routes>
