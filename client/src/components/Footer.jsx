@@ -20,11 +20,11 @@ const Footer = () => {
                 className="navbar-logo-text"
                 style={{ height: '40px' }}
               />
-              <p className="brand-description mb-4 mt-4">
+              {/* <p className="brand-description mb-4 mt-4">
                 Passione, precisione e performance.<br />
                 La tua officina di fiducia dal 1985.
-              </p>
-              <div className="social-links">
+              </p> */}
+              <div className="social-links mb-4 mt-4">
                 <a href="#" className="social-link" aria-label="Facebook">
                   <i className="bi bi-facebook"></i>
                 </a>
@@ -46,7 +46,7 @@ const Footer = () => {
               <h6 className="section-title">Servizi</h6>
               <ul className="footer-links">
                 <li><Link to="/preparazioni">Preparazioni</Link></li>
-                <li><Link to="/noleggio">Noleggio & Vendita</Link></li>
+                <li><Link to="/motorsport">Motorsport</Link></li>
               </ul>
             </div>
           </Col>
@@ -57,8 +57,6 @@ const Footer = () => {
               <ul className="footer-links">
                 <li><Link to="/storia">La Nostra Storia</Link></li>
                 <li><Link to="/team">Il Team</Link></li>
-                <li><Link to="/preparazioni">Preparazioni</Link></li>
-                <li><Link to="/hurr">HURR Prototipo</Link></li>
                 <li><Link to="/news">News Motori</Link></li>
                 <li><Link to="/contatti">Contatti</Link></li>
               </ul>

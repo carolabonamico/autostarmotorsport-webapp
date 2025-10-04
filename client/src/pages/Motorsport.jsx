@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import HeroSection from '../components/HeroSection';
+import { Carousel } from 'react-bootstrap';
 import AOS from 'aos';
 
 const Motorsport = () => {
@@ -69,39 +69,82 @@ const Motorsport = () => {
   ];
 
   return (
-    <div>
-      <HeroSection 
-        highlight="Ligier"
-        title="JSP320 LMP3"
-        subtitle=""
-      />
+    <>
 
-      {/* Full-width Image Section
-      <section className="full-width-image-section">
-        <div className="full-width-image-container">
-          <img 
-            src="/images/ligier.png" 
-            alt="Ligier JSP320 LMP3" 
-            className="full-width-image"
-            data-aos="fade-in"
+      {/* Carousel hero */}
+      <Carousel fade>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/ligier/ligier2.jpg"
+            alt="Ligier JSP320 LMP3"
+            style={{height: '520px', objectFit: 'cover'}}
           />
-        </div>
-      </section> */}
+          <Carousel.Caption>
+            <small className="bg-dark bg-opacity-75 px-2 py-1 rounded">Fonte: ligierautomotive.com</small>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-      <section className="section bg-light">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={10} md={12}>
-              <img 
-                src="/images/ligier.png" 
-                alt="Ligier JSP320 LMP3" 
-                data-aos="fade-in"
-                style={{width: '100%', maxHeight: '400px', objectFit: 'contain'}}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </section>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/ligier/ligier1.jpg"
+            alt="Ligier JSP320 LMP3"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+          <Carousel.Caption>
+            <small className="bg-dark bg-opacity-75 px-2 py-1 rounded">Fonte: ligierautomotive.com</small>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/ligier/ligier3.jpg"
+            alt="Ligier JSP320 LMP3"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+          <Carousel.Caption>
+            <small className="bg-dark bg-opacity-75 px-2 py-1 rounded">Fonte: ligierautomotive.com</small>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/ligier/ligier4.jpg"
+            alt="Ligier JSP320 LMP3"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+          <Carousel.Caption>
+            <small className="bg-dark bg-opacity-75 px-2 py-1 rounded">Fonte: ligierautomotive.com</small>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/ligier/ligier5.jpg"
+            alt="Ligier JSP320 LMP3"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+          <Carousel.Caption>
+            <small className="bg-dark bg-opacity-75 px-2 py-1 rounded">Fonte: ligierautomotive.com</small>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/ligier/ligier6.jpg"
+            alt="Ligier JSP320 LMP3"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+          <Carousel.Caption>
+            <small className="bg-dark bg-opacity-75 px-2 py-1 rounded">Fonte: ligierautomotive.com</small>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
 
       {/* Specs Section */}
       <section className="section bg-light">
@@ -151,7 +194,7 @@ const Motorsport = () => {
       </section>
 
       {/* Horizontal Gallery Section */}
-      <section className="section" style={{padding: '60px 0'}}>
+      <section className="section bg-light" style={{padding: '60px 0'}}>
         <Container>
           <Row className="justify-content-center">
             <Col lg={12}>
@@ -192,41 +235,6 @@ const Motorsport = () => {
                   />
                 </div>
                 
-                {/* Image 3 */}
-                <div 
-                  className="gallery-item"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <img 
-                    src="/images/IMG_6293.jpg" 
-                    alt="Autostar Motorsport" 
-                    className="img-fluid shadow"
-                    style={{
-                      width: 'auto', 
-                      maxWidth: '280px',
-                      height: 'auto'
-                    }}
-                  />
-                </div>
-                
-                {/* Image 4 */}
-                <div 
-                  className="gallery-item"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <img 
-                    src="/images/IMG_6312.jpg" 
-                    alt="Autostar Motorsport" 
-                    className="img-fluid shadow"
-                    style={{
-                      width: 'auto', 
-                      maxWidth: '280px',
-                      height: 'auto'
-                    }}
-                  />
-                </div>
               </div>
             </Col>
           </Row>
@@ -263,7 +271,7 @@ const Motorsport = () => {
         </Container>
       </section>
 
-    </div>
+    </>
   );
 };
 

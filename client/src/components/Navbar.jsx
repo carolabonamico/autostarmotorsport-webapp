@@ -21,8 +21,8 @@ const CustomNavbar = () => {
     { path: '/storia', label: 'La Storia' },
     { path: '/team', label: 'Il Team' },
     { path: '/preparazioni', label: 'Preparazioni' },
-    { path: '/noleggio', label: 'Noleggio & Vendita' },
-    { path: '/hurr', label: 'HURR Prototipo' },
+    // { path: '/noleggio', label: 'Noleggio & Vendita' },
+    // { path: '/hurr', label: 'HURR Prototipo' },
     { path: '/motorsport', label: 'Motorsport' },
     { path: '/news', label: 'News Motori' },
     { path: '/contatti', label: 'Contatti' }

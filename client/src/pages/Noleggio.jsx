@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
-import HeroSection from '../components/HeroSection';
 import AOS from 'aos';
 
 const Noleggio = () => {
@@ -120,11 +119,6 @@ const Noleggio = () => {
 
   return (
     <>
-      <HeroSection 
-        title="Noleggio &"
-        highlight="vendita"
-        subtitle="Veicoli da competizione pronti per la pista"
-      />
 
       {/* Tabs Section */}
       <section className="section">

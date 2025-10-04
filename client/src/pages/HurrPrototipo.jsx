@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import { Container, Row, Col, Card, Button, ProgressBar } from 'react-bootstrap';
-import HeroSection from '../components/HeroSection';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import AOS from 'aos';
 
 const HurrPrototipo = () => {
@@ -56,12 +55,7 @@ const HurrPrototipo = () => {
   ];
 
   return (
-    <div>
-      <HeroSection 
-        highlight="HURR"
-        title="Prototipo"
-        subtitle="L'apice dell'innovazione Autostar Motorsport - 20 anni di esperienza motorsport condensati in una macchina da corsa all'avanguardia."
-      />
+    <>
 
       {/* Specs Section */}
       <section className="section">
@@ -171,7 +165,7 @@ const HurrPrototipo = () => {
         </Container>
       </section>
 
-    </div>
+    </>
   );
 };
 

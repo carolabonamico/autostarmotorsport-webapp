@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import HeroSection from '../components/HeroSection';
 import AOS from 'aos';
 import TeamCard from '../components/Team section/TeamCard';
 import CertCard from '../components/Team section/CertCard';
@@ -31,15 +30,10 @@ const Team = () => {
   ];
 
   return (
-    <div>
-      <HeroSection 
-        title="Il nostro"
-        highlight="team"
-        subtitle="Professionisti appassionati al servizio dell'eccellenza"
-      />
+    <>
 
       {/* Team Introduction */}
-      <section className="section">
+      <section className="section bg-light">
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center">
@@ -103,7 +97,7 @@ const Team = () => {
       </section>
 
       {/* Certifications */}
-      <section className="section" id="certificazioni-qualifiche">
+      <section className="section bg-light" id="certificazioni-qualifiche">
         <Container>
           <Row>
             <Col>
@@ -125,7 +119,7 @@ const Team = () => {
           </Row>
         </Container>
       </section>
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import HeroSection from '../components/HeroSection';
 import ImageWithText from '../components/Preparazioni/ImageWithText';
 import AOS from 'aos';
 
@@ -127,32 +126,7 @@ const Preparazioni = () => {
   ];
 
   return (
-    <div>
-      <HeroSection 
-        title="Le nostre"
-        highlight="preparazioni"
-      >
-        <div className="mt-5">
-          <h3 className="text-white mb-4">
-            Hai Bisogno di Assistenza?
-          </h3>
-          <p className="lead mb-4 text-white-75">
-            Contattaci per una consulenza gratuita o per prenotare 
-            un appuntamento nel nostro centro specializzato.
-          </p>
-          <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <Button 
-              as={Link} 
-              to="/contatti#info-contatti" 
-              variant="outline-light"
-              size="lg"
-              className="px-4"
-            >
-              Prenota Appuntamento
-            </Button>
-          </div>
-        </div>
-      </HeroSection>
+    <>
 
       {/* Services Grid */}
       <section className="section" id="nostri-servizi">
@@ -234,7 +208,7 @@ const Preparazioni = () => {
           </Row>
         </Container>
       </section>
-    </div>
+    </>
   );
 };
 

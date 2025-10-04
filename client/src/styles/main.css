@@ -3,43 +3,47 @@
 
 /* Override Bootstrap blue with custom yellow */
 :root {
-  --bs-primary: #e6b800; /* giallo caldo, non troppo chiaro */
-  --bs-link-color: #e6b800;
-  --bs-btn-primary-bg: #e6b800;
-  --bs-btn-primary-border-color: #e6b800;
-  --bs-btn-primary-hover-bg: #c9a000;
-  --bs-btn-primary-hover-border-color: #c9a000;
-  --bs-btn-primary-active-bg: #b38f00;
-  --bs-btn-primary-active-border-color: #b38f00;
+  --bs-primary: #e6b800;
+  --navbar-height: 72px; /* altezza navbar usata per offset del contenuto */
 }
 
 .text-primary {
-  color: #e6b800 !important;
+  color: var(--bs-primary) !important;
+}
+
+/* Ensure main content starts below the fixed navbar */
+main {
+  padding-top: var(--navbar-height);
+}
+
+/* Reduce overlap risk for direct .section blocks when navbar is fixed */
+.section {
+  padding-top: calc(1rem + var(--navbar-height));
 }
 
 .bg-primary {
-  background-color: #e6b800 !important;
+  background-color: var(--bs-primary) !important;
 }
 
 .btn-primary {
-  background-color: #e6b800 !important;
-  border-color: #e6b800 !important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
   color: #222 !important;
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #c9a000 !important;
-  border-color: #c9a000 !important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
   color: #222 !important;
 }
 
 .btn-outline-primary {
-  color: #e6b800 !important;
-  border-color: #e6b800 !important;
+  color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
 }
 
 .btn-outline-primary:hover, .btn-outline-primary:focus {
-  background-color: #e6b800 !important;
+  background-color: var(--bs-primary) !important;
   color: #222 !important;
 }
 /* Footer legal links */
@@ -189,11 +193,12 @@
   box-sizing: border-box;
 }
 
-body {
+
+html, body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.6;
   color: var(--racing-black);
-  background: var(--white);
+  background: #000;
   overflow-x: hidden;
   font-weight: 400;
 }
@@ -440,6 +445,11 @@ html {
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
+/* Service card title red on hover */
+.team-card:hover h5 {
+  color: var(--primary-red) !important;
+}
+
 /* Navbar personalizzata - Nera */
 .navbar-custom {
   background: var(--racing-black) !important;
@@ -499,9 +509,9 @@ html {
 
 /* Footer Minimal */
 .footer-minimal {
-  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  background: #000;
   color: #e5e7eb;
-  padding: 60px 0 0;
+  padding: 24px 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -599,10 +609,10 @@ html {
 }
 
 .footer-bottom {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   padding: 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.3);
+  background: #000;
 }
 
 .copyright {
@@ -631,7 +641,7 @@ html {
 
 @media (max-width: 768px) {
   .footer-minimal {
-    padding: 2rem 0 0;
+    padding: 1rem 0 0;
   }
   .footer-legal {
     justify-content: center;

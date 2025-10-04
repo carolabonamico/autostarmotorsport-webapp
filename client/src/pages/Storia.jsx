@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import HeroSection from '../components/HeroSection';
 import AOS from 'aos';
 
 
@@ -44,29 +43,30 @@ const Storia = () => {
   ];
 
   return (
-    <div>
-      <HeroSection 
-        title="La nostra"
-        highlight="storia"
-        subtitle="Dalle origini negli anni '60 alle sfide di oggi: passione, innovazione e successi."
-      />
+    <>
+      
       {/* Story Content */}
-      <section className="section" id="radici">
+      <section className="section bg-light" id="radici">
         <Container>
-          <Row>
-            <Col lg={8} className="mx-auto">
-              <div data-aos="fade-up">
-                <h2 className="section-title">Le Radici di una Passione</h2>
-                <p className="lead text-center mb-4">
-                  Pietro Bonamico, padre di Davide e Walter, è una figura storica del motorsport italiano. L’inizio della sua attività di preparatore risale alla prima metà degli anni ’60, con vetture iconiche come Fiat 600, 850, Lancia Fulvia, Alfa Romeo Giulietta e Giulia.
-                </p>
-                <p className="text-justify">
-                  Nella sede Autostar sono ancora presenti numerosi pezzi di preparazione di quell’epoca, memoria viva di una tradizione che si è saputa evolvere nel tempo. La passione per l’innovazione non ha mai oscurato il rispetto per la storia: collezionisti e appassionati trovano qui un vero e proprio museo dell’automobilismo.
-                </p>
-                <p className="text-justify">
-                  Cura, esperienza, meticolosità e passione, unite ad attrezzature di primo ordine, hanno permesso ad Autostar di offrire sempre mezzi al top. La gran parte dei componenti viene lavorata o costruita direttamente dai Bonamico, sia per il motore che per la parte elettronica e la scocca. L’officina dispone di sala prova motori e grill, una struttura mobile che consente di lavorare ogni vettura nella posizione più utile.
-                </p>
+          <Row className="d-flex align-items-center" style={{minHeight: '380px'}}>
+            <Col lg={7} className="mx-auto order-2 order-lg-1 d-flex flex-column" style={{height: '100%'}}>
+              <h2 className="section-title">Le Radici di una Passione</h2>
+              <div className="d-flex flex-column justify-content-center" style={{height: '100%'}} data-aos="fade-up">
+                <div className="d-flex flex-column justify-content-center" style={{height: '100%'}}>
+                  <p className="lead text-center mb-4">
+                    Pietro Bonamico, padre di Davide e Walter, è una figura storica del motorsport italiano. L’inizio della sua attività di preparatore risale alla prima metà degli anni ’60, con vetture iconiche come Fiat 600, 850, Lancia Fulvia, Alfa Romeo Giulietta e Giulia.
+                  </p>
+                  <p className="text-justify">
+                    Nella sede Autostar sono ancora presenti numerosi pezzi di preparazione di quell’epoca, memoria viva di una tradizione che si è saputa evolvere nel tempo. La passione per l’innovazione non ha mai oscurato il rispetto per la storia: collezionisti e appassionati trovano qui un vero e proprio museo dell’automobilismo.
+                  </p>
+                  <p className="text-justify">
+                    Cura, esperienza, meticolosità e passione, unite ad attrezzature di primo ordine, hanno permesso ad Autostar di offrire sempre mezzi al top. La gran parte dei componenti viene lavorata o costruita direttamente dai Bonamico, sia per il motore che per la parte elettronica e la scocca. L’officina dispone di sala prova motori e grill, una struttura mobile che consente di lavorare ogni vettura nella posizione più utile.
+                  </p>
+                </div>
               </div>
+            </Col>
+            <Col lg={5} className="mb-4 mb-lg-0 order-1 order-lg-2" data-aos="fade-left">
+              <img src="/images/a112.jpg" alt="A112" className="img-fluid rounded shadow" style={{maxHeight: '340px', objectFit: 'cover'}} />
             </Col>
           </Row>
         </Container>
@@ -119,41 +119,19 @@ const Storia = () => {
         </Container>
       </section>
 
-      {/* Successi Recenti e Telemetria */}
-      <section className="section position-relative pt-2">
+      <section className="section bg-light position-relative pt-2">
         <Container>
           <Row>
             <Col lg={10} className="mx-auto">
                 <p className="lead text-center mb-4 fade-up" data-aos="fade-up" data-aos-delay="200">
                   L’impegno di Autostar è quello di coniugare la tradizione artigianale con l’innovazione tecnologica, mantenendo sempre al centro la passione per il motorsport e la cura per ogni dettaglio. La storia continua, guidata dalla stessa energia degli inizi.
                 </p>
-                <div className="telemetry-section bg-dark fade-up text-white rounded-4 p-5 mt-5" data-aos="fade-up" data-aos-delay="500">
-                    <Row className="align-items-center">
-                    <Col lg={8}>
-                        <h3 className="text-white mb-3">
-                        <i className="bi bi-graph-up me-2 text-primary"></i>
-                        Telemetria e Innovazione
-                        </h3>
-                        <p className="mb-0 lh-lg">
-                        L'intensificarsi dell'uso della telemetria e telematica per l'analisi dei risultati di gara, 
-                        unito al desiderio di crescita professionale della scuderia di Pecetto, porta a risultati 
-                        sportivi sempre più lusinghieri. La tecnologia al servizio della passione.
-                        </p>
-                    </Col>
-                    <Col lg={4} className="text-center">
-                        <div className="tech-icon-wrapper bg-primary bg-opacity-20 rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
-                        <i className="bi bi-cpu-fill text-primary display-4"></i>
-                        </div>
-                        <p className="text-white-50 small mb-0">Campionato TCR 2018</p>
-                    </Col>
-                    </Row>
-                </div>
             </Col>
           </Row>
         </Container>
       </section>
 
-    </div>
+    </>
   );
 };
 

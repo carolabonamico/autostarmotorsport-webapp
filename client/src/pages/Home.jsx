@@ -1,11 +1,9 @@
-import { useEffect, useRef } from 'react';
-import { Container, Row, Col, Button, Card, Badge } from 'react-bootstrap';
+import { useEffect, useRef, useState } from 'react';
+import { Container, Row, Col, Button, Card, Badge, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import HeroSection from '../components/HeroSection';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Ultime notizie (puoi importare da NewsMotori se vuoi centralizzare)
 const newsArticles = [
   {
     id: 1,
@@ -23,15 +21,19 @@ const newsArticles = [
     date: '2025-07-10',
     image: '/api/placeholder/400/250',
   },
-  // ...altre notizie
+
 ];
 
 const Home = () => {
+  const [showNewsButton, setShowNewsButton] = useState(false);
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
     });
+
+    const timer = setTimeout(() => setShowNewsButton(true), 1200);
+    return () => clearTimeout(timer);
   }, []);
 
   const services = [
@@ -84,10 +86,44 @@ const Home = () => {
 
   return (
     <>
-      <HeroSection
-        images={['/images/logo.png', '/images/logo-text.png']}
-        subtitle="Passione, Precisione e Performance - La tua officina di fiducia per servizi di meccanica d'eccellenza e assistenza tecnica professionale in pista."
-      />
+      {/* Carousel hero */}
+      <Carousel fade>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/home/308tcr.jpg"
+            alt="Peugeot 308 TCR"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/home/2017-adria-box-g1.jpg"
+            alt="Adria Box G1 - 2017"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/home/2017-misano-03.jpg"
+            alt="Peugeot 308"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+        </Carousel.Item>
+        
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/home/Imola_CITE_2014_curva_rivazza.jpg"
+            alt="Imola CITE 2014 - Curva Rivazza"
+            style={{height: '520px', objectFit: 'cover'}}
+          />
+        </Carousel.Item>
+      </Carousel>
 
       {/* Ultime Notizie */}
       <section className="section bg-light">
@@ -118,13 +154,15 @@ const Home = () => {
               </Col>
             ))}
           </Row>
-          <Row>
-            <Col className="text-center">
-              <Button as={Link} to="/news" variant="custom-primary" className="fw-semibold px-4 py-2 mt-2">
-                Vai alla pagina News Motori
-              </Button>
-            </Col>
-          </Row>
+          {showNewsButton && (
+            <Row>
+              <Col className="text-center">
+                <Button as={Link} to="/news" variant="custom-primary" className="fw-semibold px-4 py-2 mt-2" data-aos="fade-up" data-aos-delay="200">
+                  Vai alla pagina News Motori
+                </Button>
+              </Col>
+            </Row>
+          )}
         </Container>
       </section>
 
@@ -162,48 +200,6 @@ const Home = () => {
                 </Card>
               </Col>
             ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* Storia come sezione semplice */}
-      <section className="section bg-light text-black pt-2" ref={storiaRef}>
-        <Container>
-          <Row>
-            <Col className="text-center mb-5">
-              <h2 className="section-title" data-aos="fade-up">
-                La Nostra <span className="text-accent">Storia</span>
-              </h2>
-            </Col>
-          </Row>
-          <Row className="justify-content-center align-items-center">
-            <Col lg={5} md={6} className="mb-4 d-flex align-items-stretch">
-              <div className="story-img-wrapper d-flex align-items-center h-100" data-aos="fade-right" style={{height: '100%'}}>
-                <img src="/public/images/a112.jpg" alt="a112" className="rounded shadow-lg w-100" style={{height: '100%', minHeight: '260px', objectFit: 'cover', border: '4px solid var(--primary-red)'}} />
-              </div>
-            </Col>
-            <Col lg={7} md={12} className="d-flex align-items-stretch">
-              <div data-aos="fade-left" className="story-content p-4 rounded shadow-lg bg-white d-flex flex-column justify-content-center w-100" style={{height: '100%'}}>
-                <p className="lead mb-3 text-dark" style={{fontWeight: 500, fontSize: '1.25rem'}}>
-                  Oltre 60 anni di <span className="text-accent">passione</span>, <span className="text-accent">innovazione</span> e <span className="text-accent">successi</span> nel mondo automotive.
-                </p>
-                <p className="mb-4 text-muted text-justify" style={{fontSize: '1.08rem'}}>
-                  Dall'assistenza tecnica in pista alla cura quotidiana dei veicoli, la nostra esperienza nel motorsport ci permette di offrire competenze uniche e servizi d'eccellenza.<br />
-                  La nostra esperienza nel motorsport ci ha permesso di sviluppare 
-                  competenze uniche che applichiamo anche alla manutenzione quotidiana 
-                  dei veicoli dei nostri clienti.
-                </p>
-                <Button 
-                  as={Link}
-                  to="/storia"
-                  variant="custom-primary"
-                  className="fw-semibold px-4 py-2 mt-2 mx-auto d-block"
-                  style={{fontSize: '1.08rem', letterSpacing: '0.01em', maxWidth: '260px'}}
-                >
-                  Scopri la nostra storia
-                </Button>
-              </div>
-            </Col>
           </Row>
         </Container>
       </section>
