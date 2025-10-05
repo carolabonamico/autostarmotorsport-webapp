@@ -149,14 +149,14 @@ const Motorsport = () => {
       </Carousel>
 
       {/* Lead Ligier Assistance Section */}
-      <section className="section bg-white">
+      <section className="section bg-light">
         <Container>
           <Row>
             <Col md={10} className="mx-auto">
-              <div className="lead text-center mb-4" data-aos="fade-up">
+              <p className="lead text-center" data-aos="fade-up">
                 <strong>Dall'estate 2025, Autostar Motorsport offre assistenza tecnica dedicata alla Ligier JSP320 LMP3 di un cliente.</strong><br />
                 Preparazione, setup, telemetria e supporto in pista: un servizio completo per le competizioni endurance e prototipi.
-              </div>
+              </p>
             </Col>
           </Row>
         </Container>
