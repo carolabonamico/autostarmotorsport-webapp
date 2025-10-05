@@ -65,7 +65,7 @@ const NewsMotori = () => {
                   .filter(article => article.featured)
                   .slice(0, 1)
                   .map((article) => (
-                    <NewsCard key={article.id} article={article} />
+                    <NewsCard key={article.date + article.title} article={article} />
                   ))}
               </Col>
             </Row>
@@ -76,7 +76,7 @@ const NewsMotori = () => {
             {filteredNews
               .filter(article => selectedCategory !== 'all' || !article.featured)
               .map((article, index) => (
-                <Col lg={4} md={6} className="mb-4" key={article.id}>
+                <Col lg={4} md={6} className="mb-4" key={article.date + article.title}>
                   <NewsCard article={article} delay={index * 100} compact />
                 </Col>
               ))}

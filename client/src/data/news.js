@@ -1,6 +1,13 @@
 export const newsArticles = [
   {
-    id: 1,
+    title: 'Da questa estate: assistenza Ligier JSP320 LMP3',
+    excerpt: 'Autostar Motorsport offre assistenza tecnica dedicata alla Ligier JSP320 LMP3 di un cliente, ampliando i servizi motorsport dal 2025.',
+    category: 'motorsport',
+    date: '2025-07-01',
+    image: '/images/ligier/ligier1.jpg',
+    content: `Da questa estate Autostar Motorsport offre assistenza tecnica e supporto in pista per la Ligier JSP320 LMP3 di un cliente. Il servizio include preparazione, setup, telemetria e gestione eventi, rafforzando la nostra presenza nel mondo delle competizioni endurance e prototipi. Per maggiori dettagli visita la sezione dedicata nella pagina Motorsport.`
+  },
+  {
     title: 'Monza - TCR Italy Touring 2017',
     excerpt: '',
     category: 'motorsport',
@@ -15,7 +22,6 @@ export const newsArticles = [
     `
   },
   {
-    id: 2,
     title: 'Nuova Certificazione per Veicoli Elettrici',
     excerpt: 'Completata la formazione avanzata per la manutenzione di veicoli elettrici ad alta tensione.',
     category: 'tecnologia',
@@ -24,7 +30,6 @@ export const newsArticles = [
     content: `La crescente diffusione di veicoli elettrici e ibridi impone competenze tecniche sempre più avanzate. Autostar Motorsport ha completato un nuovo ciclo di certificazioni ad alta tensione (PES/PAV/PEI).\n\nQuesto ci consente di operare in totale sicurezza su sistemi HV, batterie, inverter e componentistica elettronica di potenza.`
   },
   {
-    id: 3,
     title: 'Imola - TCR Italy Touring 2017',
     excerpt: '',
     category: 'motorsport',
@@ -38,7 +43,6 @@ export const newsArticles = [
     `
   },
   {
-    id: 4,
     title: 'Mugello - TCR Italy Touring 2017',
     excerpt: '',
     category: 'motorsport',
@@ -55,7 +59,6 @@ export const newsArticles = [
     `
   },
   {
-    id: 5,
     title: 'Misano - secondo appuntamento TCR Italy Touring 2017',
     excerpt: '',
     category: 'motorsport',
@@ -70,7 +73,6 @@ export const newsArticles = [
     Update Giornata 3: meglio di così non sarebbe potuta terminare la tregiorni. In classe TCT salgono ancora una volta tutti e tre sul podio i piloti Peugeot, questa volta nell'ordine R.Ricci, M.Arduini, A.Brambilla per le posizioni assolute di 9°, 10° e 11°.`
   },
   {
-    id: 6,
     title: 'Adria - debutta il TCR Italy Touring 2017',
     excerpt: '',
     category: 'motorsport',

@@ -26,7 +26,7 @@ const NewsCard = ({ article, delay = 0, compact = false }) => {
         <h5 className="mt-3 mb-3">{article.title}</h5>
         {!compact && <p className="mb-3 team-description">{article.excerpt}</p>}
         {compact && <p className="mb-3 team-description">{article.excerpt}</p>}
-        <Button as={Link} to={`/news/${article.id}`} variant="outline-primary" size="sm">
+        <Button as={Link} to={`/news/${encodeURIComponent(article.date)}-${encodeURIComponent(article.title)}`} variant="outline-primary" size="sm">
           Leggi tutto
         </Button>
       </Card.Body>

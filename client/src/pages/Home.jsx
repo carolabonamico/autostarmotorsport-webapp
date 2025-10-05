@@ -127,7 +127,7 @@ const Home = () => {
           </Row>
           <Row className="justify-content-center">
             {latestArticles.map((article, idx) => (
-              <Col md={6} className="mb-4" key={article.id}>
+              <Col md={6} className="mb-4" key={article.date + article.title}>
                 <NewsCard article={article} delay={idx * 100} compact />
               </Col>
             ))}
