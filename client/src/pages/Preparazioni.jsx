@@ -160,7 +160,7 @@ const Preparazioni = () => {
                       <i className={`bi bi-${service.icon}`} style={{color:'var(--light-red)', fontSize: '2.5rem'}}></i>
                     </div>
                     <div className="flex-grow-1">
-                      <h3 className="text-black">{service.title}</h3>
+                      <h3 className="text-dark">{service.title}</h3>
                       <p className="lead mb-4 lh-lg">{service.description}</p>
                       <div className="service-features">
                         <div className="row g-3">

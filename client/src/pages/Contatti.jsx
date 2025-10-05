@@ -31,7 +31,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-geo-alt-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="text-black mb-1">Indirizzo</h6>
+                <h6 className="text-dark mb-1">Indirizzo</h6>
                 <div className="text-dark">Strada per Valenza 38</div>
                 <div className="text-medium-grey small">15040 Pecetto di Valenza (AL) Fr. Pellizzari</div>
               </div>
@@ -41,7 +41,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-telephone-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="text-black mb-1">Telefono</h6>
+                <h6 className="text-dark mb-1">Telefono</h6>
                 <a href="tel:+390131940175" className="text-dark">+39 0131 940175</a>
               </div>
             </Col>
@@ -50,7 +50,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-envelope-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="text-black mb-1">Email</h6>
+                <h6 className="text-dark mb-1">Email</h6>
                 <a href="mailto:info@autostar-motorsport.it" className="text-dark">info@autostar-motorsport.it</a>
               </div>
             </Col>
@@ -61,7 +61,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-envelope-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="text-black mb-1">PEC</h6>
+                <h6 className="text-dark mb-1">PEC</h6>
                 <a href="mailto:davidebonamico@pec.it" className="text-dark">davidebonamico@pec.it</a>
               </div>
             </Col>
@@ -70,7 +70,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-clock-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="text-black mb-1">Orari</h6>
+                <h6 className="text-dark mb-1">Orari</h6>
                 <div className="text-dark">Lun-Ven: 8:00-18:00</div>
                 <div className="text-medium-grey small">Sab: 8:00-12:00</div>
               </div>
@@ -80,7 +80,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-facebook text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="text-black mb-1">Facebook</h6>
+                <h6 className="text-dark mb-1">Facebook</h6>
                 <a href="https://www.facebook.com/autostar.motorsport" target="_blank" rel="noopener noreferrer" className="text-dark">@autostar.motorsport</a>
               </div>
             </Col>
@@ -94,7 +94,7 @@ const Contatti = () => {
           <Row className="justify-content-center">
             <Col lg={8} md={10}>
               <div className="text-center mb-4" data-aos="fade-up">
-                <h3 className="text-black mb-5">
+                <h3 className="text-dark mb-5">
                   Dove <span className="text-primary">Trovarci</span>
                 </h3>
                 <p className="lead text-center">

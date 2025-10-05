@@ -24,8 +24,8 @@ const Footer = () => {
               />
 
               <div className="social-links mb-4 mt-4">
-                <a href="#" className="social-link" aria-label="LinkedIn">
-                  <i className="bi bi-linkedin"></i>
+                <a href="https://www.facebook.com/autostar.motorsport" className="social-link" aria-label="Facebook">
+                  <i className="bi bi-facebook"></i>
                 </a>
               </div>
             </div>

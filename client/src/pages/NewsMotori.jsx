@@ -25,12 +25,11 @@ const NewsMotori = () => {
 
   // Articles imported from data/news.js
 
-  const filteredNews = selectedCategory === 'all' 
-    ? newsArticles 
-    : newsArticles.filter(article => article.category === selectedCategory);
+  const sortedArticles = [...newsArticles].sort((a,b) => new Date(b.date) - new Date(a.date));
 
-
-  // Colori categoria rimossi: badge uniforme gestito da NewsCard
+  const filteredNews = selectedCategory === 'all'
+    ? sortedArticles
+    : sortedArticles.filter(article => article.category === selectedCategory);
 
   return (
     <>

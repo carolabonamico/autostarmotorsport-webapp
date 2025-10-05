@@ -34,15 +34,15 @@ const NewsArticle = () => {
               </Badge>
               <span>{formatDate(article.date)}</span>
             </div>
-            <h1 className="mb-4" data-aos="fade-up" data-aos-delay="100">{article.title}</h1>
+            <h1 className="mb-4 text-dark" data-aos="fade-up" data-aos-delay="100">{article.title}</h1>
             <div className="mb-4 d-flex align-items-center justify-content-center position-relative" 
                  style={{minHeight:'280px', background:'linear-gradient(135deg,var(--black),var(--dark-red))', borderRadius:'12px'}} 
                  data-aos="fade-up" data-aos-delay="150">
-              <i className="bi bi-newspaper text-white" style={{fontSize:'4rem', opacity:.85}}></i>
+              <i className="bi bi-newspaper text-white" style={{fontSize:'4rem'}}></i>
             </div>
-            <div className="content" data-aos="fade-up" data-aos-delay="200" style={{whiteSpace:'pre-line', lineHeight:1.65}}>
+            <p data-aos="fade-up" data-aos-delay="200" style={{ textAlign: 'justify', whiteSpace: 'pre-line' }}>
               {article.content}
-            </div>
+            </p>
             <div className="mt-5 d-flex gap-3" data-aos="fade-up" data-aos-delay="250">
               <Button as={Link} to="/news" variant="outline-primary" className="btn-sm">Torna alle News</Button>
               <Button as={Link} to="/" variant="primary" className="btn-sm">Home</Button>

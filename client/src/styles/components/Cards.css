@@ -56,8 +56,3 @@
 .success-card { transition: all 0.3s ease; border-radius: 15px; overflow: hidden; }
 .success-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); }
 .success-card .icon-wrapper { width: 60px; height: 60px; }
-
-/* Article Detail Page (minimal) */
-.article-detail h1 { color: var(--black); }
-.article-detail .content { color: var(--black); font-size: 1.05rem; line-height: 1.65; }
-.article-detail { color: var(--light-red); font-weight: 500; }
