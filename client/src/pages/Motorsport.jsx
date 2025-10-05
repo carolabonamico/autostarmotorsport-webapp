@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
 import AOS from 'aos';
+import '../styles/components/Sections.css';
+import '../styles/components/Cards.css';
 
 const Motorsport = () => {
   useEffect(() => {
@@ -57,7 +59,7 @@ const Motorsport = () => {
     { icon: 'tools',
       title: 'Sicurezza',
       description: 'Regole ACO 2020',
-      details: ['Pannelli laterali in Zylon', 'imbottitura del conducente', 'nuovo guscio in carbonio del sedile del conducente', 'doppio sedile in carbonio omologato', 'ventilazione dell\'abitacolo', 'Poggiatesta compatibile con Hans']
+      details: ['Pannelli laterali in Zylon', 'Imbottitura del conducente', 'Nuovo guscio in carbonio del sedile del conducente', 'Doppio sedile in carbonio omologato', 'Ventilazione dell\'abitacolo', 'Poggiatesta compatibile con Hans']
     }
   ];
 
@@ -152,7 +154,7 @@ const Motorsport = () => {
           <Row>
             <Col className="text-center mb-5">
               <h2 className="section-title" data-aos="fade-up">
-                Specifiche Tecniche <span className="text-accent"> JSP320 LMP3 Ligier</span>
+                Specifiche Tecniche <span className="text-primary"> JSP320 LMP3 Ligier</span>
               </h2>
             </Col>
           </Row>
@@ -174,13 +176,13 @@ const Motorsport = () => {
                       </div>
                       <div>
                         <h4 className="mb-2">{tech.title}</h4>
-                        <p className="text-muted mb-3">{tech.description}</p>
+                        <p className="text-medium-grey mb-3">{tech.description}</p>
                       </div>
                     </div>
                     <ul className="list-unstyled">
                       {tech.details.map((detail, idx) => (
                         <li key={idx} className="mb-2">
-                          <i className="bi bi-arrow-right text-accent me-2"></i>
+                          <i className="bi bi-arrow-right text-primary me-2"></i>
                           {detail}
                         </li>
                       ))}
@@ -247,11 +249,20 @@ const Motorsport = () => {
           <Row>
             <Col className="text-center mb-5">
               <h2 className="section-title" data-aos="fade-up">
-                Risultati <span className="text-accent"> Riconoscimenti</span>
+                Risultati <span className="text-primary"> Riconoscimenti</span>
               </h2>
             </Col>
           </Row>
+
           <Row>
+            <Col lg={10} className="mx-auto">
+              <p className="lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                Sezione in lavorazione...
+              </p>
+            </Col>
+          </Row>
+
+          {/* <Row>
             {achievements.map((achievement, index) => (
               <Col lg={3} md={6} className="mb-4" key={index}>
                 <Card 
@@ -262,12 +273,13 @@ const Motorsport = () => {
                   <Card.Body className="d-flex flex-column justify-content-center">
                     <i className={`bi bi-${achievement.icon} text-primary mb-3`} style={{fontSize: '3rem'}}></i>
                     <h5 className="mb-2">{achievement.title}</h5>
-                    <p className="text-muted mb-0">{achievement.subtitle}</p>
+                    <p className="text-medium-grey mb-0">{achievement.subtitle}</p>
                   </Card.Body>
                 </Card>
               </Col>
             ))}
-          </Row>
+          </Row> */}
+
         </Container>
       </section>
 

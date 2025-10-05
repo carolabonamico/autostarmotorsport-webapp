@@ -1,0 +1,10 @@
+/* Flat Red Button System */
+.btn-red, .btn-custom-primary { background: var(--light-red); border: 1px solid var(--light-red); color: var(--white); font-weight:600; padding: .65rem 1.4rem; border-radius: .5rem; transition: background var(--anim-fast) var(--anim-ease), transform var(--anim-fast) var(--anim-ease), box-shadow var(--anim-fast) var(--anim-ease); }
+.btn-red:hover, .btn-custom-primary:hover { background: var(--dark-red); border-color: var(--dark-red); color: var(--white); transform: translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.25); }
+.btn-red:active, .btn-custom-primary:active { transform: translateY(0); box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.btn-red:focus-visible, .btn-custom-primary:focus-visible { outline:2px solid var(--white); outline-offset:2px; }
+.btn-red-sm { padding:.45rem 1rem; font-size:.85rem; }
+
+/* Neutral accent button (optional) */
+.btn-custom-accent { background: var(--accent-gray); border:1px solid var(--accent-gray); color: var(--white); font-weight:600; padding:.65rem 1.4rem; border-radius:.5rem; transition: background var(--anim-fast) var(--anim-ease); }
+.btn-custom-accent:hover { background: var(--medium-gray); }

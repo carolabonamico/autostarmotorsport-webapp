@@ -138,19 +138,6 @@ html, body {
   border-radius: 0.375rem;
 }
 
-.bg-success {
-  background: var(--success-green) !important;
-}
-.bg-primary {
-  background: var(--primary-red) !important;
-}
-.bg-warning {
-  background: var(--warning-orange) !important;
-}
-.bg-danger {
-  background: var(--danger-red) !important;
-}
-
 /* Login form and button styles */
 .login-page {
   position: fixed;
@@ -231,9 +218,6 @@ html, body {
 }
 
 /* Utilities */
-.text-primary-red {
-  color: var(--primary-red) !important;
-}
 .bg-primary-red {
   background-color: var(--primary-red) !important;
 }

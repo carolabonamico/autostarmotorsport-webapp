@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import AOS from 'aos';
+import '../styles/components/Sections.css';
+import '../styles/components/Cards.css';
+import '../styles/components/Timeline.css';
 import TeamCard from '../components/Team section/TeamCard';
 import CertCard from '../components/Team section/CertCard';
 
@@ -69,7 +72,7 @@ const Team = () => {
           <Row>
             <Col>
               <h2 className="text-center text-white mb-5" data-aos="fade-up">
-                Cosa Ci <span className="text-accent">Distingue</span>
+                Cosa Ci <span className="text-primary">Distingue</span>
               </h2>
             </Col>
           </Row>
@@ -85,7 +88,7 @@ const Team = () => {
             </Col>
             <Col lg={5} md={8} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="200">
-                <i className="bi bi-lightbulb-fill text-accent" style={{fontSize: '3rem'}}></i>
+                <i className="bi bi-lightbulb-fill text-primary" style={{fontSize: '3rem'}}></i>
                 <h4 className="text-white mt-3 mb-3">Innovazione e Passione</h4>
                 <p>
                   Uniamo la tradizione artigianale e la storia di famiglia con l'innovazione tecnica e la voglia di migliorare ogni giorno, offrendo ai nostri clienti soluzioni su misura e un servizio sempre attento e personale.

@@ -3,14 +3,12 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ImageWithText from '../components/Preparazioni/ImageWithText';
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Preparazioni = () => {
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    AOS.init({ duration: 800, once: true, easing: 'ease-out' });
   }, []);
 
   const services = [
@@ -126,22 +124,24 @@ const Preparazioni = () => {
   ];
 
   return (
-    <>
+  <div className="preparazioni-page">
 
       {/* Services Grid */}
       <section className="section" id="nostri-servizi">
         <Container>
+          
           <Row>
             <Col>
               <h2 className="section-title" data-aos="fade-up">
                 I Nostri <span className="text-primary">Servizi</span>
               </h2>
-              <p className="lead text-center mb-5" data-aos="fade-up" data-aos-delay="200">
+              <p className="lead text-center mb-5" data-aos="fade-up" data-aos-delay="120">
                 Dalla manutenzione ordinaria all'assistenza motorsport, 
                 offriamo soluzioni complete per ogni tipo di veicolo.
               </p>
             </Col>
           </Row>
+
           <Row>
             <Col lg={10} className="mx-auto">
               {services.map((service, index) => (
@@ -150,24 +150,24 @@ const Preparazioni = () => {
                   id={service.id}
                   className="service-item py-3"
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
+                  data-aos-delay={index * 120}
                 >
                   <div className="d-flex align-items-start">
                     <div 
                       className={`d-flex align-items-center justify-content-center me-4`}
                       style={{width: '80px', height: '80px', minWidth: '80px'}}
                     >
-                      <i className={`bi bi-${service.icon}`} style={{fontSize: '2.2rem'}}></i>
+                      <i className={`bi bi-${service.icon}`} style={{color:'var(--light-red)', fontSize: '2.5rem'}}></i>
                     </div>
                     <div className="flex-grow-1">
-                      <h3 className="mb-3 fw-semibold">{service.title}</h3>
-                      <p className="fs-5 text-muted mb-4 lh-lg">{service.description}</p>
+                      <h3 className="text-black">{service.title}</h3>
+                      <p className="lead mb-4 lh-lg">{service.description}</p>
                       <div className="service-features">
                         <div className="row g-3">
                           {service.features.map((feature, idx) => (
                             <div key={idx} className="col-lg-6">
                               <div className="d-flex align-items-center">
-                                <i className="bi bi-arrow-right text-primary me-3" style={{fontSize: '1.2rem'}}></i>
+                                <i className="bi bi-arrow-right me-3" style={{fontSize: '1.2rem', color:'var(--light-red)'}}></i>
                                 <span className="text-dark">{feature}</span>
                               </div>
                             </div>
@@ -184,13 +184,24 @@ const Preparazioni = () => {
                         )
                       )}
                       
+                      { service.id === 'motorsport' && (
+                        <div className="d-flex justify-content-center mt-3">
+                          <Button
+                            as={Link}
+                            to="/motorsport"
+                            className="btn-red btn-red-sm"
+                          >
+                            Vai alla pagina Motorsport
+                            <i className="bi bi-arrow-right ms-2"></i>
+                          </Button>
+                        </div>
+                      )}
                       { service.id === 'auto-elettriche' && (
                         <div className="d-flex justify-content-center">
                             <Button 
-                                as={Link} 
+                                as={Link}
                                 to="/team#certificazioni-qualifiche"
-                                variant="custom-primary"
-                                size="sm"
+                                className="btn-red btn-red-sm"
                             >
                                 <i className="bi bi-award me-1"></i>
                                 Scopri tutte le certificazioni
@@ -208,7 +219,7 @@ const Preparazioni = () => {
           </Row>
         </Container>
       </section>
-    </>
+  </div>
   );
 };
 

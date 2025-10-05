@@ -1,5 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../styles/components/Footer.css';
+import '../styles/components/Animations.css';
 
 const Footer = () => {
   return (
@@ -20,20 +22,8 @@ const Footer = () => {
                 className="navbar-logo-text"
                 style={{ height: '40px' }}
               />
-              {/* <p className="brand-description mb-4 mt-4">
-                Passione, precisione e performance.<br />
-                La tua officina di fiducia dal 1985.
-              </p> */}
+
               <div className="social-links mb-4 mt-4">
-                <a href="#" className="social-link" aria-label="Facebook">
-                  <i className="bi bi-facebook"></i>
-                </a>
-                <a href="#" className="social-link" aria-label="Instagram">
-                  <i className="bi bi-instagram"></i>
-                </a>
-                <a href="#" className="social-link" aria-label="YouTube">
-                  <i className="bi bi-youtube"></i>
-                </a>
                 <a href="#" className="social-link" aria-label="LinkedIn">
                   <i className="bi bi-linkedin"></i>
                 </a>
@@ -95,7 +85,7 @@ const Footer = () => {
                 <p className="copyright mb-1" style={{fontSize: '1rem', color: '#aaa', marginBottom: '4px'}}>
                   &copy; 2025 Autostar Motorsport. Tutti i diritti riservati.
                 </p>
-                <div className="footer-legal-extra text-muted small" style={{fontSize: '0.98rem', color: '#888'}}>
+                <div className="footer-legal-extra text-medium-grey small" style={{fontSize: '0.98rem', color: '#888'}}>
                   P.IVA 02231680063 &nbsp; | &nbsp; C.F. BNMDVD69A12L570G
                 </div>
                 <div className="footer-legal mt-2">

@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import AOS from 'aos';
-
+import '../styles/components/Sections.css';
+import '../styles/components/Timeline.css';
+import '../styles/components/Cards.css';
 
 const Storia = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  // Timeline aggiornata con eventi reali e successi
   const milestones = [
     {
       year: 'Anni 60',
@@ -50,19 +51,19 @@ const Storia = () => {
         <Container>
           <Row className="d-flex align-items-center" style={{minHeight: '380px'}}>
             <Col lg={7} className="mx-auto order-2 order-lg-1 d-flex flex-column" style={{height: '100%'}}>
-              <h2 className="section-title">Le Radici di una Passione</h2>
+              <h2 className="section-title">
+                Le Radici di una <span className="text-primary">Passione</span>
+              </h2>
               <div className="d-flex flex-column justify-content-center" style={{height: '100%'}} data-aos="fade-up">
-                <div className="d-flex flex-column justify-content-center" style={{height: '100%'}}>
-                  <p className="lead text-center mb-4">
-                    Pietro Bonamico, padre di Davide e Walter, è una figura storica del motorsport italiano. L’inizio della sua attività di preparatore risale alla prima metà degli anni ’60, con vetture iconiche come Fiat 600, 850, Lancia Fulvia, Alfa Romeo Giulietta e Giulia.
-                  </p>
-                  <p className="text-justify">
-                    Nella sede Autostar sono ancora presenti numerosi pezzi di preparazione di quell’epoca, memoria viva di una tradizione che si è saputa evolvere nel tempo. La passione per l’innovazione non ha mai oscurato il rispetto per la storia: collezionisti e appassionati trovano qui un vero e proprio museo dell’automobilismo.
-                  </p>
-                  <p className="text-justify">
-                    Cura, esperienza, meticolosità e passione, unite ad attrezzature di primo ordine, hanno permesso ad Autostar di offrire sempre mezzi al top. La gran parte dei componenti viene lavorata o costruita direttamente dai Bonamico, sia per il motore che per la parte elettronica e la scocca. L’officina dispone di sala prova motori e grill, una struttura mobile che consente di lavorare ogni vettura nella posizione più utile.
-                  </p>
-                </div>
+                <p className="lead text-center">
+                  Pietro Bonamico, padre di Davide e Walter, è una figura storica del motorsport italiano. L’inizio della sua attività di preparatore risale alla prima metà degli anni ’60, con vetture iconiche come Fiat 600, 850, Lancia Fulvia, Alfa Romeo Giulietta e Giulia.
+                </p>
+                <p className="text-justify">
+                  Nella sede Autostar sono ancora presenti numerosi pezzi di preparazione di quell’epoca, memoria viva di una tradizione che si è saputa evolvere nel tempo. La passione per l’innovazione non ha mai oscurato il rispetto per la storia: collezionisti e appassionati trovano qui un vero e proprio museo dell’automobilismo.
+                </p>
+                <p className="text-justify">
+                  Cura, esperienza, meticolosità e passione, unite ad attrezzature di primo ordine, hanno permesso ad Autostar di offrire sempre mezzi al top. La gran parte dei componenti viene lavorata o costruita direttamente dai Bonamico, sia per il motore che per la parte elettronica e la scocca. L’officina dispone di sala prova motori e grill, una struttura mobile che consente di lavorare ogni vettura nella posizione più utile.
+                </p>
               </div>
             </Col>
             <Col lg={5} className="mb-4 mb-lg-0 order-1 order-lg-2" data-aos="fade-left">
@@ -104,12 +105,12 @@ const Storia = () => {
                   <Card className="shadow-lg border-0 h-100">
                     <Card.Body className="p-4">
                       <div className="d-flex align-items-center mb-3">
-                        <div className={`icon-wrapper bg-primary bg-opacity-10 rounded-circle me-3 d-flex align-items-center justify-content-center`}>
+                        <div className={`icon-wrapper bg-opacity-10 rounded-circle me-3 d-flex align-items-center justify-content-center`}>
                           <i className="bi bi-trophy-fill text-primary fs-4"></i>
                         </div>
-                        <h4 className="text-dark mb-0">{milestone.title}</h4>
+                        <h4 className="mb-0">{milestone.title}</h4>
                       </div>
-                      <p className="text-muted mb-0 lh-lg">{milestone.description}</p>
+                      <p className="text-medium-grey lh-lg">{milestone.description}</p>
                     </Card.Body>
                   </Card>
                 </div>

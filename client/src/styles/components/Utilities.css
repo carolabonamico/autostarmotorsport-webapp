@@ -1,0 +1,29 @@
+/* Utility & Helpers */
+.text-primary { color: var(--light-red) !important; }
+.text-medium-grey { color: var(--medium-gray) !important; }
+.text-dark { color: var(--black) !important; }
+
+/* Bootstrap primary overrides -> brand red */
+.bg-primary { background: var(--light-red) !important; }
+.text-bg-primary { background: var(--light-red) !important; }
+.border-primary { border-color: var(--light-red) !important; }
+.badge.bg-primary { background: var(--light-red) !important; }
+.btn-primary { background: var(--light-red) !important; border-color: var(--light-red) !important; }
+.btn-primary:hover, .btn-primary:focus { background: var(--dark-red) !important; border-color: var(--dark-red) !important; }
+.btn-primary:active, .btn-primary.active, .show>.btn-primary.dropdown-toggle { background: var(--dark-red) !important; border-color: var(--dark-red) !important; }
+.btn-outline-primary { color: var(--light-red) !important; border-color: var(--light-red) !important; }
+.btn-outline-primary:hover { background: var(--light-red) !important; border-color: var(--light-red) !important; color: var(--white) !important; }
+.link-primary { color: var(--light-red) !important; }
+.link-primary:hover { color: var(--dark-red) !important; }
+.text-justify { text-align: justify; }
+.hover-lift { transition: transform .3s ease; }
+.hover-lift:hover { transform: translateY(-5px); }
+.min-vh-75 { min-height:75vh; }
+.min-vh-100 { min-height:100vh; }
+.parallax { background-attachment: fixed; background-position:center; background-repeat:no-repeat; background-size:cover; }
+.full-width-image-section { width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; padding:0; overflow:hidden; }
+.full-width-image-container { position:relative; width:100%; height:300px; overflow:hidden; }
+.full-width-image { width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform .3s ease; }
+.full-width-image:hover { transform:scale(1.02); }
+@media (max-width:768px){ .full-width-image-container{ height:200px;} }
+@media (max-width:576px){ .full-width-image-container{ height:150px;} }

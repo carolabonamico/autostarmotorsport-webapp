@@ -1,28 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
-import { Container, Row, Col, Button, Card, Badge, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '../styles/components/Sections.css';
+import '../styles/components/Cards.css';
+import '../styles/components/Buttons.css';
+import '../styles/components/Animations.css';
+import NewsCard from '../components/NewsCard';
+import { newsArticles } from '../data/news';
 
-const newsArticles = [
-  {
-    id: 1,
-    title: 'Autostar Motorsport vince il Campionato Italiano Velocità in Salita',
-    excerpt: 'Grande successo per il nostro team: prima vittoria assoluta nella categoria CN con il prototipo HURR.',
-    category: 'motorsport',
-    date: '2025-07-15',
-    image: '/api/placeholder/400/250',
-  },
-  {
-    id: 2,
-    title: 'Nuova Certificazione per Veicoli Elettrici',
-    excerpt: 'Il nostro team ha completato la formazione avanzata per la manutenzione di veicoli elettrici ad alta tensione.',
-    category: 'tecnologia',
-    date: '2025-07-10',
-    image: '/api/placeholder/400/250',
-  },
-
-];
+// Takes the two most recent articles by sorting by date desc
+const latestArticles = [...newsArticles]
+  .sort((a,b) => new Date(b.date) - new Date(a.date))
+  .slice(0,2);
 
 const Home = () => {
   const [showNewsButton, setShowNewsButton] = useState(false);
@@ -81,11 +72,10 @@ const Home = () => {
     }
   ];
 
-  // Ref per la sezione "Le Radici di una Passione"
   const storiaRef = useRef(null);
 
   return (
-    <>
+  <div className="home-page">
       {/* Carousel hero */}
       <Carousel fade>
         <Carousel.Item>
@@ -131,26 +121,14 @@ const Home = () => {
           <Row>
             <Col className="text-center mb-5">
               <h2 className="section-title" data-aos="fade-up">
-                Ultime <span className="text-accent">News</span>
+                Ultime <span className="text-primary">News</span>
               </h2>
             </Col>
           </Row>
           <Row className="justify-content-center">
-            {newsArticles.slice(0,2).map((news, idx) => (
-              <Col md={6} className="mb-4" key={news.id}>
-                <Card className="team-card h-100" data-aos="fade-up" data-aos-delay={idx * 100}>
-                  <div className="bg-primary" style={{height: '180px', backgroundImage: 'linear-gradient(135deg, var(--racing-black), var(--primary-red))', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <i className="bi bi-newspaper text-white" style={{fontSize: '2.5rem'}}></i>
-                  </div>
-                  <Card.Body className="team-card-body">
-                    <div className="d-flex align-items-center mb-2">
-                      <Badge bg="primary" className="me-2">{news.category}</Badge>
-                      <span className="news-date">{new Date(news.date).toLocaleDateString('it-IT')}</span>
-                    </div>
-                    <h5 className="mb-2">{news.title}</h5>
-                    <p className="text-muted mb-3">{news.excerpt}</p>
-                  </Card.Body>
-                </Card>
+            {latestArticles.map((article, idx) => (
+              <Col md={6} className="mb-4" key={article.id}>
+                <NewsCard article={article} delay={idx * 100} compact />
               </Col>
             ))}
           </Row>
@@ -172,7 +150,7 @@ const Home = () => {
           <Row>
             <Col className="text-center mb-5">
               <h2 className="section-title" data-aos="fade-up">
-                I Nostri Servizi
+                I Nostri <span className="text-primary">Servizi</span>
               </h2>
               <p className="lead" data-aos="fade-up" data-aos-delay="200">
                 Offriamo una gamma completa di servizi automotive.
@@ -187,7 +165,7 @@ const Home = () => {
                   to={`/preparazioni#${service.id}`}
                   className="team-card h-100 text-decoration-none"
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
+                  data-aos-delay="0"
                   style={{cursor: 'pointer'}}
                 >
                   <Card.Body className="team-card-body text-center">
@@ -195,7 +173,7 @@ const Home = () => {
                       <i className={`bi bi-${service.icon}`}></i>
                     </div>
                     <h5 className="mb-3">{service.title}</h5>
-                    <p className="text-muted">{service.description}</p>
+                    <p className="team-description">{service.description}</p>
                   </Card.Body>
                 </Card>
               </Col>
@@ -204,7 +182,7 @@ const Home = () => {
         </Container>
       </section>
 
-    </>
+  </div>
   );
 };
 

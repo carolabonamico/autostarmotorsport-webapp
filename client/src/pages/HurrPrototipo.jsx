@@ -116,13 +116,13 @@ const HurrPrototipo = () => {
                       </div>
                       <div>
                         <h4 className="mb-2">{tech.title}</h4>
-                        <p className="text-muted mb-3">{tech.description}</p>
+                        <p className="text-medium-grey mb-3">{tech.description}</p>
                       </div>
                     </div>
                     <ul className="list-unstyled">
                       {tech.details.map((detail, idx) => (
                         <li key={idx} className="mb-2">
-                          <i className="bi bi-arrow-right text-accent me-2"></i>
+                          <i className="bi bi-arrow-right text-primary me-2"></i>
                           {detail}
                         </li>
                       ))}
@@ -156,7 +156,7 @@ const HurrPrototipo = () => {
                   <Card.Body className="d-flex flex-column justify-content-center">
                     <i className={`bi bi-${achievement.icon} text-primary mb-3`} style={{fontSize: '3rem'}}></i>
                     <h5 className="mb-2">{achievement.title}</h5>
-                    <p className="text-muted mb-0">{achievement.subtitle}</p>
+                    <p className="text-medium-grey mb-0">{achievement.subtitle}</p>
                   </Card.Body>
                 </Card>
               </Col>

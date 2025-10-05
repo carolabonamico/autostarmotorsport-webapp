@@ -1,0 +1,10 @@
+/* Navbar */
+.navbar-custom { background: var(--black) !important; backdrop-filter: blur(10px); transition: all 0.3s ease; border-bottom: 1px solid var(--dark-gray); height: 80px; padding: 0.5rem 0; }
+.navbar-custom.scrolled { background: var(--black) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+.navbar-brand { font-size: 1.8rem; font-weight: 700; color: var(--light-red) !important; }
+.nav-link { color: var(--white) !important; font-weight: 500; transition: color 0.3s ease; position: relative; }
+.nav-link:hover { color: var(--accent-gray) !important; }
+.nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--light-red); transition: width 0.3s ease; }
+.nav-link:hover::after { width: 100%; }
+.nav-link.active { color: var(--light-red) !important; font-weight: 600; }
+.nav-link.active::after { width: 100%; }

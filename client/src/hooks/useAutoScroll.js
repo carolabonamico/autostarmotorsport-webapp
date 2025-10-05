@@ -5,40 +5,19 @@ const useAutoScroll = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Aspetta che la pagina sia completamente renderizzata
-    const timer = setTimeout(() => {
-      // Se c'è un hash nell'URL (come #radici), gestiscilo con compensazione navbar
-      if (location.hash) {
-        const element = document.getElementById(location.hash.replace('#', ''));
-        if (element) {
-          const navbarHeight = 80; // Altezza della navbar fissa
-          const elementPosition = element.offsetTop - navbarHeight;
-          window.scrollTo({
-            top: elementPosition,
-            behavior: 'smooth'
-          });
-          return;
-        }
+    // Scroll con offset navbar se presente un hash
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        const navbarHeight = 80;
+        const top = el.offsetTop - navbarHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
+        return;
       }
-
-      // Per tutte le altre navigazioni verso pagine diverse dalla home, 
-      // controlla se c'è un hash specifico o se è una navigazione normale
-      if (location.pathname !== '/') {
-        // Se non c'è hash, mostra l'hero completo (scroll a inizio pagina)
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      } else {
-        // Per la home, scrolla all'inizio
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-    }, 300); // Aumenta il delay per dare tempo al rendering
-
-    return () => clearTimeout(timer);
+    }
+    // Default: scroll top semplice (senza delay inutile)
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname, location.hash]);
 };
 

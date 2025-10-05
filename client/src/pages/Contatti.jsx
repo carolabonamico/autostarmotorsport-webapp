@@ -31,9 +31,9 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-geo-alt-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="fw-bold mb-1">Indirizzo</h6>
+                <h6 className="text-black mb-1">Indirizzo</h6>
                 <div className="text-dark">Strada per Valenza 38</div>
-                <div className="text-muted small">15040 Pecetto di Valenza (AL) Fr. Pellizzari</div>
+                <div className="text-medium-grey small">15040 Pecetto di Valenza (AL) Fr. Pellizzari</div>
               </div>
             </Col>
             <Col lg={4} md={6} className="mb-4">
@@ -41,7 +41,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-telephone-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="fw-bold mb-1">Telefono</h6>
+                <h6 className="text-black mb-1">Telefono</h6>
                 <a href="tel:+390131940175" className="text-dark">+39 0131 940175</a>
               </div>
             </Col>
@@ -50,7 +50,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-envelope-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="fw-bold mb-1">Email</h6>
+                <h6 className="text-black mb-1">Email</h6>
                 <a href="mailto:info@autostar-motorsport.it" className="text-dark">info@autostar-motorsport.it</a>
               </div>
             </Col>
@@ -61,7 +61,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-envelope-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="fw-bold mb-1">PEC</h6>
+                <h6 className="text-black mb-1">PEC</h6>
                 <a href="mailto:davidebonamico@pec.it" className="text-dark">davidebonamico@pec.it</a>
               </div>
             </Col>
@@ -70,9 +70,9 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-clock-fill text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="fw-bold mb-1">Orari</h6>
+                <h6 className="text-black mb-1">Orari</h6>
                 <div className="text-dark">Lun-Ven: 8:00-18:00</div>
-                <div className="text-muted small">Sab: 8:00-12:00</div>
+                <div className="text-medium-grey small">Sab: 8:00-12:00</div>
               </div>
             </Col>
             <Col lg={4} md={6} className="mb-4">
@@ -80,7 +80,7 @@ const Contatti = () => {
                 <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
                   <i className="bi bi-facebook text-white" style={{fontSize: '2rem'}}></i>
                 </div>
-                <h6 className="fw-bold mb-1">Facebook</h6>
+                <h6 className="text-black mb-1">Facebook</h6>
                 <a href="https://www.facebook.com/autostar.motorsport" target="_blank" rel="noopener noreferrer" className="text-dark">@autostar.motorsport</a>
               </div>
             </Col>
@@ -94,7 +94,7 @@ const Contatti = () => {
           <Row className="justify-content-center">
             <Col lg={8} md={10}>
               <div className="text-center mb-4" data-aos="fade-up">
-                <h3 className="mb-5">
+                <h3 className="text-black mb-5">
                   Dove <span className="text-primary">Trovarci</span>
                 </h3>
                 <p className="lead text-center">
@@ -123,7 +123,7 @@ const Contatti = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
-                <div className="text-muted small text-center mt-5">
+                <div className="text-medium-grey small text-center mt-5">
                   P.IVA 02231680063 &nbsp; | &nbsp; C.F. BNMDVD69A12L570G &nbsp; | &nbsp; R.E.A. AL153227
                 </div>
               </div>
@@ -131,64 +131,6 @@ const Contatti = () => {
           </Row>
         </Container>
       </section>
-
-      {/* Social Media
-      <section className="section bg-light pt-2">
-        <Container>
-          <Row>
-            <Col>
-              <h2 className="section-title" data-aos="fade-up">
-                Seguici sui <span className="text-primary">Social</span>
-              </h2>
-              <p className="lead text-center mb-5" data-aos="fade-up" data-aos-delay="200">
-                Non perdere i nostri aggiornamenti quotidiani sui social media
-              </p>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3} md={6} className="mb-4">
-              <div className="text-center" data-aos="fade-up" data-aos-delay="100">
-                <div className="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                     style={{width: '80px', height: '80px'}}>
-                  <i className="bi bi-facebook text-white" style={{fontSize: '2rem'}}></i>
-                </div>
-                <h5>Facebook</h5>
-                <p className="text-muted">Foto e video dalle nostre attività</p>
-              </div>
-            </Col>
-            <Col lg={3} md={6} className="mb-4">
-              <div className="text-center" data-aos="fade-up" data-aos-delay="200">
-                <div className="bg-accent rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                     style={{width: '80px', height: '80px'}}>
-                  <i className="bi bi-instagram text-dark" style={{fontSize: '2rem'}}></i>
-                </div>
-                <h5>Instagram</h5>
-                <p className="text-muted">Stories e contenuti esclusivi</p>
-              </div>
-            </Col>
-            <Col lg={3} md={6} className="mb-4">
-              <div className="text-center" data-aos="fade-up" data-aos-delay="300">
-                <div className="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                     style={{width: '80px', height: '80px'}}>
-                  <i className="bi bi-youtube text-white" style={{fontSize: '2rem'}}></i>
-                </div>
-                <h5>YouTube</h5>
-                <p className="text-muted">Video tecnici e interviste</p>
-              </div>
-            </Col>
-            <Col lg={3} md={6} className="mb-4">
-              <div className="text-center" data-aos="fade-up" data-aos-delay="400">
-                <div className="bg-accent rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                     style={{width: '80px', height: '80px'}}>
-                  <i className="bi bi-linkedin text-dark" style={{fontSize: '2rem'}}></i>
-                </div>
-                <h5>LinkedIn</h5>
-                <p className="text-muted">Aggiornamenti professionali</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
 
     </>
   );

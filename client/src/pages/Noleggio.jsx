@@ -264,7 +264,7 @@ const Noleggio = () => {
                               
                               <div className="d-flex justify-content-between align-items-center">
                                 <span className="h4 text-dark mb-0">€{veicolo.pricePerDay}</span>
-                                <small className="text-muted ms-1">/giorno</small>
+                                <small className="text-medium-grey ms-1">/giorno</small>
                               </div>
                             </Card.Body>
                           </Card>
@@ -322,11 +322,11 @@ const Noleggio = () => {
                               
                               <div className="row mb-3">
                                 <div className="col-6">
-                                  <small className="text-muted d-block">Potenza</small>
+                                  <small className="text-medium-grey d-block">Potenza</small>
                                   <span className="fw-semibold">{veicolo.power}</span>
                                 </div>
                                 <div className="col-6">
-                                  <small className="text-muted d-block">Condizioni</small>
+                                  <small className="text-medium-grey d-block">Condizioni</small>
                                   <span className="fw-semibold">{veicolo.condition}</span>
                                 </div>
                               </div>
@@ -388,7 +388,7 @@ const Noleggio = () => {
                   <Card.Body className="team-card-body">
                     <i className={`bi bi-${servizio.icon} text-primary`} style={{fontSize: '3rem'}}></i>
                     <h5 className="mt-3 mb-3">{servizio.title}</h5>
-                    <p className="text-muted">{servizio.description}</p>
+                    <p className="text-medium-grey">{servizio.description}</p>
                   </Card.Body>
                 </Card>
               </Col>

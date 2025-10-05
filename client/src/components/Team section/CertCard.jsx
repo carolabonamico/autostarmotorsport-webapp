@@ -12,6 +12,7 @@ const pdfs = [
 ];
 
 import { Card } from 'react-bootstrap';
+import '../../styles/components/Cards.css';
 
 const CertCard = () => {
   return (
@@ -24,7 +25,7 @@ const CertCard = () => {
                 <i className="bi bi-file-pdf text-danger me-3" style={{fontSize: '2rem'}}></i>
                 <div className="flex-grow-1">
                   <h6 className="mb-1">{pdf.title}</h6>
-                  <p className="text-muted small mb-2">{pdf.desc}</p>
+                  <p className="text-medium-grey small mb-2">{pdf.desc}</p>
                   <a 
                     href={pdf.file}
                     className="btn btn-sm btn-outline-primary"

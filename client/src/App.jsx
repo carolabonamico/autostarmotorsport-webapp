@@ -12,6 +12,7 @@ import Noleggio from "./pages/Noleggio";
 import HurrPrototipo from "./pages/HurrPrototipo";
 import Motorsport from "./pages/Motorsport";
 import NewsMotori from "./pages/NewsMotori";
+import NewsArticle from "./pages/NewsArticle";
 import Contatti from "./pages/Contatti";
 import useAutoScroll from "./hooks/useAutoScroll";
 import "./styles/main.css";
@@ -32,6 +33,7 @@ function App() {
           {/* <Route path="/hurr" element={<HurrPrototipo />} /> */}
           <Route path="/motorsport" element={<Motorsport />} />
           <Route path="/news" element={<NewsMotori />} />
+          <Route path="/news/:id" element={<NewsArticle />} />
           <Route path="/contatti" element={<Contatti />} />
         </Routes>
       </main>

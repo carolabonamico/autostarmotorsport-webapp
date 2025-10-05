@@ -1,4 +1,5 @@
 /* Componente per visualizzare immagine e testo */
+import '../../styles/components/Utilities.css';
 
 const ImageWithText = ({ src, alt, text, maxWidth }) => (
   <div className="d-flex flex-column align-items-center" style={{marginTop: '2.5rem', marginBottom: '2.5rem'}}>
