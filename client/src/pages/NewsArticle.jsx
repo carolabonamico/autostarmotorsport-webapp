@@ -32,7 +32,7 @@ const NewsArticle = () => {
               <Badge bg="primary">
                 {article.category.charAt(0).toUpperCase() + article.category.slice(1)}
               </Badge>
-              <span className="news-date">{formatDate(article.date)}</span>
+              <span>{formatDate(article.date)}</span>
             </div>
             <h1 className="mb-4" data-aos="fade-up" data-aos-delay="100">{article.title}</h1>
             <div className="mb-4 d-flex align-items-center justify-content-center position-relative" 

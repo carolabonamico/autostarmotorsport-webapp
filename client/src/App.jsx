@@ -8,8 +8,6 @@ import Home from "./pages/Home";
 import Storia from "./pages/Storia";
 import Team from "./pages/Team";
 import Preparazioni from "./pages/Preparazioni";
-import Noleggio from "./pages/Noleggio";
-import HurrPrototipo from "./pages/HurrPrototipo";
 import Motorsport from "./pages/Motorsport";
 import NewsMotori from "./pages/NewsMotori";
 import NewsArticle from "./pages/NewsArticle";
