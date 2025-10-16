@@ -90,3 +90,26 @@ export const newsArticles = [
     `
   },
 ];
+
+export const categories = [
+  { 
+    id: 'all', 
+    name: 'Tutte le News' 
+  },
+  { 
+    id: 'motorsport',
+    name: 'Motorsport' 
+  },
+  { 
+    id: 'tecnologia',
+    name: 'Tecnologia' 
+  },
+  { 
+    id: 'azienda', 
+    name: 'Azienda' 
+  },
+  { 
+    id: 'eventi', 
+    name: 'Eventi' 
+  }
+];

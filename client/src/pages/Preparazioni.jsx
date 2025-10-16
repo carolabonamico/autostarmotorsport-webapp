@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ImageWithText from '../components/Preparazioni/ImageWithText';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { services } from '../data/preparazioni';
+import SectionHeader from '../components/SectionHeader';
+import '../styles/components/Services.css';
 
 const Preparazioni = () => {
 
@@ -11,215 +14,103 @@ const Preparazioni = () => {
     AOS.init({ duration: 800, once: true, easing: 'ease-out' });
   }, []);
 
-  const services = [
-    {
-      id: 'motorsport',
-      icon: 'speedometer2',
-      title: 'Motorsport',
-      description: 'Assistenza tecnica completa in pista per competizioni automobilistiche',
-      features: [
-        'Assistenza durante le gare',
-        'Preparazione veicoli da competizione',
-        'Ottimizzazione setup',
-        'Analisi telemetria',
-        'Supporto tecnico 24/7'
-      ],
-
-    },
-    {
-      id: 'tagliandi-auto',
-      icon: 'wrench',
-      title: 'Tagliandi Auto',
-      description: 'Manutenzione ordinaria e straordinaria con ricambi originali',
-      features: [
-        'Tagliandi secondo casa madre',
-        'Ricambi originali certificati',
-        'Controlli preventivi completi',
-        'Promemoria scadenze'
-      ],
-      text: 'Si effettua il tagliando auto per qualsiasi tipo di veicolo, controllando attentamente tutte le componenti del motore.Il tagliando auto è un controllo periodico dei mezzi motorizzati, che ha lo scopo di controllare tutte le parti del motore soggette al normale deterioramento: pastiglie dei freni, sospensioni, pneumatici, luci, marmitta, filtri, cinghia, acqua, oli, fluidi, climatizzatore e altri. Effettuare il tagliando auto non è obbligatorio come per la revisione; tuttavia, un periodico tagliando della vostra automobile vi garantisce una guida in completa sicurezza, oltre che un risparmio sui costi di riparazione futuri. Il tagliando periodico regala lunga vita alla vostra automobile ed elimina i pericoli dovuti all\'eventuale rottura di parti usurate. Si tratta di una pratica consigliata soprattutto per le automobili fuori garanzia. Il tagliando è un\'operazione particolarmente delicata, per la quale è consigliabile affidarsi a un professionista anziché al fai da te. Per questo motivo, per il vostro tagliando auto vi consigliamo di contattare Autostar Motorsport. Essendo un\'officina indipendente, ma regolarmente iscritta all\'albo degli autoriparatori, possiamo garantirvi costi più bassi rispetto alle officine autorizzate, nonché dei tempi molto più brevi. Il tagliando auto non ha una scadenza regolare. Tutte le case automobilistiche consigliano, nei rispettivi libretti di manutenzione, le tempistiche da seguire per il proprio mezzo. Ma questa cadenza varia anche in base all\'intensità di utilizzo della propria automobile, e può essere calcolata in base al numero di chilometri percorsi, al tempo di utilizzo e ad altri parametri specifici. Se necessitate di una consulenza sull\'eventualità o meno di effettuare un tagliando auto, saremo felici di rispondere telefonicamente alle vostre richieste.'
-    },
-    {
-      id: 'cambio-gomme',
-      icon: 'circle',
-      title: 'Cambio Gomme',
-      description: 'Servizio professionale di montaggio e bilanciatura pneumatici',
-      features: [
-        'Montaggio e smontaggio',
-        'Bilanciatura elettronica',
-        'Controllo geometrie',
-        'Deposito stagionale',
-        'Pneumatici racing'
-      ],
-      text: 'Ogni anno, a ridosso di novembre, scatta l\'obbligo di avere le catene a bordo oppure le gomme invernali, per non incorrere in una sanzione. Autostar Motorsport si può occupare di questa semplice operazione, ma proprio perché tutti tendono a concentrarsi in un breve periodo dell\'anno, ti consigliamo di chiamarci e prendere un appuntamento in modo da evitare di attendere troppi giorni. Naturalmente, possiamo occuparci anche dello smontaggio delle tue gomme invernali per sostituirle con quelle estive. In questo caso, il riferimento temporale è solitamente il passaggio all\'ora legale, che avviene a ridosso della primavera.',
-      image: '/images/gomme.jpg',
-      alt: 'Cambio Gomme',
-      imageWidth: '600px'
-    },
-    {
-      id: 'elettrauto',
-      icon: 'lightning-charge',
-      title: 'Elettrauto',
-      description: 'Diagnosi e riparazione sistemi elettrici ed elettronici',
-      features: [
-        'Diagnosi multimarca',
-        'Riparazione centraline',
-        'Riparazione e/o sostituzione sistema di accensione',
-        'Riparazione e/o sostituzione regolatori di tensione',
-        'Ispezione e misurazione impianti elettrici'
-      ],
-      text: 'Autostar Motorsport è anche elettrauto, e può risolvere qualsiasi problema di natura elettronica della vostra auto. Se avete bisogno di un elettrauto, potete recarvi nella nostra officina per contare su un servizio altamente specializzato e professionale: usiamo computer e attrezzature di ultima generazione per monitorare i mezzi dei nostri clienti e risolvere i loro problemi in breve tempo. Individuazione guasti elettronici.',
-      image: '/images/elettrauto.jpeg',
-      alt: 'Elettrauto',
-      imageWidth: '400px'
-    },
-    {
-      id: 'meccatronica',
-      icon: 'cpu',
-      title: 'Meccatronica',
-      description: 'Specialisti in sistemi meccatronici e controllo motore',
-      features: [
-        'Mappature ECU',
-        'Riprogrammazione centraline',
-        'Sistemi iniezione',
-        'Controllo emissioni',
-        'Ottimizzazione prestazioni'
-      ],
-      text: 'Possiamo risolvere qualsiasi problema meccanico, elettronico ed elettrico del vostro mezzo a quattro ruote. La nostra esperienza pluricinquantennale garantisce un servizio di alta qualità per ogni tipo di automobile, dalle utilitarie ai suv, dalle berline ai fuoristrada. Per le riparazioni meccaniche delle vostre automobili utilizziamo attrezzature di ultima generazione che ci permettono di individuare e risolvere il problema in pochissimo tempo.',
-      image: '/images/motore.jpeg',
-      alt: 'Meccatronica',
-      imageWidth: '400px'
-    },
-    {
-      id: 'auto-elettriche',
-      icon: 'battery-charging',
-      title: 'Auto Elettriche',
-      description: 'Manutenzione e riparazione veicoli elettrici e ibridi',
-      features: [
-        'Diagnosi batterie HV',
-        'Manutenzione motori elettrici',
-        'Sistemi di ricarica',
-        'Inverter e convertitori',
-        'Aggiornamenti software'
-      ],
-      text: 'Mettiamo a vostra disposizione consulenza affidabile e completa in grado di offrire un intero ventaglio di servizi dedicati alle esigenze dei nuovi veicoli elettrici. Offriamo assistenza e riparazione ai veicoli elettrici con l\'esperienza che ci contraddistingue da sempre, in questo caso maturata anche in ambito motorsport. Garantiamo la massima professionalità e completezza degli interventi elettronici. Eseguiamo lavorazioni di manutenzione ordinaria, straordinaria, servizio pneumatici, vetri e ogni tipo di riparazione. Nulla al caso perché facciamo la diagnosi analitica e computerizzata su ogni veicolo, l\'unica capace di identificare con precisione la tipologia di guasto e che permette l\'intervento mirato. Siamo un\'azienda con attestato PEI e PES/PAV per interventi in sicurezza su auto ibride ed elettriche.',
-      image: '/images/elettriche2.jpg',
-      alt: 'Auto Elettrica',
-      imageWidth: '500px'
-    },
-    {
-      id: 'pre-revisione',
-      icon: 'clipboard-check',
-      title: 'Pre-Revisione',
-      description: 'Controlli preventivi per superare la revisione ministeriale',
-      features: [
-        'Controllo completo veicolo',
-        'Verifica emissioni',
-        'Test sistemi sicurezza',
-        'Controllo luci e segnalazioni',
-        'Documentazione completa'
-      ],
-      text: 'La pre-revisione dell’auto è un controllo preventivo dell’automobile quando si avvicina il momento della revisione. La pre-revisione non è obbligatoria come la revisione; tuttavia è una pratica consigliata per evitare che la revisione diventi una perdita di tempo o, peggio ancora, una brutta sorpresa. Effettuando una pre-revisione, infatti, l’auto gode di un completo check-up che può prevenire eventuali contestazioni all’automobilista. Portandoci la vostra auto, potremo controllare tutte le parti legate alla sicurezza e ai gas di scarico, in modo da garantirvi il buon esito delle operazioni di revisione. Se la revisione è obbligatoria ogni due anni, la pre-revisione è altamente consigliata per il medesimo periodo di tempo.'
-    }
-  ];
-
   return (
-  <div className="preparazioni-page">
-
-      {/* Services Grid */}
+  <>
+      {/* Services Section */}
       <section className="section" id="nostri-servizi">
         <Container>
-          
           <Row>
             <Col>
-              <h2 className="section-title" data-aos="fade-up">
-                I Nostri <span className="text-primary">Servizi</span>
-              </h2>
-              <p className="lead text-center mb-5" data-aos="fade-up" data-aos-delay="120">
-                Dalla manutenzione ordinaria all'assistenza motorsport, 
-                offriamo soluzioni complete per ogni tipo di veicolo.
-              </p>
+              <SectionHeader 
+                title="I Nostri" 
+                lastword="Servizi" 
+                subtitle="Dalla manutenzione ordinaria all'assistenza motorsport, offriamo soluzioni complete per ogni tipo di veicolo." 
+              />
             </Col>
           </Row>
 
-          <Row>
-            <Col lg={10} className="mx-auto">
-              {services.map((service, index) => (
-                <div 
-                  key={index}
-                  id={service.id}
-                  className="service-item py-3"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 120}
-                >
-                  <div className="d-flex align-items-start">
-                    <div 
-                      className={`d-flex align-items-center justify-content-center me-4`}
-                      style={{width: '80px', height: '80px', minWidth: '80px'}}
-                    >
-                      <i className={`bi bi-${service.icon}`} style={{color:'var(--light-red)', fontSize: '2.5rem'}}></i>
-                    </div>
-                    <div className="flex-grow-1">
-                      <h3 className="text-dark">{service.title}</h3>
-                      <p className="lead mb-4 lh-lg">{service.description}</p>
-                      <div className="service-features">
-                        <div className="row g-3">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="col-lg-6">
-                              <div className="d-flex align-items-center">
-                                <i className="bi bi-arrow-right me-3" style={{fontSize: '1.2rem', color:'var(--light-red)'}}></i>
-                                <span className="text-dark">{feature}</span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      {service.image ? (
-                        <ImageWithText src={service.image} alt={service.alt} text={service.text} maxWidth={service.imageWidth} />
-                      ) : (
-                        service.text && (
-                          <div className="mt-4 text-justify">
-                            <p>{service.text}</p>
-                          </div>
-                        )
-                      )}
-                      
-                      { service.id === 'motorsport' && (
-                        <div className="d-flex justify-content-center mt-3">
-                          <Button
-                            as={Link}
-                            to="/motorsport"
-                            className="btn-red btn-red-sm"
-                          >
-                            Vai alla pagina Motorsport
-                            <i className="bi bi-arrow-right ms-2"></i>
-                          </Button>
-                        </div>
-                      )}
-                      { service.id === 'auto-elettriche' && (
-                        <div className="d-flex justify-content-center">
-                            <Button 
-                                as={Link}
-                                to="/team#certificazioni-qualifiche"
-                                className="btn-red btn-red-sm"
-                            >
-                                <i className="bi bi-award me-1"></i>
-                                Scopri tutte le certificazioni
-                            </Button>
-                        </div>
-                    )}
-                    </div>
+          {services.map((service, index) => (
+            <div 
+              key={service.id}
+              id={service.id}
+              className="service-block"
+              data-aos="fade-up"
+              data-aos-delay={100}
+            >
+              <Row className="align-items-center g-3">
+                {/* Content Column */}
+                <Col lg={service.image ? 8 : 12}>
+                  <div className="service-header">
+                    <h3 className="service-title mb-3">{service.title}</h3>
+                    <p className="service-description">{service.description}</p>
                   </div>
-                  {index < services.length - 1 && (
-                    <hr className="my-4" style={{opacity: '0.6', border: 'none', height: '1px', backgroundColor: '#666666'}} />
+
+                  {/* Features List */}
+                  <ListGroup variant="flush" className="service-features mb-3">
+                    {service.features.map((feature, idx) => (
+                      <ListGroup.Item 
+                        key={idx}
+                        className="border-0 px-0"
+                        data-aos="fade-in"
+                        data-aos-delay={150 + (idx * 30)}
+                      >
+                        <i className="bi bi-check-circle-fill me-2"></i>
+                        {feature}
+                      </ListGroup.Item>
+                    ))}
+                  </ListGroup>
+                  
+                  {/* Action Buttons */}
+                  {service.id === 'motorsport' && (
+                    <div className="service-action mt-4" data-aos="fade-up" data-aos-delay={250}>
+                      <Button as={Link} to="/motorsport" variant='red'>
+                        Vai alla pagina Motorsport
+                        <i className="bi bi-arrow-right ms-2"></i>
+                      </Button>
+                    </div>
                   )}
-                </div>
-              ))}
-            </Col>
-          </Row>
+                  
+                  {service.id === 'auto-elettriche' && (
+                    <div className="service-action mt-4" data-aos="fade-up" data-aos-delay={250}>
+                      <Button as={Link} to="/team#certificazioni-qualifiche" variant='red'>
+                        <i className="bi bi-award me-2"></i>
+                        Scopri tutte le certificazioni
+                      </Button>
+                    </div>
+                  )}
+                </Col>
+
+                {/* Image Column */}
+                {service.image && (
+                  <Col lg={4}>
+                    <div className="service-image-container" data-aos="fade-left" data-aos-delay={200}>
+                      <img 
+                        src={service.image} 
+                        alt={service.alt}
+                        className="service-image"
+                      />
+                    </div>
+                  </Col>
+                )}
+              </Row>
+
+              {/* Text below taking full width */}
+              {service.text && (
+                <Row className="mt-4">
+                  <Col xs={12}>
+                    <div className="service-text" data-aos="fade-up" data-aos-delay={200}>
+                      <p>{service.text}</p>
+                    </div>
+                  </Col>
+                </Row>
+              )}
+
+              {index < services.length - 1 && <div className="footer-line"></div>}
+            </div>
+          ))}
         </Container>
       </section>
-  </div>
+  </>
   );
 };
 

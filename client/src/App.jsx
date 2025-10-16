@@ -27,8 +27,6 @@ function App() {
           <Route path="/storia" element={<Storia />} />
           <Route path="/team" element={<Team />} />
           <Route path="/preparazioni" element={<Preparazioni />} />
-          {/* <Route path="/noleggio" element={<Noleggio />} /> */}
-          {/* <Route path="/hurr" element={<HurrPrototipo />} /> */}
           <Route path="/motorsport" element={<Motorsport />} />
           <Route path="/news" element={<NewsMotori />} />
           <Route path="/news/:id" element={<NewsArticle />} />

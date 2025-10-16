@@ -1,12 +1,64 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Autostar Motorsport Website
 
-Currently, two official plugins are available:
+> Sito web statico per l’azienda Autostar Motorsport, realizzato con React + Vite e deploy su Vercel.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Link al sito online
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Deploy Vercel:** [https://autostar-motorsport.vercel.app](https://autostar-motorsport.vercel.app)
+
+---
+
+## 📦 Tech Stack
+- **Frontend:** React 18, Vite
+- **UI:** React-Bootstrap, Bootstrap Icons
+- **Animazioni:** AOS (Animate On Scroll)
+- **CSS:** Modularizzato, custom tokens, component styles
+- **Deployment:** Vercel
+
+---
+
+## 📄 Struttura del progetto
+
+- `src/pages/` — Pagine principali (Home, Motorsport, News, Team, ecc.)
+- `src/components/` — Componenti riutilizzabili (Navbar, Footer, NewsCard, ecc.)
+- `src/data/` — Dati statici (news, team, ecc.)
+- `src/styles/` — Stili CSS suddivisi per componenti
+- `public/` — Immagini e asset statici
+
+---
+
+## 🚀 Requisiti
+
+- **Node.js** >= 18.x
+- **npm** >= 9.x
+
+---
+
+## 🚀 Come avviare il progetto in locale
+
+```bash
+npm install
+npm run dev
+```
+
+Apri [http://localhost:5173](http://localhost:5173) per vedere il sito in locale.
+
+---
+
+## 🛠️ Build produzione
+
+```bash
+npm run build
+```
+
+---
+
+## 📝 Funzionalità principali
+- News dinamiche e filtrabili
+- Pagina Motorsport con specifiche tecniche e assistenza
+- Sezione Team e Storia aziendale
+- Modulo contatti
+- Layout responsive e animazioni

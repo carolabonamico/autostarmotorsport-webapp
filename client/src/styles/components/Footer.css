@@ -1,20 +1,45 @@
 /* Footer */
-.footer-minimal { background: #000; color: #e5e7eb; padding: 24px 0 0; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-.footer-brand .brand-title { color: var(--light-red); font-weight: 700; font-size: 1.5rem; margin-bottom: 1rem; }
-.footer-brand .brand-description { color: #9ca3af; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem; }
-.social-links { display: flex; gap: 1rem; }
-.social-link { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.05); color: #9ca3af; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; text-decoration: none; transition: all 0.3s ease; font-size: 1.1rem; }
-.social-link:hover { background: var(--light-red); color: white; border-color: var(--light-red); transform: translateY(-2px); }
-.footer-section .section-title { color: white; font-weight: 600; font-size: 1rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: .5px; }
-.footer-links { list-style: none; padding: 0; margin: 0; }
-.footer-links li { margin-bottom: .75rem; }
-.footer-links a { color: #9ca3af; text-decoration: none; font-size: .9rem; transition: all .3s ease; display: inline-block; }
-.footer-links a:hover { color: var(--light-red); transform: translateX(4px); }
-.contact-info .contact-item { display: flex; align-items: flex-start; margin-bottom: 1rem; font-size: .9rem; }
-.contact-item i { color: var(--light-red); width: 18px; margin-right: .75rem; margin-top: 2px; flex-shrink: 0; }
-.contact-item span { color: #9ca3af; line-height: 1.5; }
-.footer-bottom { margin-top: .5rem; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1); background: #000; }
-.footer-legal { display: inline-flex; gap: 18px; justify-content: center; align-items: center; }
-.footer-legal a { color: #9ca3af; text-decoration: none; font-size: .85rem; transition: color .3s ease; }
-.footer-legal a:hover { color: var(--light-red); }
-@media (max-width:768px){ .footer-minimal{ padding:1rem 0 0;} .footer-legal{ justify-content:center; margin-top:1rem;} .social-links{ justify-content:flex-start;} }
+.footer-custom {
+  background: var(--medium-white);
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.footer-custom ul {
+  display: inline-flex;
+  gap: 2vw;
+  list-style: none;
+}
+
+.footer-custom li {
+  color: var(--medium-gray); 
+  font-size: var(--font-subtitle);
+}
+
+.footer-links {
+  color: var(--medium-gray);
+  text-decoration: none;
+  font-size: var(--font-subtitle);
+}
+
+.footer-line {
+  width: 90%;
+  height: 0;
+  border-top: 1px solid var(--light-gray);
+  margin: 0 auto 1rem auto;
+}
+
+.footer-col {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer-custom ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0;
+    text-align: center;
+  }
+}

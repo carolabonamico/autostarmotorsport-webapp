@@ -1,0 +1,148 @@
+/* News Article Page Styles */
+.news-article-page {
+  background: var(--medium-white);
+}
+
+/* Hero Section */
+.article-hero {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  padding: 8vh 0 4vh;
+}
+
+.article-breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.article-breadcrumb .breadcrumb-item a {
+  color: var(--medium-gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-breadcrumb .breadcrumb-item a:hover {
+  color: var(--light-red);
+}
+
+.article-breadcrumb .breadcrumb-item.active {
+  color: var(--dark-gray);
+}
+
+.article-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.article-badge {
+  padding: 0.6rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.article-title {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .article-title {
+    font-size: 2rem;
+  }
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.article-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.article-image-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-excerpt {
+  background: linear-gradient(135deg, rgba(220,38,38,0.05), rgba(220,38,38,0.1));
+  border-left: 4px solid var(--light-red);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: var(--light-red);
+  opacity: 0.3;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.article-excerpt p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 2.5rem;
+}
+
+.article-text {
+  line-height: 1.8;
+}
+
+.article-text p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.article-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Article Actions */
+.article-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Article Not Found */
+.article-not-found {
+  padding: 6vh 0;
+  text-align: center;
+}
+
+.article-not-found i {
+  font-size: 5rem;
+  color: var(--light-red);
+  opacity: 0.6;
+}
+
+.article-not-found h1 {
+  font-size: 2.5rem;
+}
+
+.article-not-found p {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}

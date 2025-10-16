@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
-import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import AOS from 'aos';
+import { SectionHeader } from '../components/SectionHeader';
 
 const Contatti = () => {
 
@@ -11,77 +12,68 @@ const Contatti = () => {
     });
   }, []);
 
-
   return (
     <>
 
       {/* Contact info */}
-      <section className="section bg-light" id='info-contatti'>
+      <section className="section" id='info-contatti'>
         <Container>
           <Row>
-            <Col className="mb-5">
-              <h2 className="section-title text-center mb-5" data-aos="fade-up">
-                Come <span className="text-primary">Raggiungerci</span>
-              </h2>
+            <Col>
+              <SectionHeader title="Come" lastword="Raggiungerci" />
             </Col>
           </Row>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center mb-5">
             <Col lg={4} md={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="100">
-                <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
-                  <i className="bi bi-geo-alt-fill text-white" style={{fontSize: '2rem'}}></i>
-                </div>
-                <h6 className="text-dark mb-1">Indirizzo</h6>
-                <div className="text-dark">Strada per Valenza 38</div>
-                <div className="text-medium-grey small">15040 Pecetto di Valenza (AL) Fr. Pellizzari</div>
+                <i className="contact-icon bi bi-geo-alt-fill"></i>
+                <h6>Indirizzo</h6>
+                Strada per Valenza 38<br />
+                15040 Pecetto di Valenza (AL) Fr. Pellizzari
               </div>
             </Col>
             <Col lg={4} md={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="200">
-                <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
-                  <i className="bi bi-telephone-fill text-white" style={{fontSize: '2rem'}}></i>
-                </div>
-                <h6 className="text-dark mb-1">Telefono</h6>
-                <a href="tel:+390131940175" className="text-dark">+39 0131 940175</a>
+                <i className="contact-icon bi bi-telephone-fill"></i>
+                <h6>Telefono</h6>
+                <a href="tel:+390131940175">+39 0131 940175</a>
               </div>
             </Col>
             <Col lg={4} md={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="300">
-                <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
-                  <i className="bi bi-envelope-fill text-white" style={{fontSize: '2rem'}}></i>
-                </div>
-                <h6 className="text-dark mb-1">Email</h6>
-                <a href="mailto:info@autostar-motorsport.it" className="text-dark">info@autostar-motorsport.it</a>
+                <i className="contact-icon bi bi-envelope-fill"></i>
+                <h6>Email</h6>
+                <a href="mailto:info@autostar-motorsport.it">info@autostar-motorsport.it</a>
               </div>
             </Col>
           </Row>
           <Row className="justify-content-center">
             <Col lg={4} md={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="400">
-                <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
-                  <i className="bi bi-envelope-fill text-white" style={{fontSize: '2rem'}}></i>
+                <div className="contact-icon">
+                  <i className="bi bi-envelope-fill text-white"></i>
                 </div>
-                <h6 className="text-dark mb-1">PEC</h6>
-                <a href="mailto:davidebonamico@pec.it" className="text-dark">davidebonamico@pec.it</a>
+                <h6>PEC</h6>
+                <a href="mailto:davidebonamico@pec.it">davidebonamico@pec.it</a>
               </div>
             </Col>
             <Col lg={4} md={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="500">
-                <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
-                  <i className="bi bi-clock-fill text-white" style={{fontSize: '2rem'}}></i>
+                <div className="contact-icon">
+                  <i className="bi bi-clock-fill"></i>
                 </div>
-                <h6 className="text-dark mb-1">Orari</h6>
-                <div className="text-dark">Lun-Ven: 8:00-18:00</div>
-                <div className="text-medium-grey small">Sab: 8:00-12:00</div>
+                <h6>Orari</h6>
+                Lun-Ven: 8:00-18:00<br />
+                Sab: 8:00-12:00
               </div>
             </Col>
             <Col lg={4} md={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="600">
-                <div className="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '70px', height: '70px'}}>
-                  <i className="bi bi-facebook text-white" style={{fontSize: '2rem'}}></i>
+                <div className="contact-icon">
+                  <i className="bi bi-facebook"></i>
                 </div>
-                <h6 className="text-dark mb-1">Facebook</h6>
-                <a href="https://www.facebook.com/autostar.motorsport" target="_blank" rel="noopener noreferrer" className="text-dark">@autostar.motorsport</a>
+                <h6>Facebook</h6>
+                <a href="https://www.facebook.com/autostar.motorsport" target="_blank" rel="noopener noreferrer">@autostar.motorsport</a>
               </div>
             </Col>
           </Row>
@@ -89,25 +81,25 @@ const Contatti = () => {
       </section>
 
       {/* Mappa e info */}
-      <section className="section bg-light pt-2">
+      <section className="section">
         <Container>
+          <Row>
+            <Col>
+              <SectionHeader title="Dove" lastword="Siamo" />
+            </Col>
+          </Row>
           <Row className="justify-content-center">
-            <Col lg={8} md={10}>
-              <div className="text-center mb-4" data-aos="fade-up">
-                <h3 className="text-dark mb-5">
-                  Dove <span className="text-primary">Trovarci</span>
-                </h3>
-                <p className="lead text-center">
+            <Col md={10} className="text-center">
+              <div className="section-subtitle" data-aos="fade-up">
                   Vieni a trovarci nella nostra sede oppure contattaci tramite i recapiti qui sopra. Siamo sempre disponibili per informazioni, preventivi e assistenza!
-                </p>
               </div>
-              <div className="mx-auto mt-5" style={{maxWidth: '700px'}}>
+              <div className="mx-auto mt-5 mb-5" style={{maxWidth: '700px'}}>
                 <div 
-                  className="bg-primary"
+                  className="bg-red"
                   style={{
                     height: '400px',
                     width: '100%',
-                    background: 'linear-gradient(135deg, var(--racing-black), var(--primary-red))',
+                    background: 'linear-gradient(135deg, var(--racing-black), var(--light-red))',
                     borderRadius: '24px',
                     boxShadow: '0 2px 16px rgba(0,0,0,0.10)'
                   }}
@@ -122,9 +114,6 @@ const Contatti = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
-                </div>
-                <div className="text-medium-grey small text-center mt-5">
-                  P.IVA 02231680063 &nbsp; | &nbsp; C.F. BNMDVD69A12L570G &nbsp; | &nbsp; R.E.A. AL153227
                 </div>
               </div>
             </Col>
