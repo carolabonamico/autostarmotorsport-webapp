@@ -23,8 +23,8 @@ const Contatti = () => {
               <SectionHeader title="Come" lastword="Raggiungerci" />
             </Col>
           </Row>
-          <Row className="justify-content-center mb-5">
-            <Col lg={4} md={6} className="mb-4">
+          <Row className="justify-content-center">
+            <Col lg={4} sm={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="100">
                 <i className="contact-icon bi bi-geo-alt-fill"></i>
                 <h6>Indirizzo</h6>
@@ -32,23 +32,21 @@ const Contatti = () => {
                 15040 Pecetto di Valenza (AL) Fr. Pellizzari
               </div>
             </Col>
-            <Col lg={4} md={6} className="mb-4">
+            <Col lg={4} sm={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="200">
                 <i className="contact-icon bi bi-telephone-fill"></i>
                 <h6>Telefono</h6>
                 <a href="tel:+390131940175">+39 0131 940175</a>
               </div>
             </Col>
-            <Col lg={4} md={6} className="mb-4">
+            <Col lg={4} sm={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="300">
                 <i className="contact-icon bi bi-envelope-fill"></i>
                 <h6>Email</h6>
                 <a href="mailto:info@autostar-motorsport.it">info@autostar-motorsport.it</a>
               </div>
             </Col>
-          </Row>
-          <Row className="justify-content-center">
-            <Col lg={4} md={6} className="mb-4">
+            <Col lg={4} sm={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="400">
                 <div className="contact-icon">
                   <i className="bi bi-envelope-fill text-white"></i>
@@ -57,7 +55,7 @@ const Contatti = () => {
                 <a href="mailto:davidebonamico@pec.it">davidebonamico@pec.it</a>
               </div>
             </Col>
-            <Col lg={4} md={6} className="mb-4">
+            <Col lg={4} sm={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="500">
                 <div className="contact-icon">
                   <i className="bi bi-clock-fill"></i>
@@ -67,7 +65,7 @@ const Contatti = () => {
                 Sab: 8:00-12:00
               </div>
             </Col>
-            <Col lg={4} md={6} className="mb-4">
+            <Col lg={4} sm={6} className="mb-4">
               <div className="text-center" data-aos="fade-up" data-aos-delay="600">
                 <div className="contact-icon">
                   <i className="bi bi-facebook"></i>
