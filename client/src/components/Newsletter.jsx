@@ -1,6 +1,5 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import '../styles/components/Footer.css';
-import '../styles/components/Animations.css';
 
 const Newsletter = () => {
   return (
@@ -10,7 +9,7 @@ const Newsletter = () => {
           <Col lg={8} className="mx-auto text-center">
             <div data-aos="fade-up">
               <h2 className="text-white mb-4">
-                Resta <span className="text-primary">Aggiornato</span>
+                Resta <span className="text-red">Aggiornato</span>
               </h2>
               <p className="lead mb-4">
                 Iscriviti alla nostra newsletter per ricevere tutte le ultime 
@@ -24,7 +23,7 @@ const Newsletter = () => {
                       className="form-control" 
                       placeholder="La tua email"
                     />
-                    <Button variant="primary" type="button">
+                    <Button className='btn-red' type="button">
                       <i className="bi bi-envelope me-2"></i>
                       Iscriviti
                     </Button>

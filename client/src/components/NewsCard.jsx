@@ -4,7 +4,7 @@ import '../styles/components/Cards.css';
 
 const formatDate = (dateString) => new Date(dateString).toLocaleDateString('it-IT');
 
-const NewsCard = ({ article, delay = 0, compact = false }) => {
+const NewsCard = ({ article, delay = 0 }) => {
   if (!article) return null;
 
   // Capitalizing the category for display
@@ -14,20 +14,18 @@ const NewsCard = ({ article, delay = 0, compact = false }) => {
 
   return (
     <Card
-      className={`team-card h-100 ${compact ? 'news-card-compact' : ''}`}
       data-aos="fade-up"
       data-aos-delay={delay}
     >
-      <Card.Body className="team-card-body">
-        <div className="d-flex align-items-center mb-2">
-          <Badge bg="primary" className="me-2 badge-category">{categoryLabel}</Badge>
-          <span className="news-date">{formatDate(article.date)}</span>
+      <Card.Body className="d-flex flex-column">
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <Badge bg="red" className="badge-center">{categoryLabel}</Badge>
+          <small className="text-muted ms-2">{formatDate(article.date)}</small>
         </div>
-        <h5 className="mt-3 mb-3">{article.title}</h5>
-        {!compact && <p className="mb-3 team-description">{article.excerpt}</p>}
-        {compact && <p className="mb-3 team-description">{article.excerpt}</p>}
-        <Button as={Link} to={`/news/${encodeURIComponent(article.date)}-${encodeURIComponent(article.title)}`} variant="outline-primary" size="sm">
-          Leggi tutto
+        <h5 className="mb-2 text-center">{article.title}</h5>
+        <p className="mb-3 text-center flex-grow-1">{article.excerpt}</p>
+        <Button as={Link} to={`/news/${encodeURIComponent(article.date)}-${encodeURIComponent(article.title)}`} variant="red" className="w-100">
+          Leggi
         </Button>
       </Card.Body>
     </Card>

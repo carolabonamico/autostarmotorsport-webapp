@@ -1,17 +1,60 @@
 /* Section Layout */
-.section { padding:80px 0; background: var(--white); }
-.section:nth-child(even){ background: var(--light-bg); }
-.section.bg-light { background: var(--light-bg) !important; }
-.section.bg-dark-custom { background: linear-gradient(135deg,var(--black) 0%, var(--dark-gray) 100%) !important; }
+.section { 
+    padding: 6vh 6vw; 
+    background: var(--medium-white); 
+}
+
+.section p, h1, h2, h3, h4, h5, h6 { 
+    margin-top: 2vh; 
+    margin-bottom: 2vh;
+}
+
+.section a { 
+    color: black; 
+}
+
+.section-title { 
+    font-size: 2.5rem; 
+    position: relative;
+    margin-bottom: 8vh;
+    text-align: center;
+}
+
+.section-title::after { 
+    content: ''; 
+    position: absolute; 
+    bottom: -10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 6vw; 
+    height: 2px; 
+    background: var(--light-red);
+}
+
+.section-subtitle { 
+    font-size: var(--font-subtitle);
+    text-align: center; 
+    padding-bottom: 4vh;
+    color: var(--dark-gray);
+}
+
+.section.bg-dark-custom { 
+    background: black ;
+}
+
 .section.bg-dark-custom h1,
 .section.bg-dark-custom h2,
 .section.bg-dark-custom h3,
 .section.bg-dark-custom h4,
 .section.bg-dark-custom h5,
-.section.bg-dark-custom h6 { color: var(--white) !important; }
-.section.bg-dark-custom p { color: var(--light-gray) !important; }
-.section.bg-dark-custom .text-primary { color: var(--light-red) !important; }
-.section-title { font-size:2.5rem; font-weight:600; margin-bottom:3rem; color:var(--black); position:relative; text-align:center; }
-.section-title::after { content:''; position:absolute; bottom:-10px; left:50%; transform:translateX(-50%); width:60px; height:4px; background:linear-gradient(90deg,var(--light-red),var(--dark-red)); }
-@media (max-width:768px){ .section-title{ font-size:2rem;} .section{ padding:60px 0;} }
-@media (max-width:576px){ .section-title{ font-size:2rem;} .section{ padding:40px 0;} }
+.section.bg-dark-custom h6 { 
+    color: white; 
+}
+
+.section.bg-dark-custom p { 
+    color: var(--light-gray) !important; 
+}
+
+.section.bg-dark-custom .text-red {
+    color: var(--light-red) !important; 
+}

@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-// Stili specifici del componente
 import '../styles/components/Navbar.css';
-import '../styles/components/Animations.css';
 
 const CustomNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +35,6 @@ const CustomNavbar = () => {
         expand="lg" 
         fixed="top" 
         className={`navbar-custom ${scrolled ? 'scrolled' : ''}`}
-        variant="dark"
       >
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">

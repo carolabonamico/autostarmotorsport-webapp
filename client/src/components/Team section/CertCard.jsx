@@ -1,47 +1,23 @@
-const pdfs = [
-  {
-    title: 'Certificazione PES/PAV',
-    desc: 'Certificato ufficiale PES/PAV - Bonamico Davide',
-    file: '/pdf/7908_PESPAV-BONAMICO_DAVIDE.pdf'
-  },
-  {
-    title: 'Certificazione PEI',
-    desc: 'Certificato ufficiale PEI - Bonamico Davide',
-    file: '/pdf/7909_PEI-BONAMICO_DAVIDE.pdf'
-  }
-];
-
 import { Card } from 'react-bootstrap';
 import '../../styles/components/Cards.css';
 
-const CertCard = () => {
+const CertCard = ({ cert, delay = 0 }) => {
   return (
-    <div className="row g-3 mt-4">
-      {pdfs.map((pdf) => (
-        <div className="col-md-6 col-12" key={pdf.file}>
-          <Card className="team-card h-100">
-            <Card.Body className="team-card-body">
-              <div className="d-flex align-items-start">
-                <i className="bi bi-file-pdf text-danger me-3" style={{fontSize: '2rem'}}></i>
-                <div className="flex-grow-1">
-                  <h6 className="mb-1">{pdf.title}</h6>
-                  <p className="text-medium-grey small mb-2">{pdf.desc}</p>
-                  <a 
-                    href={pdf.file}
-                    className="btn btn-sm btn-outline-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="bi bi-eye me-1"></i>
-                    Visualizza PDF
-                  </a>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </div>
-      ))}
-    </div>
+    <Card
+      className="text-center"
+      data-aos="fade-up"
+      data-aos-delay={delay}
+    >
+      <Card.Body className="d-flex flex-column">
+        <i className="bi bi-file-earmark-pdf text-danger" style={{fontSize: '3rem'}}></i>
+        <h5>{cert.title}</h5>
+        <p>Data di rilascio: {cert.date}</p>
+        <a href={cert.file} className="btn btn-outline-red w-100" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-eye me-1"></i>
+          Visualizza PDF
+        </a>
+      </Card.Body>
+    </Card>
   );
 }
 
