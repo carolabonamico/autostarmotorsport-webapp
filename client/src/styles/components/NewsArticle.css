@@ -45,9 +45,181 @@
   margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) {
+/* Unified Responsive Breakpoints */
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .article-hero {
+    padding: 5vh 0 3vh;
+  }
+
+  .article-breadcrumb {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .article-header {
+    margin-bottom: 2rem;
+  }
+
+  .article-badge {
+    padding: 0.4rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-meta {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .article-image-wrapper {
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .article-image {
+    max-height: 300px;
+  }
+
+  .article-excerpt {
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .quote-icon {
+    font-size: 1.5rem;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .article-excerpt p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 2rem;
+  }
+
+  .article-text {
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .article-text p {
+    margin-bottom: 1.25rem;
+  }
+
+  .article-actions {
+    padding: 0.75rem 0;
+    gap: 0.75rem;
+  }
+
+  .article-not-found {
+    padding: 4vh 0;
+  }
+
+  .article-not-found i {
+    font-size: 3.5rem;
+  }
+
+  .article-not-found h1 {
+    font-size: 1.75rem;
+  }
+
+  .article-not-found p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet and iPad devices (max-width: 900px) */
+@media (max-width: 900px) {
+  .article-hero {
+    padding: 6vh 0 3.5vh;
+  }
+
+  .article-breadcrumb {
+    margin-bottom: 1.75rem;
+    font-size: 0.85rem;
+  }
+
+  .article-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .article-badge {
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+  }
+
   .article-title {
     font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .article-meta {
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .article-image-wrapper {
+    border-radius: 16px;
+    margin-bottom: 2.5rem;
+  }
+
+  .article-image {
+    max-height: 400px;
+  }
+
+  .article-excerpt {
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+  }
+
+  .quote-icon {
+    font-size: 1.75rem;
+    top: 0.85rem;
+    left: 0.85rem;
+  }
+
+  .article-excerpt p {
+    font-size: 1rem;
+    line-height: 1.65;
+    padding-left: 2.25rem;
+  }
+
+  .article-text {
+    line-height: 1.75;
+  }
+
+  .article-text p {
+    margin-bottom: 1.35rem;
+  }
+
+  .article-actions {
+    padding: 0.85rem 0;
+    gap: 0.85rem;
+  }
+
+  .article-not-found {
+    padding: 5vh 0;
+  }
+
+  .article-not-found i {
+    font-size: 4rem;
+  }
+
+  .article-not-found h1 {
+    font-size: 2rem;
+  }
+
+  .article-not-found p {
+    font-size: 1rem;
   }
 }
 

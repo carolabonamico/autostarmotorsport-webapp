@@ -45,8 +45,26 @@
   width: 100%; 
 }
 
-@media (max-width: 991px) {
+/* Unified Responsive Breakpoints */
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .navbar-custom {
+    min-height: 60px;
+  }
+
   .nav-link {
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet and iPad devices (max-width: 900px) */
+@media (max-width: 900px) {
+  .navbar-custom {
+    min-height: 70px;
+  }
+
+  .nav-link {
+    padding: 0.65rem 0.85rem;
   }
 }

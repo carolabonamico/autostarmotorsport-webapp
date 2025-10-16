@@ -58,3 +58,51 @@
 .section.bg-dark-custom .text-red {
     color: var(--light-red) !important; 
 }
+
+/* Unified Responsive Breakpoints */
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .section {
+    padding: 4vh 4vw;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 4vh;
+  }
+
+  .section-title::after {
+    width: 10vw;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    padding-bottom: 2vh;
+  }
+
+  .section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+  }
+}
+
+/* Tablet and iPad devices (max-width: 900px) */
+@media (max-width: 900px) {
+  .section {
+    padding: 5vh 5vw;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 6vh;
+  }
+
+  .section-title::after {
+    width: 8vw;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    padding-bottom: 3vh;
+  }
+}

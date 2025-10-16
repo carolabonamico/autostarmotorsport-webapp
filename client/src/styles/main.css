@@ -52,3 +52,32 @@ main {
 footer {
   flex-shrink: 0;
 }
+
+/* Unified Responsive Breakpoints */
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  :root {
+    --navbar-height: 60px;
+    --font-subtitle: 0.95rem;
+  }
+
+  .App {
+    font-size: 14px;
+  }
+
+  main {
+    padding-top: 60px;
+  }
+}
+
+/* Tablet and iPad devices (max-width: 900px) */
+@media (max-width: 900px) {
+  :root {
+    --navbar-height: 70px;
+    --font-subtitle: 1rem;
+  }
+
+  main {
+    padding-top: 70px;
+  }
+}
