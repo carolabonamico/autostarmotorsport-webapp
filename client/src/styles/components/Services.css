@@ -1,12 +1,88 @@
-.service-item { 
-    padding: 1.5rem 0; 
-    scroll-margin-top: 80px; 
-    transition: background-color .3s ease;
+/* Services Layout */
+.service-block {
+  margin-bottom: 5rem;
+  scroll-margin-top: 100px;
 }
 
-.service-item:target { 
-    background-color: rgba(220,53,69,0.05); 
-    border-radius:10px; 
-    padding:2rem 1rem; 
-    margin:0 -1rem; 
+.service-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Service Header */
+.service-header {
+  margin-bottom: 2rem;
+}
+
+.service-description {
+  line-height: 1.6;
+}
+
+/* Service Features */
+.service-features .list-group-item {
+  padding: 0.75rem 0;
+  background: transparent;
+}
+
+.service-features .list-group-item i {
+  color: var(--light-red);
+}
+
+/* Service Image */
+.service-image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.service-image {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Service Text */
+.service-text p {
+  margin: 0;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Service Divider (uses footer-line class but with more spacing) */
+.service-block .footer-line {
+  margin: 3rem auto;
+}
+
+/* Target State */
+.service-block:target {
+  padding: 2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  background: rgba(220,38,38,0.03);
+  border-radius: 16px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .service-block {
+    margin-bottom: 4rem;
+  }
+
+  .service-image {
+    max-height: 300px;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-block {
+    margin-bottom: 3rem;
+  }
+
+  .service-block:target {
+    padding: 1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }

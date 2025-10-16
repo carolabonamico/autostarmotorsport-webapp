@@ -51,15 +51,14 @@ const NewsMotori = () => {
           </Row>
 
           {/* Featured Article */}
-          {selectedCategory === 'all' && (
+          {selectedCategory === 'all' && filteredNews.length > 0 && (
             <Row className="mt-5 mb-4">
-              <Col lg={4} md={6}>
-                {filteredNews
-                  .filter(article => article.featured)
-                  .slice(0, 1)
-                  .map((article) => (
-                    <NewsCard key={article.date + article.title} article={article} />
-                  ))}
+              <Col lg={12}>
+                <NewsCard 
+                  article={filteredNews[0]} 
+                  featured={true}
+                  delay={0}
+                />
               </Col>
             </Row>
           )}
@@ -67,10 +66,10 @@ const NewsMotori = () => {
           {/* News Grid */}
           <Row className={selectedCategory === 'all' ? '' : 'mt-5'}>
             {filteredNews
-              .filter(article => selectedCategory !== 'all' || !article.featured)
+              .slice(selectedCategory === 'all' ? 1 : 0)
               .map((article, index) => (
                 <Col lg={4} md={6} className="mb-4" key={article.date + article.title}>
-                  <NewsCard article={article} delay={index * 100} />
+                  <NewsCard article={article} delay={(index + 1) * 100} />
                 </Col>
               ))}
           </Row>

@@ -1,6 +1,5 @@
 .navbar-custom { 
   background: var(--black); 
-  backdrop-filter: blur(10px); 
   transition: all 0.3s ease;
   min-height: var(--navbar-height);
   display: flex;
@@ -8,15 +7,15 @@
 }
 
 .navbar-custom.scrolled { 
-  background: var(--black);
   box-shadow: 0 2px 20px rgba(0,0,0,0.5); 
 }
 
 .nav-link { 
   color: var(--white) !important; 
-  font-weight: 500; 
   transition: color 0.3s ease; 
-  position: relative; 
+  position: relative;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
 }
 
 .nav-link:hover { 
@@ -44,4 +43,10 @@
 
 .nav-link.active::after { 
   width: 100%; 
+}
+
+@media (max-width: 991px) {
+  .nav-link {
+    padding: 0.75rem 1rem;
+  }
 }

@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ImageWithText from '../components/Preparazioni/ImageWithText';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { services } from '../data/preparazioni';
 import SectionHeader from '../components/SectionHeader';
+import '../styles/components/Services.css';
 
 const Preparazioni = () => {
 
@@ -15,92 +16,98 @@ const Preparazioni = () => {
 
   return (
   <>
-
-      {/* Services Grid */}
+      {/* Services Section */}
       <section className="section" id="nostri-servizi">
         <Container>
-          
           <Row>
             <Col>
-              <SectionHeader title="I Nostri" lastword="Servizi" subtitle="Dalla manutenzione ordinaria all'assistenza motorsport, offriamo soluzioni complete per ogni tipo di veicolo." />
+              <SectionHeader 
+                title="I Nostri" 
+                lastword="Servizi" 
+                subtitle="Dalla manutenzione ordinaria all'assistenza motorsport, offriamo soluzioni complete per ogni tipo di veicolo." 
+              />
             </Col>
           </Row>
 
-          <Row className="g-4">
-            {services.map((service, index) => (
-              <Col lg={12} key={index}>
-                <div 
-                  id={service.id}
-                  className="service-item"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <div className="mb-4">
-                    <h5 className="mb-2">{service.title}</h5>
-                    <p className="mb-3">{service.description}</p>
+          {services.map((service, index) => (
+            <div 
+              key={service.id}
+              id={service.id}
+              className="service-block"
+              data-aos="fade-up"
+              data-aos-delay={100}
+            >
+              <Row className="align-items-center g-3">
+                {/* Content Column */}
+                <Col lg={service.image ? 8 : 12}>
+                  <div className="service-header">
+                    <h3 className="service-title mb-3">{service.title}</h3>
+                    <p className="service-description">{service.description}</p>
                   </div>
 
-                  <ul className="list-unstyled mb-4">
+                  {/* Features List */}
+                  <ListGroup variant="flush" className="service-features mb-3">
                     {service.features.map((feature, idx) => (
-                      <li 
-                        key={idx} 
-                        className="mb-3"
-                        data-aos="fade-right"
-                        data-aos-delay={index * 100 + 300 + (idx * 50)}
+                      <ListGroup.Item 
+                        key={idx}
+                        className="border-0 px-0"
+                        data-aos="fade-in"
+                        data-aos-delay={150 + (idx * 30)}
                       >
-                        <i className="bi bi-check-circle-fill text-red me-2"></i>
+                        <i className="bi bi-check-circle-fill me-2"></i>
                         {feature}
-                      </li>
+                      </ListGroup.Item>
                     ))}
-                  </ul>
-
-                  {service.image ? (
-                    <div data-aos="fade-up" data-aos-delay={index * 100 + 400}>
-                      <ImageWithText src={service.image} alt={service.alt} text={service.text} maxWidth={service.imageWidth} />
-                    </div>
-                  ) : (
-                    service.text && (
-                      <div className="mt-3" data-aos="fade-up" data-aos-delay={index * 100 + 400}>
-                        <p>{service.text}</p>
-                      </div>
-                    )
-                  )}
+                  </ListGroup>
                   
-                  { service.id === 'motorsport' && (
-                    <div className="text-center mt-4" data-aos="fade-up" data-aos-delay={index * 100 + 500}>
-                      <Button
-                        as={Link}
-                        to="/motorsport"
-                        variant='red'
-                        className='mt-3'
-                      >
+                  {/* Action Buttons */}
+                  {service.id === 'motorsport' && (
+                    <div className="service-action mt-4" data-aos="fade-up" data-aos-delay={250}>
+                      <Button as={Link} to="/motorsport" variant='red'>
                         Vai alla pagina Motorsport
                         <i className="bi bi-arrow-right ms-2"></i>
                       </Button>
                     </div>
                   )}
                   
-                  { service.id === 'auto-elettriche' && (
-                    <div className="text-center mt-4" data-aos="fade-up" data-aos-delay={index * 100 + 500}>
-                      <Button 
-                        as={Link}
-                        to="/team#certificazioni-qualifiche"
-                        variant='red'
-                        className='mt-3'
-                      >
+                  {service.id === 'auto-elettriche' && (
+                    <div className="service-action mt-4" data-aos="fade-up" data-aos-delay={250}>
+                      <Button as={Link} to="/team#certificazioni-qualifiche" variant='red'>
                         <i className="bi bi-award me-2"></i>
                         Scopri tutte le certificazioni
                       </Button>
                     </div>
                   )}
+                </Col>
 
-                  {index < services.length - 1 && (
-                    <div className='footer-line mt-5 mb-4'></div>
-                  )}
-                </div>
-              </Col>
-            ))}
-          </Row>
+                {/* Image Column */}
+                {service.image && (
+                  <Col lg={4}>
+                    <div className="service-image-container" data-aos="fade-left" data-aos-delay={200}>
+                      <img 
+                        src={service.image} 
+                        alt={service.alt}
+                        className="service-image"
+                      />
+                    </div>
+                  </Col>
+                )}
+              </Row>
+
+              {/* Text below taking full width */}
+              {service.text && (
+                <Row className="mt-4">
+                  <Col xs={12}>
+                    <div className="service-text" data-aos="fade-up" data-aos-delay={200}>
+                      <p>{service.text}</p>
+                    </div>
+                  </Col>
+                </Row>
+              )}
+
+              {index < services.length - 1 && <div className="footer-line"></div>}
+            </div>
+          ))}
         </Container>
       </section>
   </>

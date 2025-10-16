@@ -1,9 +1,9 @@
 /* Footer */
 .footer-custom {
-    background: var(--medium-white);
-    padding: 0;
-    width: 100%;
- }
+  background: var(--medium-white);
+  padding: 1.5rem 0;
+  width: 100%;
+}
 
 .footer-custom ul {
   display: inline-flex;
@@ -35,3 +35,11 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .footer-custom ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0;
+    text-align: center;
+  }
+}

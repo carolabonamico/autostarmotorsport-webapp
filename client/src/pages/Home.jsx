@@ -54,7 +54,7 @@ const Home = () => {
               <SectionHeader title="Ultimi" lastword="Aggiornamenti" subtitle="Rimani aggiornato con le nostre ultime notizie e servizi" />
             </Col>
           </Row>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center g-4">
             {latestArticles.map((article, idx) => (
               <Col lg={5} md={6} key={article.date + article.title}>
                 <NewsCard article={article} delay={idx * 100} />
