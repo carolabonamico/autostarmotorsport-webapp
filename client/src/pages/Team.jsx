@@ -29,7 +29,7 @@ const Team = () => {
               <SectionHeader title="Esperienza e" lastword="Competenza" subtitle="Il nostro team è composto da professionisti altamente qualificati." />
             </Col>
           </Row>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center g-4">
             {teamMembers.map((member, index) => (
               <Col lg={4} md={6} key={index}>
                 <TeamCard member={member} index={index} />

@@ -21,14 +21,6 @@
   margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-  .contact-icon {
-    width: 70px;
-    height: 70px;
-    font-size: 2rem;
-  }
-}
-
 /* Carousel */
 .carousel-caption-caption {
   background-color: #212529;

@@ -77,3 +77,50 @@
 .timeline-item:hover .timeline-year::after { 
   width:60px; 
 }
+
+/* Mobile Timeline - Vertical Layout */
+@media (max-width: 767px) {
+  .timeline-line {
+    display: none !important;
+  }
+  
+  .timeline-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 2.5rem !important;
+  }
+  
+  .timeline-year {
+    font-size: 1.5rem !important;
+    position: static !important;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+  }
+  
+  /* Remove horizontal line under year on mobile */
+  .timeline-year::after {
+    display: none !important;
+  }
+  
+  .timeline-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+/* iPhone Pro specific timeline sizing */
+@media (max-width: 402px) {
+  .timeline-year {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* iPhone SE specific timeline sizing */
+@media (max-width: 375px) {
+  .timeline-year {
+    font-size: 1.35rem !important;
+  }
+}
