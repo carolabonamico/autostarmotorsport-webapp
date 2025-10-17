@@ -1,1048 +1,129 @@
-/* Responsive Design - Optimized for all devices */
-/* Base: iPad 13" (1366x1024) - Perfect proportions */
+/* Simplified Responsive Design */
+/* Using CSS variables for easier maintenance */
 
-/* iPad 11" (1180x820) - 82% */
-@media (max-width: 1180px) and (min-width: 821px) {
+:root {
+  --section-padding-y: 6vh;
+  --section-padding-x: 6vw;
+  --title-size: 1.5rem;
+  --subtitle-size: 1rem;
+  --body-size: 0.9rem;
+  --navbar-height: 80px;
+  --footer-padding: 1.5rem;
+}
+
+/* Tablet optimization (iPad and similar) */
+@media (max-width: 1180px) {
   :root {
-    --font-subtitle: 0.95rem;
+    --section-padding-y: 4vh;
+    --section-padding-x: 4vw;
+    --title-size: 1.4rem;
+    --subtitle-size: 0.95rem;
+    --body-size: 0.9rem;
     --navbar-height: 70px;
+    --footer-padding: 1.3rem;
   }
   
-  .section {
-    padding: 2.5rem 0;
+  /* Navbar fix - reduce font size and padding */
+  .navbar-custom .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
   }
   
-  .contact-icon {
-    width: 65px;
-    height: 65px;
-    font-size: 2rem;
+  .navbar-custom .nav-link {
+    font-size: 0.85rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
   
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.7rem; }
-  h3 { font-size: 1.3rem; }
-  h4 { font-size: 1.2rem; }
-  h5 { font-size: 1.05rem; }
-  
-  /* Navbar */
-  .navbar-logo {
-    width: 38px !important;
-    height: 38px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 32px !important;
-  }
-  
-  /* Footer */
-  .footer-custom {
-    padding: 1.3rem 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.95rem;
-  }
-  
-  /* Carousel */
   .carousel-img {
     height: 420px;
   }
-  
-  .carousel-caption h5 {
-    font-size: 1.1rem;
-  }
-  
-  /* Cards */
-  .card {
-    font-size: 0.95rem;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-  }
-  
-  .news-card-modern .card-title {
-    font-size: 1.15rem;
-  }
-  
-  /* Timeline */
-  .timeline-year {
-    font-size: 1.5rem;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.2rem;
-  }
 }
 
-/* iPad mini (1133x744) - 91% */
-@media (max-width: 1133px) and (min-width: 745px) {
+@media (max-width: 1133px) {
   :root {
-    --font-subtitle: 0.9rem;
+    --section-padding-y: 3.5vh;
+    --section-padding-x: 3.5vw;
+    --title-size: 1.35rem;
+    --subtitle-size: 0.9rem;
     --navbar-height: 65px;
+    --footer-padding: 1.2rem;
   }
   
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
-  h4 { font-size: 1.1rem; }
-  h5 { font-size: 1rem; }
-  h6 { font-size: 0.9rem; }
-  
-  .section {
-    padding: 2rem 0;
+  /* Navbar fix - reduce font size and padding */
+  .navbar-custom .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
   
-  .contact-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.8rem;
+  .navbar-custom .nav-link {
+    font-size: 0.8rem !important;
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
   }
   
-  /* Navbar */
-  .navbar-logo {
-    width: 35px !important;
-    height: 35px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 28px !important;
-  }
-  
-  /* Footer */
-  .footer-custom {
-    padding: 1.2rem 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.9rem;
-  }
-  
-  /* Carousel */
   .carousel-img {
     height: 380px;
   }
-  
-  .carousel-caption h5 {
-    font-size: 1rem;
-  }
-  
-  /* Cards */
-  .card {
-    font-size: 0.9rem;
-  }
-  
-  .card-title {
-    font-size: 1.1rem;
-  }
-  
-  .news-card-modern .card-title {
-    font-size: 1.05rem;
-  }
-  
-  /* Timeline */
-  .timeline-year {
-    font-size: 1.4rem;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.1rem;
-  }
 }
 
-/* iPhone Pro Max (440x956) - 71% */
-@media (max-width: 440px) and (min-width: 393px) {
+/* Mobile optimization (iPhone and similar) */
+@media (max-width: 767px) {
   :root {
-    --font-subtitle: 0.9rem;
+    --section-padding-y: 1.5rem;
+    --section-padding-x: 1rem;
+    --title-size: 1.5rem;
+    --subtitle-size: 1rem;
+    --body-size: 0.9rem;
     --navbar-height: 60px;
+    --footer-padding: 0.5rem;
   }
   
-  /* Uniform font sizes across all pages */
-  body {
-    font-size: 0.9rem;
-  }
-  
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1.15rem; }
-  h4 { font-size: 1.05rem; }
-  h5 { font-size: 0.95rem; }
-  h6 { font-size: 0.85rem; }
-  
-  p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  /* Section titles - larger and uniform */
-  .section-title {
-    font-size: 1.5rem !important;
-  }
-  
-  .section-subtitle {
-    font-size: 1rem !important;
-  }
-  
+  /* Section spacing */
   .section {
-    padding: 1.5rem 0;
+    padding: var(--section-padding-y) var(--section-padding-x) 0 var(--section-padding-x) !important;
+    margin-bottom: 0 !important;
   }
   
-  /* Preparazioni page - uniform with cards */
-  .service-title {
-    font-size: 1.15rem !important;
+  /* Fix container padding to match */
+  .container {
+    padding-left: var(--section-padding-x) !important;
+    padding-right: var(--section-padding-x) !important;
   }
   
-  .service-description,
-  .service-text {
-    font-size: 0.9rem !important;
-  }
-  
-  .service-features {
-    font-size: 0.85rem !important;
-  }
-  
-  .contact-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 1.6rem;
-  }
-  
-  /* Navbar */
-  .navbar-logo {
-    width: 32px !important;
-    height: 32px !important;
-    margin-right: 8px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 26px !important;
-  }
-  
-  .navbar-brand {
-    padding: 0.3rem 0;
-  }
-  
-  /* Footer - stay vertical on mobile */
-  .footer-custom {
-    padding: 1rem 0;
-  }
-  
-  .footer-custom ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.85rem;
-  }
-  
-  /* Carousel - fixed height */
-  .carousel-img {
-    height: 280px !important;
-    max-height: 280px !important;
-  }
-  
-  .carousel-caption h5 {
-    font-size: 0.9rem;
-  }
-  
-  /* Cards - uniform sizing */
-  .card {
-    font-size: 0.9rem;
-  }
-  
-  .card-title {
-    font-size: 1.05rem;
-  }
-  
-  .news-card-modern .card-title {
-    font-size: 1rem;
-  }
-  
-  .card-body {
-    padding: 0.9rem;
-  }
-  
-  /* Timeline - vertical stacked layout */
-  .timeline-line {
-    display: none !important;
-  }
-  
-  .timeline-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 2rem !important;
-    text-align: center;
-  }
-  
-  .timeline-year {
-    font-size: 1.3rem;
-    position: static !important;
+  .section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+    margin-top: 2rem !important;
     margin-bottom: 1rem !important;
   }
   
-  .timeline-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.05rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-  
-  /* NewsArticle Page - with proper padding */
-  .article-hero {
-    padding: 4vh 1.5rem 2vh;
-  }
-  
-  .article-breadcrumb {
-    font-size: 0.75rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-breadcrumb .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .article-badge {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-title {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-meta {
-    gap: 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-image-wrapper {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-  }
-  
-  .article-excerpt {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
-  }
-  
-  .article-excerpt p {
-    font-size: 0.9rem !important;
-  }
-  
-  .article-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  .article-text p {
-    margin-bottom: 1.2rem;
-    font-size: 0.9rem !important;
-  }
-  
-  /* Add padding to article content */
-  .news-article-page .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .news-article-page section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* iPhone Plus (430x932) - 72% */
-@media (max-width: 430px) and (min-width: 403px) {
-  :root {
-    --font-subtitle: 0.9rem;
-    --navbar-height: 60px;
-  }
-  
-  /* Uniform font sizes across all pages */
+  /* Typography */
   body {
-    font-size: 0.9rem;
-  }
-  
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1.15rem; }
-  h4 { font-size: 1.05rem; }
-  h5 { font-size: 0.95rem; }
-  h6 { font-size: 0.85rem; }
-  
-  p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  /* Section titles - larger and uniform */
-  .section-title {
-    font-size: 1.5rem !important;
-  }
-  
-  .section-subtitle {
-    font-size: 1rem !important;
-  }
-  
-  /* Preparazioni page - uniform with cards */
-  .service-title {
-    font-size: 1.15rem !important;
-  }
-  
-  .service-description,
-  .service-text {
-    font-size: 0.9rem !important;
-  }
-  
-  .service-features {
-    font-size: 0.85rem !important;
-  }
-  
-  .contact-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 1.6rem;
-  }
-  
-  /* Navbar */
-  .navbar-logo {
-    width: 32px !important;
-    height: 32px !important;
-    margin-right: 8px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 26px !important;
-  }
-  
-  /* Footer - stay vertical on mobile */
-  .footer-custom {
-    padding: 1rem 0;
-  }
-  
-  .footer-custom ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.85rem;
-  }
-  
-  /* Carousel - fixed height */
-  .carousel-img {
-    height: 280px !important;
-    max-height: 280px !important;
-  }
-  
-  .carousel-caption h5 {
-    font-size: 0.9rem;
-  }
-  
-  /* Cards - uniform sizing */
-  .card {
-    font-size: 0.9rem;
-  }
-  
-  .card-title {
-    font-size: 1.05rem;
-  }
-  
-  .news-card-modern .card-title {
-    font-size: 1rem;
-  }
-  
-  .card-body {
-    padding: 0.9rem;
-  }
-  
-  /* Timeline - vertical stacked layout */
-  .timeline-line {
-    display: none !important;
-  }
-  
-  .timeline-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 2rem !important;
-    text-align: center;
-  }
-  
-  .timeline-year {
-    font-size: 1.3rem;
-    position: static !important;
-    margin-bottom: 1rem !important;
-  }
-  
-  .timeline-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.05rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-  
-  /* NewsArticle Page - with proper padding */
-  .article-hero {
-    padding: 4vh 1.5rem 2vh;
-  }
-  
-  .article-breadcrumb {
-    font-size: 0.75rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-breadcrumb .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .article-badge {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-title {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-meta {
-    gap: 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-image-wrapper {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-  }
-  
-  .article-excerpt {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
-  }
-  
-  .article-excerpt p {
-    font-size: 0.9rem !important;
-  }
-  
-  .article-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  .article-text p {
-    margin-bottom: 1.2rem;
-    font-size: 0.9rem !important;
-  }
-  
-  /* Add padding to article content */
-  .news-article-page .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .news-article-page section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* iPhone Plus (430x932) - 72% */
-@media (max-width: 430px) and (min-width: 403px) {
-  :root {
-    --font-subtitle: 0.9rem;
-    --navbar-height: 60px;
-  }
-  
-  /* Uniform font sizes across all pages */
-  body {
-    font-size: 0.9rem;
-  }
-  
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1.15rem; }
-  h4 { font-size: 1.05rem; }
-  h5 { font-size: 0.95rem; }
-  h6 { font-size: 0.85rem; }
-  
-  p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  /* Section titles - larger and uniform */
-  .section-title {
-    font-size: 1.5rem !important;
-  }
-  
-  .section-subtitle {
-    font-size: 1rem !important;
-  }
-  
-  /* Preparazioni page - uniform with cards */
-  .service-title {
-    font-size: 1.15rem !important;
-  }
-  
-  .service-description,
-  .service-text {
-    font-size: 0.9rem !important;
-  }
-  
-  .service-features {
-    font-size: 0.85rem !important;
-  }
-  
-  .contact-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 1.6rem;
-  }
-  
-  /* Navbar */
-  .navbar-logo {
-    width: 32px !important;
-    height: 32px !important;
-    margin-right: 8px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 26px !important;
-  }
-  
-  /* Footer - stay vertical on mobile */
-  .footer-custom {
-    padding: 1rem 0;
-  }
-  
-  .footer-custom ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.85rem;
-  }
-  
-  /* Carousel - fixed height */
-  .carousel-img {
-    height: 280px !important;
-    max-height: 280px !important;
-  }
-  
-  .carousel-caption h5 {
-    font-size: 0.9rem;
-  }
-  
-  /* Cards - uniform sizing */
-  .card {
-    font-size: 0.9rem;
-  }
-  
-  .card-title {
-    font-size: 1.05rem;
-  }
-  
-  .news-card-modern .card-title {
-    font-size: 1rem;
-  }
-  
-  .card-body {
-    padding: 0.9rem;
-  }
-  
-  /* Timeline - vertical stacked layout */
-  .timeline-line {
-    display: none !important;
-  }
-  
-  .timeline-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 2rem !important;
-    text-align: center;
-  }
-  
-  .timeline-year {
-    font-size: 1.3rem;
-    position: static !important;
-    margin-bottom: 1rem !important;
-  }
-  
-  .timeline-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.05rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-  
-  /* NewsArticle Page - with proper padding */
-  .article-hero {
-    padding: 4vh 1.5rem 2vh;
-  }
-  
-  .article-breadcrumb {
-    font-size: 0.75rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-breadcrumb .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .article-badge {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-title {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-meta {
-    gap: 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-image-wrapper {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-  }
-  
-  .article-excerpt {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
-  }
-  
-  .article-excerpt p {
-    font-size: 0.9rem !important;
-  }
-  
-  .article-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  .article-text p {
-    margin-bottom: 1.2rem;
-    font-size: 0.9rem !important;
-  }
-  
-  /* Add padding to article content */
-  .news-article-page .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .news-article-page section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* iPhone Plus (430x932) - 72% */
-@media (max-width: 430px) and (min-width: 403px) {
-  :root {
-    --font-subtitle: 0.9rem;
-    --navbar-height: 60px;
-  }
-  
-  /* Uniform font sizes across all pages */
-  body {
-    font-size: 0.9rem;
-  }
-  
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1.15rem; }
-  h4 { font-size: 1.05rem; }
-  h5 { font-size: 0.95rem; }
-  h6 { font-size: 0.85rem; }
-  
-  p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  /* Section titles - larger and uniform */
-  .section-title {
-    font-size: 1.5rem !important;
-  }
-  
-  .section-subtitle {
-    font-size: 1rem !important;
-  }
-  
-  /* Preparazioni page - uniform with cards */
-  .service-title {
-    font-size: 1.15rem !important;
-  }
-  
-  .service-description,
-  .service-text {
-    font-size: 0.9rem !important;
-  }
-  
-  .service-features {
-    font-size: 0.85rem !important;
-  }
-  
-  .contact-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 1.6rem;
-  }
-  
-  /* Navbar */
-  .navbar-logo {
-    width: 32px !important;
-    height: 32px !important;
-    margin-right: 8px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 26px !important;
-  }
-  
-  /* Footer - stay vertical on mobile */
-  .footer-custom {
-    padding: 1rem 0;
-  }
-  
-  .footer-custom ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.85rem;
-  }
-  
-  /* Carousel - fixed height */
-  .carousel-img {
-    height: 280px !important;
-    max-height: 280px !important;
-  }
-  
-  .carousel-caption h5 {
-    font-size: 0.9rem;
-  }
-  
-  /* Cards - uniform sizing */
-  .card {
-    font-size: 0.9rem;
-  }
-  
-  .card-title {
-    font-size: 1.05rem;
-  }
-  
-  .card-body {
-    padding: 0.9rem;
-  }
-  
-  /* Timeline - vertical stacked layout */
-  .timeline-line {
-    display: none !important;
-  }
-  
-  .timeline-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 2rem !important;
-    text-align: center;
-  }
-  
-  .timeline-year {
-    font-size: 1.3rem;
-    position: static !important;
-    margin-bottom: 1rem !important;
-  }
-  
-  .timeline-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.05rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-  
-  /* NewsArticle Page - with proper padding */
-  .article-hero {
-    padding: 4vh 1.5rem 2vh;
-  }
-  
-  .article-breadcrumb {
-    font-size: 0.75rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-breadcrumb .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .article-badge {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-title {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-meta {
-    gap: 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-image-wrapper {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-  }
-  
-  .article-excerpt {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
-  }
-  
-  .article-excerpt p {
-    font-size: 0.9rem !important;
-  }
-  
-  .article-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  .article-text p {
-    margin-bottom: 1.2rem;
-    font-size: 0.9rem !important;
-  }
-  
-  /* Add padding to article content */
-  .news-article-page .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .news-article-page section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* iPhone Pro (402x874) - 77% */
-@media (max-width: 402px) and (min-width: 376px) {
-  :root {
-    --font-subtitle: 0.85rem;
-    --navbar-height: 58px;
-  }
-  
-  /* Uniform font sizes across all pages */
-  body {
-    font-size: 0.85rem;
+    font-size: var(--body-size);
   }
   
   h1 { font-size: 1.4rem; }
   h2 { font-size: 1.2rem; }
   h3 { font-size: 1.1rem; }
   h4 { font-size: 1rem; }
-  h5 { font-size: 0.9rem; }
-  h6 { font-size: 0.8rem; }
+  h5 { font-size: 0.95rem; }
+  h6 { font-size: 0.85rem; }
   
   p {
-    font-size: 0.85rem;
+    font-size: var(--body-size);
     line-height: 1.6;
   }
   
-  /* Section titles - larger and uniform */
+  /* Section titles - consistent sizing with MORE spacing */
   .section-title {
-    font-size: 1.4rem !important;
+    font-size: var(--title-size) !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
   
   .section-subtitle {
-    font-size: 0.95rem !important;
-  }
-  
-  /* Preparazioni page - uniform with cards */
-  .service-title {
-    font-size: 1.1rem !important;
-  }
-  
-  .service-description,
-  .service-text {
-    font-size: 0.85rem !important;
-  }
-  
-  .service-features {
-    font-size: 0.8rem !important;
-  }
-  
-  .contact-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    font-size: var(--subtitle-size) !important;
+    margin-top: 1.5rem !important;
+    padding-top: 0 !important;
   }
   
   /* Navbar */
@@ -1056,474 +137,60 @@
     height: 24px !important;
   }
   
-  /* Footer - stay vertical on mobile */
+  /* Hamburger menu - white icon, no border */
+  .navbar-toggler {
+    border: none;
+    box-shadow: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* Footer */
   .footer-custom {
-    padding: 0.9rem 0;
-  }
-  
-  .footer-custom ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.8rem;
-  }
-  
-  /* Carousel - fixed height */
-  .carousel-img {
-    height: 260px !important;
-    max-height: 260px !important;
-  }
-  
-  .carousel-caption h5 {
-    font-size: 0.85rem;
-  }
-  
-  /* Cards - uniform sizing */
-  .card {
-    font-size: 0.85rem;
-  }
-  
-  .card-title {
-    font-size: 1rem;
-  }
-  
-  .card-body {
-    padding: 0.8rem;
-  }
-  
-  /* Timeline - vertical stacked layout */
-  .timeline-line {
-    display: none !important;
-  }
-  
-  .timeline-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 1.8rem !important;
-    text-align: center;
-  }
-  
-  .timeline-year {
-    font-size: 1.2rem;
-    position: static !important;
-    margin-bottom: 0.9rem !important;
-  }
-  
-  .timeline-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.85rem;
-  }
-  
-  /* NewsArticle Page - with proper padding */
-  .article-hero {
-    padding: 3.5vh 1.5rem 1.5vh;
-  }
-  
-  .article-breadcrumb {
-    font-size: 0.7rem;
-    margin-bottom: 1rem;
-  }
-  
-  .article-breadcrumb .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .article-badge {
-    padding: 0.45rem 1.1rem;
-    font-size: 0.75rem;
-  }
-  
-  .article-title {
-    font-size: 1.4rem !important;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-  }
-  
-  .article-meta {
-    gap: 1rem;
-    font-size: 0.75rem;
-  }
-  
-  .article-image-wrapper {
-    margin-bottom: 1.8rem;
-    border-radius: 10px;
-  }
-  
-  .article-excerpt {
-    padding: 1.3rem;
-    margin-bottom: 1.8rem;
-    font-size: 0.85rem;
-  }
-  
-  .article-excerpt p {
-    font-size: 0.85rem !important;
-  }
-  
-  .article-text {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-  
-  .article-text p {
-    margin-bottom: 1rem;
-    font-size: 0.85rem !important;
-  }
-  
-  /* Add padding to article content */
-  .news-article-page .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .news-article-page section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* iPhone SE (375x667) - 100% */
-@media (max-width: 375px) {
-  :root {
-    --font-subtitle: 0.8rem;
-    --navbar-height: 55px;
-  }
-  
-  /* Uniform font sizes across all pages */
-  body {
-    font-size: 0.85rem;
-  }
-  
-  h1 { font-size: 1.3rem; }
-  h2 { font-size: 1.1rem; }
-  h3 { font-size: 1.05rem; }
-  h4 { font-size: 0.95rem; }
-  h5 { font-size: 0.9rem; }
-  h6 { font-size: 0.8rem; }
-  
-  p {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-  
-  /* Section titles - larger and uniform */
-  .section-title {
-    font-size: 1.35rem !important;
-  }
-  
-  .section-subtitle {
-    font-size: 0.9rem !important;
-  }
-  
-  .section {
-    padding: 1.2rem 0;
-  }
-  
-  /* Preparazioni page - uniform with cards */
-  .service-title {
-    font-size: 1.05rem !important;
-  }
-  
-  .service-description,
-  .service-text {
-    font-size: 0.85rem !important;
-  }
-  
-  .service-features {
-    font-size: 0.75rem !important;
-  }
-  
-  .contact-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 1.4rem;
-  }
-  
-  /* Navbar */
-  .navbar-logo {
-    width: 28px !important;
-    height: 28px !important;
-    margin-right: 6px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 22px !important;
-  }
-  
-  .navbar-brand {
-    padding: 0.2rem 0;
-  }
-  
-  /* Footer - stay vertical on mobile */
-  .footer-custom {
-    padding: 0.6rem 0;
+    padding: var(--footer-padding) 0 !important;
+    margin-top: 0 !important;
   }
   
   .footer-custom ul {
     flex-direction: column;
     gap: 0.4rem;
     padding: 0;
+    margin-bottom: 0 !important;
   }
   
   .footer-custom li,
   .footer-links {
-    font-size: 0.7rem;
+    font-size: var(--body-size) !important;
   }
   
-  /* Carousel - fixed height */
-  .carousel-img {
-    height: 240px !important;
-    max-height: 240px !important;
-  }
-  
-  .carousel-caption h5 {
-    font-size: 0.8rem;
-  }
-  
-  /* Cards - uniform sizing */
-  .card {
-    font-size: 0.85rem;
-  }
-  
-  .card-title {
-    font-size: 0.95rem;
-  }
-  
-  .card-body {
-    padding: 0.75rem;
-  }
-  
-  .news-card-modern .card-title {
-    font-size: 0.9rem;
-  }
-  
-  /* Timeline - vertical stacked layout */
-  .timeline-line {
-    display: none !important;
-  }
-  
-  .timeline-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 1.8rem !important;
-    text-align: center;
-  }
-  
-  .timeline-year {
-    font-size: 1.15rem;
-    position: static !important;
-    margin-bottom: 0.9rem !important;
-  }
-  
-  .timeline-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  .timeline-content h3 {
-    font-size: 0.95rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.85rem;
-  }
-  
-  /* NewsArticle Page - with proper padding */
-  .article-hero {
-    padding: 3vh 1.5rem 1vh;
-  }
-  
-  .article-breadcrumb {
-    font-size: 0.65rem;
-    margin-bottom: 0.9rem;
-  }
-  
-  .article-breadcrumb .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .article-badge {
-    padding: 0.4rem 1rem;
-    font-size: 0.7rem;
-  }
-  
-  .article-title {
-    font-size: 1.3rem !important;
-    line-height: 1.3;
-    margin-bottom: 0.9rem;
-  }
-  
-  .article-meta {
-    gap: 0.9rem;
-    font-size: 0.7rem;
-  }
-  
-  .article-image-wrapper {
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-  }
-  
-  .article-excerpt {
-    padding: 1.2rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.85rem;
-  }
-  
-  .article-excerpt p {
-    font-size: 0.85rem !important;
-  }
-  
-  .article-text {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-  
-  .article-text p {
-    margin-bottom: 0.9rem;
-    font-size: 0.85rem !important;
-  }
-  
-  /* Add padding to article content */
-  .news-article-page .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .news-article-page section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* iPhone Plus (430x932) - 72% */
-@media (max-width: 430px) and (min-width: 403px) {
-  :root {
-    --font-subtitle: 0.9rem;
-    --navbar-height: 60px;
-  }
-  
-  /* Uniform font sizes across all pages */
-  body {
-    font-size: 0.9rem;
-  }
-  
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1.15rem; }
-  h4 { font-size: 1.05rem; }
-  h5 { font-size: 0.95rem; }
-  h6 { font-size: 0.85rem; }
-  
-  p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  /* Section titles - larger and uniform */
-  .section-title {
-    font-size: 1.5rem !important;
-  }
-  
-  .section-subtitle {
-    font-size: 1rem !important;
-  }
-  
-  /* Preparazioni page - uniform with cards */
-  .service-title {
-    font-size: 1.15rem !important;
-  }
-  
-  .service-description,
-  .service-text {
-    font-size: 0.9rem !important;
-  }
-  
-  .service-features {
-    font-size: 0.85rem !important;
-  }
-  
-  .contact-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 1.6rem;
-  }
-  
-  /* Navbar */
-  .navbar-logo {
-    width: 32px !important;
-    height: 32px !important;
-    margin-right: 8px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 26px !important;
-  }
-  
-  /* Footer - stay vertical on mobile */
-  .footer-custom {
-    padding: 1rem 0;
-  }
-  
-  .footer-custom ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.85rem;
-  }
-  
-  /* Carousel - fixed height */
+  /* Carousel */
   .carousel-img {
     height: 280px !important;
     max-height: 280px !important;
   }
   
-  .carousel-caption h5 {
-    font-size: 0.9rem;
-  }
-  
-  /* Cards - uniform sizing */
+  /* Cards */
   .card {
-    font-size: 0.9rem;
-  }
-  
-  .card-title {
-    font-size: 1.05rem;
+    font-size: var(--body-size);
   }
   
   .card-body {
-    padding: 0.9rem;
+    padding: 0.8rem;
   }
   
-  /* Timeline - vertical stacked layout */
+  /* Value boxes (Team page red sections) */
+  .value-box {
+    padding: 0.8rem;
+  }
+  
+  /* Timeline - vertical layout */
   .timeline-line {
     display: none !important;
   }
   
   .timeline-item {
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     margin-bottom: 2rem !important;
@@ -1531,9 +198,15 @@
   }
   
   .timeline-year {
-    font-size: 1.3rem;
+    font-size: var(--title-size) !important;
     position: static !important;
     margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .timeline-year::after {
+    display: none !important;
   }
   
   .timeline-content {
@@ -1542,132 +215,65 @@
     margin: 0 !important;
   }
   
-  .timeline-content h3 {
-    font-size: 1.05rem;
+  /* Contact icons */
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
   }
   
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-  
-  /* NewsArticle Page - with proper padding */
-  .article-hero {
-    padding: 4vh 1.5rem 2vh;
-  }
-  
-  .article-breadcrumb {
-    font-size: 0.75rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-breadcrumb .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .article-badge {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-title {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-    margin-bottom: 1.2rem;
-  }
-  
-  .article-meta {
-    gap: 1.2rem;
-    font-size: 0.8rem;
-  }
-  
-  .article-image-wrapper {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-  }
-  
-  .article-excerpt {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
-  }
-  
-  .article-excerpt p {
-    font-size: 0.9rem !important;
-  }
-  
-  .article-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  .article-text p {
-    margin-bottom: 1.2rem;
-    font-size: 0.9rem !important;
-  }
-  
-  /* Add padding to article content */
-  .news-article-page .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .news-article-page section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* iPhone SE (375x667) - 100% */
-@media (max-width: 375px) {
-  :root {
-    --font-subtitle: 0.8rem;
-    --navbar-height: 55px;
-  }
-  
-  /* Uniform font sizes across all pages */
-  body {
-    font-size: 0.85rem;
-  }
-  
-  h1 { font-size: 1.3rem; }
-  h2 { font-size: 1.1rem; }
-  h3 { font-size: 1.05rem; }
-  h4 { font-size: 0.95rem; }
-  h5 { font-size: 0.9rem; }
-  h6 { font-size: 0.8rem; }
-  
-  p {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-  
-  /* Section titles - larger and uniform */
-  .section-title {
-    font-size: 1.35rem !important;
-  }
-  
-  .section-subtitle {
-    font-size: 0.9rem !important;
-  }
-  
-  .section {
-    padding: 1.2rem 0;
-  }
-  
-  /* Preparazioni page - uniform with cards */
+  /* Service sections (Preparazioni page) */
   .service-title {
-    font-size: 1.05rem !important;
+    font-size: 1.15rem !important;
   }
   
   .service-description,
   .service-text {
-    font-size: 0.85rem !important;
+    font-size: var(--body-size) !important;
   }
   
   .service-features {
-    font-size: 0.75rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  /* News Article page */
+  .article-hero {
+    padding: 3vh 1.5rem 1vh;
+  }
+  
+  .article-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .article-text,
+  .article-excerpt {
+    font-size: var(--body-size) !important;
+  }
+  
+  .article-text p,
+  .article-excerpt p {
+    font-size: var(--body-size) !important;
+  }
+}
+
+/* Extra small phones (iPhone SE) */
+@media (max-width: 375px) {
+  :root {
+    --title-size: 1.35rem;
+    --subtitle-size: 0.9rem;
+  }
+  
+  .navbar-logo {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  
+  .navbar-logo-text {
+    height: 22px !important;
+  }
+  
+  .carousel-img {
+    height: 240px !important;
   }
   
   .contact-icon {
@@ -1675,310 +281,4 @@
     height: 48px;
     font-size: 1.4rem;
   }
-  
-  /* Navbar */
-  .navbar-logo {
-    width: 28px !important;
-    height: 28px !important;
-    margin-right: 6px !important;
-  }
-  
-  .navbar-logo-text {
-    height: 22px !important;
-  }
-  
-  .navbar-brand {
-    padding: 0.2rem 0;
-  }
-  
-  /* Footer - stay vertical on mobile */
-  .footer-custom {
-    padding: 0.6rem 0;
-  }
-  
-  .footer-custom ul {
-    flex-direction: column;
-    gap: 0.4rem;
-    padding: 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.7rem;
-  }
-  
-  /* Carousel - fixed height */
-  .carousel-img {
-    height: 240px !important;
-    max-height: 240px !important;
-  }
-  
-  .carousel-caption h5 {
-    font-size: 0.8rem;
-  }
-  
-  /* Cards - uniform sizing */
-  .card {
-    font-size: 0.85rem;
-  }
-  
-  .card-title {
-    font-size: 0.95rem;
-  }
-  
-  .card-body {
-    padding: 0.75rem;
-  }
-  
-  .news-card-modern .card-title {
-    font-size: 0.9rem;
-  }
-  
-  /* Timeline - vertical stacked layout */
-  .timeline-line {
-    display: none !important;
-  }
-  
-  .timeline-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 1.8rem !important;
-    text-align: center;
-  }
-  
-  .timeline-year {
-    font-size: 1.15rem;
-    position: static !important;
-    margin-bottom: 0.9rem !important;
-  }
-  
-  .timeline-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  .timeline-content h3 {
-    font-size: 0.95rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.85rem;
-  }
-  
-  /* NewsArticle Page - with proper padding */
-  .article-hero {
-    padding: 3vh 1.5rem 1vh;
-  }
-  
-  .article-breadcrumb {
-    font-size: 0.65rem;
-    margin-bottom: 0.9rem;
-  }
-  
-  .article-breadcrumb .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .article-badge {
-    padding: 0.4rem 1rem;
-    font-size: 0.7rem;
-  }
-  
-  .article-title {
-    font-size: 1.3rem !important;
-    line-height: 1.3;
-    margin-bottom: 0.9rem;
-  }
-  
-  .article-meta {
-    gap: 0.9rem;
-    font-size: 0.7rem;
-  }
-  
-  .article-image-wrapper {
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-  }
-  
-  .article-excerpt {
-    padding: 1.2rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.85rem;
-  }
-  
-  .article-excerpt p {
-    font-size: 0.85rem !important;
-  }
-  
-  .article-text {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-  
-  .article-text p {
-    margin-bottom: 0.9rem;
-    font-size: 0.85rem !important;
-  }
-  
-  /* Add padding to article content */
-  .news-article-page .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .news-article-page section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
-
-/* Riduci ulteriormente lo spazio tra le sezioni e il padding del footer su iPhone */
-@media (max-width: 430px) {
-  .section {
-    padding: 1.5rem 0 0 0 !important;
-    margin-bottom: 0 !important;
-  }
-  .section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-  .footer-custom {
-    padding: 0.5rem 0 !important;
-    margin-top: 0 !important;
-  }
-  .footer-custom ul {
-    margin-bottom: 0 !important;
-  }
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.85rem !important;
-  }
-}
-
-@media (max-width: 402px) {
-  .section {
-    padding: 1.5rem 0 0 0 !important;
-    margin-bottom: 0 !important;
-  }
-  .section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-  .footer-custom {
-    padding: 0.5rem 0 !important;
-    margin-top: 0 !important;
-  }
-  .footer-custom ul {
-    margin-bottom: 0 !important;
-  }
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.85rem !important;
-  }
-}
-
-@media (max-width: 375px) {
-  .section {
-    padding: 1.5rem 0 0 0 !important;
-    margin-bottom: 0 !important;
-  }
-  .section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-  .footer-custom {
-    padding: 0.5rem 0 !important;
-    margin-top: 0 !important;
-  }
-  .footer-custom ul {
-    margin-bottom: 0 !important;
-  }
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.85rem !important;
-  }
-}
-
-/* General tablet optimization */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  body {
-    font-size: 0.95rem;
-  }
-}
-
-/* General mobile optimization */
-@media (max-width: 767px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .section {
-    padding: 0.8rem 0;
-  }
-  
-  body {
-    font-size: 0.9rem;
-  }
-  
-  .nav-link {
-    font-size: 0.9rem;
-  }
-  
-  /* Timeline mobile - vertical stacked layout */
-  .timeline-line {
-    display: none !important;
-  }
-  
-  .timeline-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 2.5rem !important;
-  }
-  
-  .timeline-year {
-    position: static !important;
-    margin-bottom: 1rem !important;
-    text-align: center !important;
-  }
-  
-  .timeline-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  /* Carousel mobile - 100% width, smaller height */
-  .carousel-img {
-    width: 100% !important;
-    height: 280px !important;
-    max-height: 280px !important;
-    object-fit: cover !important;
-  }
-  
-  .carousel-inner,
-  .carousel-item {
-    width: 100% !important;
-  }
-  
-  /* Footer */
-  .footer-custom {
-    padding: 0.7rem 0;
-  }
-  
-  .footer-custom li,
-  .footer-links {
-    font-size: 0.9rem !important;
-  }
-}
-

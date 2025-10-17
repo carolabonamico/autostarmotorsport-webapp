@@ -42,6 +42,10 @@
     padding: 0;
     text-align: center;
   }
+  
+  .footer-line {
+    margin: 1rem auto 1rem auto !important;
+  }
 }
 
 /* iPhone SE specific footer sizing */
