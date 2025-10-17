@@ -5,6 +5,7 @@ import '../styles/components/Navbar.css';
 
 const CustomNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -29,12 +30,18 @@ const CustomNavbar = () => {
     { path: '/contatti', label: 'Contatti' }
   ];
 
+  // Chiudi il menu a tendina al click su una voce
+  const handleNavClick = (to) => {
+    setExpanded(false);
+  };
+
   return (
     <div className="fade-in-up">
       <Navbar 
         expand="lg" 
         fixed="top" 
         className={`navbar-custom ${scrolled ? 'scrolled' : ''}`}
+        expanded={expanded}
       >
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
@@ -52,7 +59,7 @@ const CustomNavbar = () => {
             />
           </Navbar.Brand>
           
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : true)} />
           
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
@@ -66,6 +73,7 @@ const CustomNavbar = () => {
                     as={Link} 
                     to={item.path}
                     className={location.pathname === item.path ? 'active' : ''}
+                    onClick={() => handleNavClick(item.path)}
                   >
                     {item.label}
                   </Nav.Link>

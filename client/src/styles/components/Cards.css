@@ -115,6 +115,12 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 767px) {
+  .value-box {
+    padding: 0.8rem;
+  }
+}
+
 /* News Cards */
 .news-card-modern {
   text-decoration: none;

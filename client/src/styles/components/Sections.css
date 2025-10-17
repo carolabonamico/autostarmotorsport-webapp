@@ -1,6 +1,6 @@
 /* Section Layout */
 .section { 
-    padding: 6vh 6vw; 
+    padding: 6vh 6vw 0 6vw; 
     background: var(--medium-white); 
 }
 

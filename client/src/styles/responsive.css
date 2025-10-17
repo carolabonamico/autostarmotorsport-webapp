@@ -468,6 +468,424 @@
     font-size: 1.05rem;
   }
   
+  .news-card-modern .card-title {
+    font-size: 1rem;
+  }
+  
+  .card-body {
+    padding: 0.9rem;
+  }
+  
+  /* Timeline - vertical stacked layout */
+  .timeline-line {
+    display: none !important;
+  }
+  
+  .timeline-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 2rem !important;
+    text-align: center;
+  }
+  
+  .timeline-year {
+    font-size: 1.3rem;
+    position: static !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .timeline-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.05rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+  
+  /* NewsArticle Page - with proper padding */
+  .article-hero {
+    padding: 4vh 1.5rem 2vh;
+  }
+  
+  .article-breadcrumb {
+    font-size: 0.75rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .article-breadcrumb .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .article-badge {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .article-title {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+  }
+  
+  .article-meta {
+    gap: 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .article-image-wrapper {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+  }
+  
+  .article-excerpt {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .article-excerpt p {
+    font-size: 0.9rem !important;
+  }
+  
+  .article-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .article-text p {
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Add padding to article content */
+  .news-article-page .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .news-article-page section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* iPhone Plus (430x932) - 72% */
+@media (max-width: 430px) and (min-width: 403px) {
+  :root {
+    --font-subtitle: 0.9rem;
+    --navbar-height: 60px;
+  }
+  
+  /* Uniform font sizes across all pages */
+  body {
+    font-size: 0.9rem;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.15rem; }
+  h4 { font-size: 1.05rem; }
+  h5 { font-size: 0.95rem; }
+  h6 { font-size: 0.85rem; }
+  
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* Section titles - larger and uniform */
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  /* Preparazioni page - uniform with cards */
+  .service-title {
+    font-size: 1.15rem !important;
+  }
+  
+  .service-description,
+  .service-text {
+    font-size: 0.9rem !important;
+  }
+  
+  .service-features {
+    font-size: 0.85rem !important;
+  }
+  
+  .contact-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+  }
+  
+  /* Navbar */
+  .navbar-logo {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 8px !important;
+  }
+  
+  .navbar-logo-text {
+    height: 26px !important;
+  }
+  
+  /* Footer - stay vertical on mobile */
+  .footer-custom {
+    padding: 1rem 0;
+  }
+  
+  .footer-custom ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+  
+  .footer-custom li,
+  .footer-links {
+    font-size: 0.85rem;
+  }
+  
+  /* Carousel - fixed height */
+  .carousel-img {
+    height: 280px !important;
+    max-height: 280px !important;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 0.9rem;
+  }
+  
+  /* Cards - uniform sizing */
+  .card {
+    font-size: 0.9rem;
+  }
+  
+  .card-title {
+    font-size: 1.05rem;
+  }
+  
+  .news-card-modern .card-title {
+    font-size: 1rem;
+  }
+  
+  .card-body {
+    padding: 0.9rem;
+  }
+  
+  /* Timeline - vertical stacked layout */
+  .timeline-line {
+    display: none !important;
+  }
+  
+  .timeline-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 2rem !important;
+    text-align: center;
+  }
+  
+  .timeline-year {
+    font-size: 1.3rem;
+    position: static !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .timeline-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.05rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+  
+  /* NewsArticle Page - with proper padding */
+  .article-hero {
+    padding: 4vh 1.5rem 2vh;
+  }
+  
+  .article-breadcrumb {
+    font-size: 0.75rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .article-breadcrumb .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .article-badge {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .article-title {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+  }
+  
+  .article-meta {
+    gap: 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .article-image-wrapper {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+  }
+  
+  .article-excerpt {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .article-excerpt p {
+    font-size: 0.9rem !important;
+  }
+  
+  .article-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .article-text p {
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Add padding to article content */
+  .news-article-page .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .news-article-page section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* iPhone Plus (430x932) - 72% */
+@media (max-width: 430px) and (min-width: 403px) {
+  :root {
+    --font-subtitle: 0.9rem;
+    --navbar-height: 60px;
+  }
+  
+  /* Uniform font sizes across all pages */
+  body {
+    font-size: 0.9rem;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.15rem; }
+  h4 { font-size: 1.05rem; }
+  h5 { font-size: 0.95rem; }
+  h6 { font-size: 0.85rem; }
+  
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* Section titles - larger and uniform */
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  /* Preparazioni page - uniform with cards */
+  .service-title {
+    font-size: 1.15rem !important;
+  }
+  
+  .service-description,
+  .service-text {
+    font-size: 0.9rem !important;
+  }
+  
+  .service-features {
+    font-size: 0.85rem !important;
+  }
+  
+  .contact-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+  }
+  
+  /* Navbar */
+  .navbar-logo {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 8px !important;
+  }
+  
+  .navbar-logo-text {
+    height: 26px !important;
+  }
+  
+  /* Footer - stay vertical on mobile */
+  .footer-custom {
+    padding: 1rem 0;
+  }
+  
+  .footer-custom ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+  
+  .footer-custom li,
+  .footer-links {
+    font-size: 0.85rem;
+  }
+  
+  /* Carousel - fixed height */
+  .carousel-img {
+    height: 280px !important;
+    max-height: 280px !important;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 0.9rem;
+  }
+  
+  /* Cards - uniform sizing */
+  .card {
+    font-size: 0.9rem;
+  }
+  
+  .card-title {
+    font-size: 1.05rem;
+  }
+  
   .card-body {
     padding: 0.9rem;
   }
@@ -996,6 +1414,495 @@
   }
 }
 
+/* iPhone Plus (430x932) - 72% */
+@media (max-width: 430px) and (min-width: 403px) {
+  :root {
+    --font-subtitle: 0.9rem;
+    --navbar-height: 60px;
+  }
+  
+  /* Uniform font sizes across all pages */
+  body {
+    font-size: 0.9rem;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.15rem; }
+  h4 { font-size: 1.05rem; }
+  h5 { font-size: 0.95rem; }
+  h6 { font-size: 0.85rem; }
+  
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* Section titles - larger and uniform */
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  /* Preparazioni page - uniform with cards */
+  .service-title {
+    font-size: 1.15rem !important;
+  }
+  
+  .service-description,
+  .service-text {
+    font-size: 0.9rem !important;
+  }
+  
+  .service-features {
+    font-size: 0.85rem !important;
+  }
+  
+  .contact-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+  }
+  
+  /* Navbar */
+  .navbar-logo {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 8px !important;
+  }
+  
+  .navbar-logo-text {
+    height: 26px !important;
+  }
+  
+  /* Footer - stay vertical on mobile */
+  .footer-custom {
+    padding: 1rem 0;
+  }
+  
+  .footer-custom ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+  
+  .footer-custom li,
+  .footer-links {
+    font-size: 0.85rem;
+  }
+  
+  /* Carousel - fixed height */
+  .carousel-img {
+    height: 280px !important;
+    max-height: 280px !important;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 0.9rem;
+  }
+  
+  /* Cards - uniform sizing */
+  .card {
+    font-size: 0.9rem;
+  }
+  
+  .card-title {
+    font-size: 1.05rem;
+  }
+  
+  .card-body {
+    padding: 0.9rem;
+  }
+  
+  /* Timeline - vertical stacked layout */
+  .timeline-line {
+    display: none !important;
+  }
+  
+  .timeline-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 2rem !important;
+    text-align: center;
+  }
+  
+  .timeline-year {
+    font-size: 1.3rem;
+    position: static !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .timeline-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.05rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+  
+  /* NewsArticle Page - with proper padding */
+  .article-hero {
+    padding: 4vh 1.5rem 2vh;
+  }
+  
+  .article-breadcrumb {
+    font-size: 0.75rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .article-breadcrumb .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .article-badge {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .article-title {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+  }
+  
+  .article-meta {
+    gap: 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .article-image-wrapper {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+  }
+  
+  .article-excerpt {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .article-excerpt p {
+    font-size: 0.9rem !important;
+  }
+  
+  .article-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .article-text p {
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Add padding to article content */
+  .news-article-page .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .news-article-page section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* iPhone SE (375x667) - 100% */
+@media (max-width: 375px) {
+  :root {
+    --font-subtitle: 0.8rem;
+    --navbar-height: 55px;
+  }
+  
+  /* Uniform font sizes across all pages */
+  body {
+    font-size: 0.85rem;
+  }
+  
+  h1 { font-size: 1.3rem; }
+  h2 { font-size: 1.1rem; }
+  h3 { font-size: 1.05rem; }
+  h4 { font-size: 0.95rem; }
+  h5 { font-size: 0.9rem; }
+  h6 { font-size: 0.8rem; }
+  
+  p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  
+  /* Section titles - larger and uniform */
+  .section-title {
+    font-size: 1.35rem !important;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem !important;
+  }
+  
+  .section {
+    padding: 1.2rem 0;
+  }
+  
+  /* Preparazioni page - uniform with cards */
+  .service-title {
+    font-size: 1.05rem !important;
+  }
+  
+  .service-description,
+  .service-text {
+    font-size: 0.85rem !important;
+  }
+  
+  .service-features {
+    font-size: 0.75rem !important;
+  }
+  
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+  }
+  
+  /* Navbar */
+  .navbar-logo {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 6px !important;
+  }
+  
+  .navbar-logo-text {
+    height: 22px !important;
+  }
+  
+  .navbar-brand {
+    padding: 0.2rem 0;
+  }
+  
+  /* Footer - stay vertical on mobile */
+  .footer-custom {
+    padding: 0.6rem 0;
+  }
+  
+  .footer-custom ul {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0;
+  }
+  
+  .footer-custom li,
+  .footer-links {
+    font-size: 0.7rem;
+  }
+  
+  /* Carousel - fixed height */
+  .carousel-img {
+    height: 240px !important;
+    max-height: 240px !important;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 0.8rem;
+  }
+  
+  /* Cards - uniform sizing */
+  .card {
+    font-size: 0.85rem;
+  }
+  
+  .card-title {
+    font-size: 0.95rem;
+  }
+  
+  .card-body {
+    padding: 0.75rem;
+  }
+  
+  .news-card-modern .card-title {
+    font-size: 0.9rem;
+  }
+  
+  /* Timeline - vertical stacked layout */
+  .timeline-line {
+    display: none !important;
+  }
+  
+  .timeline-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 1.8rem !important;
+    text-align: center;
+  }
+  
+  .timeline-year {
+    font-size: 1.15rem;
+    position: static !important;
+    margin-bottom: 0.9rem !important;
+  }
+  
+  .timeline-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .timeline-content h3 {
+    font-size: 0.95rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+  
+  /* NewsArticle Page - with proper padding */
+  .article-hero {
+    padding: 3vh 1.5rem 1vh;
+  }
+  
+  .article-breadcrumb {
+    font-size: 0.65rem;
+    margin-bottom: 0.9rem;
+  }
+  
+  .article-breadcrumb .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .article-badge {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .article-title {
+    font-size: 1.3rem !important;
+    line-height: 1.3;
+    margin-bottom: 0.9rem;
+  }
+  
+  .article-meta {
+    gap: 0.9rem;
+    font-size: 0.7rem;
+  }
+  
+  .article-image-wrapper {
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .article-excerpt {
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .article-excerpt p {
+    font-size: 0.85rem !important;
+  }
+  
+  .article-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  
+  .article-text p {
+    margin-bottom: 0.9rem;
+    font-size: 0.85rem !important;
+  }
+  
+  /* Add padding to article content */
+  .news-article-page .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .news-article-page section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Riduci ulteriormente lo spazio tra le sezioni e il padding del footer su iPhone */
+@media (max-width: 430px) {
+  .section {
+    padding: 1.5rem 0 0 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-custom {
+    padding: 0.5rem 0 !important;
+    margin-top: 0 !important;
+  }
+  .footer-custom ul {
+    margin-bottom: 0 !important;
+  }
+  .footer-custom li,
+  .footer-links {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 402px) {
+  .section {
+    padding: 1.5rem 0 0 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-custom {
+    padding: 0.5rem 0 !important;
+    margin-top: 0 !important;
+  }
+  .footer-custom ul {
+    margin-bottom: 0 !important;
+  }
+  .footer-custom li,
+  .footer-links {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .section {
+    padding: 1.5rem 0 0 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .section p, .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-custom {
+    padding: 0.5rem 0 !important;
+    margin-top: 0 !important;
+  }
+  .footer-custom ul {
+    margin-bottom: 0 !important;
+  }
+  .footer-custom li,
+  .footer-links {
+    font-size: 0.85rem !important;
+  }
+}
+
 /* General tablet optimization */
 @media (max-width: 1024px) and (min-width: 768px) {
   .container {
@@ -1016,7 +1923,7 @@
   }
   
   .section {
-    padding: 1.5rem 0;
+    padding: 0.8rem 0;
   }
   
   body {
@@ -1062,6 +1969,16 @@
   .carousel-inner,
   .carousel-item {
     width: 100% !important;
+  }
+  
+  /* Footer */
+  .footer-custom {
+    padding: 0.7rem 0;
+  }
+  
+  .footer-custom li,
+  .footer-links {
+    font-size: 0.9rem !important;
   }
 }
 
