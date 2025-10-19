@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Carousel } from 'react-bootstrap';
 import AOS from 'aos';
-import { carFeatures, carouselItemsMotorsport, galleryImages } from '../data/motorsport';
+import { carFeatures, galleryImages } from '../data/motorsport';
 import '../styles/components/Sections.css';
 import '../styles/components/Cards.css';
 import SpecsCard from '../components/SpecsCard';
@@ -19,7 +18,7 @@ const Motorsport = () => {
   return (
     <>
 
-      {/* Carousel hero */}
+      {/* Carousel hero
       <Carousel fade>
       {carouselItemsMotorsport.map((img, idx) => (
         <Carousel.Item key={idx}>
@@ -29,29 +28,11 @@ const Motorsport = () => {
             alt={img.alt}
           />
           <Carousel.Caption>
-            <small className="carousel-caption-caption">Fonte: ligierautomotive.com</small>
+            {img.source && <small className="carousel-caption-caption">Fonte: {img.source}</small>}
           </Carousel.Caption>
         </Carousel.Item>
       ))}
-      </Carousel>
-
-      {/* Specs Section */}
-      <section className="section">
-        <Container>
-          <Row>
-            <Col>
-              <SectionHeader title="Specifiche Tecniche" lastword="JSP320 LMP3 Ligier" subtitle="Dall'estate 2025, Autostar Motorsport offre assistenza tecnica dedicata alla Ligier JSP320 LMP3 di un cliente. Preparazione, setup, telemetria e supporto in pista: un servizio completo per le competizioni endurance e prototipi." />
-            </Col>
-          </Row>
-          <Row>
-            {carFeatures.map((tech, index) => (
-              <Col lg={6} md={6} className="pb-4" key={index}>
-                <SpecsCard tech={tech} index={index} />
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+      </Carousel> */}
 
       {/* Horizontal Gallery Section */}
       <section className="section">
@@ -70,6 +51,24 @@ const Motorsport = () => {
                 ))}
               </div>
             </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Specs Section */}
+      <section className="section">
+        <Container>
+          <Row>
+            <Col>
+              <SectionHeader title="Specifiche Tecniche" lastword="JSP320 LMP3 Ligier" subtitle="Dall'estate 2025, Autostar Motorsport offre assistenza tecnica dedicata alla Ligier JSP320 LMP3 di un cliente. Preparazione, setup, telemetria e supporto in pista: un servizio completo per le competizioni endurance e prototipi." />
+            </Col>
+          </Row>
+          <Row>
+            {carFeatures.map((tech, index) => (
+              <Col lg={6} md={6} className="pb-4" key={index}>
+                <SpecsCard tech={tech} index={index} />
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>

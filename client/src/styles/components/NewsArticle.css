@@ -64,7 +64,7 @@
 }
 
 .article-image-wrapper {
-  border-radius: 20px;
+  border-radius: 0;
   overflow: hidden;
   margin-bottom: 3rem;
 }
@@ -81,7 +81,7 @@
   background: linear-gradient(135deg, rgba(220,38,38,0.05), rgba(220,38,38,0.1));
   border-left: 4px solid var(--light-red);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 15px;
   margin-bottom: 3rem;
   position: relative;
 }

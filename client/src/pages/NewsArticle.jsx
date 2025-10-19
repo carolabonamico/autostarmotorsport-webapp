@@ -61,7 +61,9 @@ const NewsArticle = () => {
                 <h1 className="article-title">{article.title}</h1>
                 <div className="article-meta">
                   <span><i className="bi bi-calendar3 me-2"></i>{formatDate(article.date)}</span>
-                  <span><i className="bi bi-clock me-2"></i>3 min di lettura</span>
+                  {article.readingTime && (
+                    <span><i className="bi bi-clock me-2"></i>{article.readingTime} di lettura</span>
+                  )}
                 </div>
               </div>
 

@@ -4,7 +4,7 @@ export const newsArticles = [
     excerpt: 'Autostar Motorsport offre assistenza tecnica dedicata alla Ligier JSP320 LMP3 di un cliente, ampliando i servizi motorsport dal 2025.',
     category: 'motorsport',
     date: '2025-07-01',
-    image: '/images/ligier/ligier1.jpg',
+    readingTime: '3 min',
     content: `Da questa estate Autostar Motorsport offre assistenza tecnica e supporto in pista per la Ligier JSP320 LMP3 di un cliente. Il servizio include preparazione, setup, telemetria e gestione eventi, rafforzando la nostra presenza nel mondo delle competizioni endurance e prototipi. Per maggiori dettagli visita la sezione dedicata nella pagina Motorsport.`
   },
   {

@@ -11,7 +11,9 @@ export const services = [
         'Analisi telemetria',
         'Supporto tecnico 24/7'
       ],
-
+      image: '/images/home/camion1.jpg',
+      alt: 'Camion Motorsport',
+      imageWidth: '500px'
     },
     {
       id: 'tagliandi-auto',

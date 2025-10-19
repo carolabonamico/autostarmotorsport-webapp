@@ -90,27 +90,33 @@ export const achievements = [
 export const carouselItemsMotorsport = [
     { 
         src: "/images/ligier/ligier2.jpg", 
-        alt: "Ligier JSP320 LMP3" 
+        alt: "Ligier JSP320 LMP3",
+        source: "ligierautomotive.com"
     },
     { 
         src: "/images/ligier/ligier1.jpg", 
-        alt: "Ligier JSP320 LMP3" 
+        alt: "Ligier JSP320 LMP3",
+        source: "ligierautomotive.com"
     },
     { 
         src: "/images/ligier/ligier3.jpg", 
-        alt: "Ligier JSP320 LMP3" 
+        alt: "Ligier JSP320 LMP3",
+        source: "ligierautomotive.com"
     },
     { 
         src: "/images/ligier/ligier4.jpg", 
-        alt: "Ligier JSP320 LMP3" 
+        alt: "Ligier JSP320 LMP3",
+        source: "ligierautomotive.com"
     },
     { 
         src: "/images/ligier/ligier5.jpg", 
-        alt: "Ligier JSP320 LMP3" 
+        alt: "Ligier JSP320 LMP3",
+        source: "ligierautomotive.com"
     },
     { 
         src: "/images/ligier/ligier6.jpg", 
-        alt: "Ligier JSP320 LMP3" 
+        alt: "Ligier JSP320 LMP3",
+        source: "ligierautomotive.com"
     },
 ];
 

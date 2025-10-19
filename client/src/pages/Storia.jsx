@@ -26,7 +26,7 @@ const Storia = () => {
           </Row>
           <Row>
             <Col>
-              <img src="/images/a112.jpg" alt="A112" className="shadow mb-5" style={{maxHeight: '340px', objectFit: 'cover'}} />
+              <img src="/images/a112.jpg" alt="A112" className="shadow mb-5" style={{maxHeight: '340px', objectFit: 'cover', borderRadius: '0'}} />
             </Col>
             <Col lg={12}>
               <p className='text-justify'>

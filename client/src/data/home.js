@@ -46,19 +46,19 @@ export const services = [
 
 export const carouselItemsHome = [
     { 
-        src: "/images/home/308tcr.jpg",
-        alt: "Peugeot 308 TCR" 
+        src: "/images/home/audi1.jpg",
+        alt: "" 
     },
     { 
-        src: "/images/home/2017-adria-box-g1.jpg",
-        alt: "Adria Box G1 - 2017" 
+        src: "/images/home/audi2.jpg",
+        alt: "" 
     },
     { 
-        src: "/images/home/2017-misano-03.jpg",
-        alt: "Peugeot 308" 
+        src: "/images/home/audi3.jpg",
+        alt: "" 
     },
     { 
-        src: "/images/home/Imola_CITE_2014_curva_rivazza.jpg",
-        alt: "Imola CITE 2014 - Curva Rivazza"
+        src: "/images/home/audi4Mugello.jpg",
+        alt: ""
     },
 ];
