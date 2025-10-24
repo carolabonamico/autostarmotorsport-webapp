@@ -6,7 +6,9 @@ export const carFeatures = [
         details: [
             'Monoscocca in carbonio - HP Composites', 
             'Carrozzeria in carbonio - HP Composites',
-            'Lunghezza: 4605 mm - larghezza: 1900 mm - passo: 2860 mm', 'Peso: 950 kg']
+            'Lunghezza: 4605 mm - larghezza: 1900 mm - passo: 2860 mm', 
+            'Peso: 950 kg'
+        ]
     },
     {
         icon: 'gear-wide-connected',
@@ -74,59 +76,47 @@ export const carFeatures = [
     }
 ];
 
-export const achievements = [
-    { 
-        title: 'Campionato Italiano Velocità Montagna', 
-        subtitle: 'Categoria CN - 2024', 
-        icon: 'trophy' 
+export const mediaGallery = [
+    {
+        src: "/videos/ligier/ligierVideoHorizontal1.MOV",
+        alt: "Ligier JSP320 in azione",
+        type: "video",
+        orientation: "horizontal",
+        size: "large"
     },
-    { 
-        title: 'Record del Tracciato', 
-        subtitle: 'Verzegnis - 1:28.456', 
-        icon: 'stopwatch' 
+    {
+        src: "/videos/ligier/ligierVideoVertical2.MOV",
+        alt: "Ligier JSP320 in pista",
+        type: "video",
+        orientation: "vertical",
+        size: "small"
     },
-];
-
-export const carouselItemsMotorsport = [
-    { 
-        src: "/images/ligier/ligier2.jpg", 
+    {
+        src: "/videos/ligier/ligierVideoVertical1.MOV",
+        alt: "Ligier JSP320 dettaglio",
+        type: "video",
+        orientation: "vertical",
+        size: "small"
+    },
+    {
+        src: "/images/ligier/ligier8.jpg",
         alt: "Ligier JSP320 LMP3",
-        source: "ligierautomotive.com"
+        type: "image",
+        orientation: "vertical",
+        size: "small"
     },
-    { 
-        src: "/images/ligier/ligier1.jpg", 
+    {
+        src: "/images/ligier/ligier7.jpg",
         alt: "Ligier JSP320 LMP3",
-        source: "ligierautomotive.com"
+        type: "image",
+        orientation: "vertical",
+        size: "small"
     },
-    { 
-        src: "/images/ligier/ligier3.jpg", 
+    {
+        src: "/images/ligier/ligierBox3.jpg",
         alt: "Ligier JSP320 LMP3",
-        source: "ligierautomotive.com"
-    },
-    { 
-        src: "/images/ligier/ligier4.jpg", 
-        alt: "Ligier JSP320 LMP3",
-        source: "ligierautomotive.com"
-    },
-    { 
-        src: "/images/ligier/ligier5.jpg", 
-        alt: "Ligier JSP320 LMP3",
-        source: "ligierautomotive.com"
-    },
-    { 
-        src: "/images/ligier/ligier6.jpg", 
-        alt: "Ligier JSP320 LMP3",
-        source: "ligierautomotive.com"
-    },
-];
-
-export const galleryImages = [
-    { 
-        src: "/images/IMG_6285.jpg",
-        alt: "Autostar Motorsport" 
-    },
-    { 
-        src: "/images/IMG_6292.jpg",
-        alt: "Autostar Motorsport" 
+        type: "image",
+        orientation: "horizontal",
+        size: "medium"
     },
 ];

@@ -1,0 +1,98 @@
+/* Media Gallery Component Styles */
+
+/* Gallery Grid Container */
+.media-gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* Media Item Container */
+.media-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Size Variants */
+.media-item.large {
+  min-height: 450px;
+  max-height: 450px;
+}
+
+.media-item.medium {
+  min-height: 350px;
+  max-height: 350px;
+}
+
+.media-item.small {
+  min-height: 550px;
+  max-height: 550px;
+}
+
+/* Orientation Overrides */
+.media-item.horizontal {
+  aspect-ratio: 16 / 9;
+}
+
+/* Media Content (Images & Videos) */
+.media-content {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .media-item.large {
+    min-height: 350px;
+    max-height: 350px;
+  }
+  
+  .media-item.medium {
+    min-height: 300px;
+    max-height: 300px;
+  }
+  
+  .media-item.small {
+    min-height: 450px;
+    max-height: 450px;
+  }
+}
+
+@media (max-width: 991px) {
+  .media-item.large,
+  .media-item.medium {
+    min-height: 300px;
+    max-height: 300px;
+  }
+  
+  .media-item.small {
+    min-height: 400px;
+    max-height: 400px;
+  }
+  
+  .media-item.horizontal {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 767px) {
+  .media-item.large,
+  .media-item.medium,
+  .media-item.horizontal {
+    aspect-ratio: 16 / 9;
+    min-height: 250px;
+    max-height: 250px;
+  }
+  
+  .media-item.small,
+  .media-item.vertical {
+    min-height: 350px;
+    max-height: 350px;
+  }
+}
