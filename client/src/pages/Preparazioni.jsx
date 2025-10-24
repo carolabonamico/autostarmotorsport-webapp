@@ -39,7 +39,7 @@ const Preparazioni = () => {
             >
               <Row className="align-items-center g-3">
                 {/* Content Column */}
-                <Col lg={service.image ? 8 : 12}>
+                <Col lg={service.image ? 7 : 12}>
                   <div className="service-header">
                     <h3 className="service-title mb-3">{service.title}</h3>
                     <p className="service-description">{service.description}</p>

@@ -81,7 +81,7 @@
   background: linear-gradient(135deg, rgba(220,38,38,0.05), rgba(220,38,38,0.1));
   border-left: 4px solid var(--light-red);
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   margin-bottom: 3rem;
   position: relative;
 }

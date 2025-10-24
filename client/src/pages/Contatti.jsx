@@ -20,7 +20,7 @@ const Contatti = () => {
         <Container>
           <Row>
             <Col>
-              <SectionHeader title="Come" lastword="Raggiungerci" />
+              <SectionHeader title="Come" lastword="Raggiungerci" subtitle="Tutti i nostri recapiti e indirizzo"/>
             </Col>
           </Row>
           <Row className="justify-content-center">
@@ -63,15 +63,6 @@ const Contatti = () => {
                 <h6>Orari</h6>
                 Lun-Ven: 8:00-18:00<br />
                 Sab: 8:00-12:00
-              </div>
-            </Col>
-            <Col lg={4} sm={6} className="mb-4">
-              <div className="text-center" data-aos="fade-up" data-aos-delay="600">
-                <div className="contact-icon">
-                  <i className="bi bi-facebook"></i>
-                </div>
-                <h6>Facebook</h6>
-                <a href="https://www.facebook.com/autostar.motorsport" target="_blank" rel="noopener noreferrer">@autostar.motorsport</a>
               </div>
             </Col>
           </Row>

@@ -9,9 +9,8 @@ export const services = [
         'Preparazione veicoli da competizione',
         'Ottimizzazione setup',
         'Analisi telemetria',
-        'Supporto tecnico 24/7'
       ],
-      image: '/images/home/camion1.jpg',
+      image: '/images/home/camion3.jpg',
       alt: 'Camion Motorsport',
       imageWidth: '500px'
     },

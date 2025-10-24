@@ -32,7 +32,6 @@
 
 .timeline-content .card:hover { 
   transform: translateY(-8px); 
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
 }
 
 /* A112 image centering for all screen sizes */
@@ -41,6 +40,7 @@
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+  border-radius: var(--border-radius);
 }
 
 /* Year display restored */
