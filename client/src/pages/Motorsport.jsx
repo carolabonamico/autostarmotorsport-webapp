@@ -55,7 +55,8 @@ const Motorsport = () => {
                       <video 
                         className="media-content shadow"
                         controls
-                        preload="metadata"
+                        preload="auto"
+                        playsInline
                       >
                         <source src={item.src} type="video/quicktime" />
                         <source src={item.src.replace('.MOV', '.mp4')} type="video/mp4" />
