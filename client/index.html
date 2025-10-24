@@ -5,9 +5,28 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Autostar Motorsport</title>
+    <!-- Iubenda Cookie Solution Widget -->
+    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/e6123b50-b75e-4e92-aaae-bc60a72b00c9.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Iubenda Loader Script -->
+    <script type="text/javascript">
+      (function (w,d) {
+        var loader = function () {
+          var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+          s.src="https://cdn.iubenda.com/iubenda.js";
+          tag.parentNode.insertBefore(s,tag);
+        };
+        if(w.addEventListener){
+          w.addEventListener("load", loader, false);
+        }else if(w.attachEvent){
+          w.attachEvent("onload", loader);
+        }else{
+          w.onload = loader;
+        }
+      })(window, document);
+    </script>
   </body>
 </html>

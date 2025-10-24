@@ -35,7 +35,18 @@ const Footer = () => {
               <li>P.IVA 02231680063</li>
               <li>C.F. BNMDVD69A12L570G</li>
               <li>R.E.A. AL153227</li>
+              <li><a href="https://www.iubenda.com/privacy-policy/62251225" className="footer-links" target="_blank" rel="noopener noreferrer" title="Privacy Policy">Privacy Policy</a></li>
+              <li><a href="https://www.iubenda.com/privacy-policy/62251225/cookie-policy" className="footer-links" target="_blank" rel="noopener noreferrer" title="Cookie Policy">Cookie Policy</a></li>
             </ul>
+          </Col>
+        </Row>
+        <Row className="align-items-center mt-2">
+          <Col xs={12} md={12} className='footer-col'>
+            <p style={{ fontSize: 'inherit', margin: 0, color: 'var(--medium-gray)' }}>
+              Sito realizzato da <a href="https://www.linkedin.com/in/carola-bonamico-341805357/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                Carola Bonamico <i className="bi bi-linkedin" style={{ fontSize: 'inherit', marginLeft: '4px' }}></i>
+              </a>
+            </p>
           </Col>
         </Row>
       </Container>
