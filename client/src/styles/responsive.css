@@ -1,5 +1,4 @@
 /* Simplified Responsive Design */
-/* Using CSS variables for easier maintenance */
 
 :root {
   --section-padding-y: 6vh;
@@ -36,7 +35,7 @@
   }
   
   .carousel-img {
-    height: 420px;
+    height: 480px;
   }
 }
 
@@ -63,7 +62,7 @@
   }
   
   .carousel-img {
-    height: 380px;
+    height: 450px;
   }
 }
 

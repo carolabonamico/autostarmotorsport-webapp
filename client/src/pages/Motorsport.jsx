@@ -18,7 +18,7 @@ const Motorsport = () => {
 
   return (
     <>
-      {/* Media Gallery - Foto e Video */}
+      {/* Media Gallery */}
       <section className="section">
         <Container>
           <Row>
@@ -107,24 +107,6 @@ const Motorsport = () => {
               <SectionHeader title="Risultati e" lastword="Riconoscimenti" subtitle="Sezione in lavorazione..." />
             </Col>
           </Row>
-
-          {/* <Row>
-            {achievements.map((achievement, index) => (
-              <Col lg={3} md={6} className="mb-4" key={index}>
-                <Card 
-                  className="text-center border-0 bg-light h-100"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <Card.Body className="d-flex flex-column justify-content-center">
-                    <i className={`bi bi-${achievement.icon} text-red mb-3`} style={{fontSize: '3rem'}}></i>
-                    <h5 className="mb-2">{achievement.title}</h5>
-                    <p className="text-medium-grey mb-0">{achievement.subtitle}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row> */}
 
         </Container>
       </section>

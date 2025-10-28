@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { Container, Row, Col, Button, ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import ImageWithText from '../components/Preparazioni/ImageWithText';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { services } from '../data/preparazioni';

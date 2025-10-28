@@ -35,6 +35,7 @@
   align-items: center;
 }
 
+/* Responsive Design */
 @media (max-width: 767px) {
   .footer-custom ul {
     flex-direction: column;
@@ -48,7 +49,6 @@
   }
 }
 
-/* iPhone SE specific footer sizing */
 @media (max-width: 375px) {
   .footer-custom {
     padding: 1rem 0 !important;

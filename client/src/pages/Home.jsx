@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import '../styles/components/Sections.css';
 import '../styles/components/Cards.css';
 import '../styles/components/Buttons.css';
+import '../styles/components/Carousel.css';
 import NewsCard from '../components/NewsCard';
 import { newsArticles } from '../data/news';
 import { services, carouselItemsHome } from '../data/home';

@@ -5,7 +5,7 @@ const useAutoScroll = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Scroll con offset navbar se presente un hash
+    
     if (location.hash) {
       const id = location.hash.slice(1);
       const el = document.getElementById(id);
@@ -16,7 +16,7 @@ const useAutoScroll = () => {
         return;
       }
     }
-    // Default: scroll top semplice (senza delay inutile)
+    
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname, location.hash]);
 };
