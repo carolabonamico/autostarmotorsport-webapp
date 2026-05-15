@@ -58,8 +58,7 @@ const Motorsport = () => {
                         preload="auto"
                         playsInline
                       >
-                        <source src={item.src} type="video/quicktime" />
-                        <source src={item.src.replace('.MOV', '.mp4')} type="video/mp4" />
+                        <source src={item.src} type="video/mp4" />
                         Il tuo browser non supporta il tag video.
                       </video>
                     ) : (
@@ -99,7 +98,7 @@ const Motorsport = () => {
         </Container>
       </section>
 
-      {/* Achievements */}
+      {/* Achievements
       <section className="section">
         <Container>
           <Row>
@@ -109,7 +108,7 @@ const Motorsport = () => {
           </Row>
 
         </Container>
-      </section>
+      </section> */}
 
     </>
   );

@@ -78,21 +78,21 @@ export const carFeatures = [
 
 export const mediaGallery = [
     {
-        src: "/videos/ligier/ligierVideoHorizontal1.MOV",
+        src: "/videos/ligier/ligierVideoHorizontal1.mp4",
         alt: "Ligier JSP320 in azione",
         type: "video",
         orientation: "horizontal",
         size: "large"
     },
     {
-        src: "/videos/ligier/ligierVideoVertical2.MOV",
+        src: "/videos/ligier/ligierVideoVertical2.mp4",
         alt: "Ligier JSP320 in pista",
         type: "video",
         orientation: "vertical",
         size: "small"
     },
     {
-        src: "/videos/ligier/ligierVideoVertical1.MOV",
+        src: "/videos/ligier/ligierVideoVertical1.mp4",
         alt: "Ligier JSP320 dettaglio",
         type: "video",
         orientation: "vertical",

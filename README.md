@@ -1,13 +1,13 @@
-
 # Autostar Motorsport Web application
 
 Web app for Autostar Motorsport, a motorsport preparation and automotive services company based in Italy. Built with React + Vite and deployed on Vercel.
 
-## 🌐 Live Website
+## Live Website
 
-**Production URL:** [https://autostar-motorsport.vercel.app](https://autostar-motorsport.vercel.app)
+**Production URL:** [https://autostarmotorsport.vercel.app/](https://autostarmotorsport.vercel.app/)
 
-## Core Technologies
+Core Technologies
+
 - **Frontend Framework:** React 18.3
 - **Build Tool:** Vite 6.3
 - **UI Library:** React-Bootstrap 2.10
@@ -16,15 +16,17 @@ Web app for Autostar Motorsport, a motorsport preparation and automotive service
 - **Routing:** React Router DOM 7.0
 
 ## Privacy & Legal Compliance
+
 - **Privacy Policy & Cookie Banner:** Iubenda
 - **GDPR Compliant:** Cookie consent management and privacy policy integration
 
 ## Deployment & Hosting
+
 - **Platform:** Vercel
 - **CI/CD:** Automatic deployment from GitHub repository
 - **Branch:** `dev` (development), `main` (production)
 
-## 📄 Project Structure
+## Project Structure
 
 ```
 client/
@@ -95,10 +97,10 @@ client/
 
 ```bash
 # Clone the repository
-git clone https://github.com/carolabonamico/autostar-website.git
+git clone https://github.com/carolabonamico/autostarmotorsport-webapp.git
 
 # Navigate to client directory
-cd autostar-website/client
+cd autostarmotorsport-webapp/client
 
 # Install dependencies
 npm install

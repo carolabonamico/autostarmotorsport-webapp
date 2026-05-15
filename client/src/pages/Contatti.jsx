@@ -61,8 +61,7 @@ const Contatti = () => {
                   <i className="bi bi-clock-fill"></i>
                 </div>
                 <h6>Orari</h6>
-                Lun-Ven: 8:00-18:00<br />
-                Sab: 8:00-12:00
+                Lun-Ven: 9:00-18:00
               </div>
             </Col>
           </Row>
